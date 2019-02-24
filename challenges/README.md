@@ -29,21 +29,14 @@ Startup Order NoSQL Database
 |Field Name | Type   | Sample Value |
 | --------- | ------ | ------------ |
 |Record ID  | Number | 1234         |
-|           |        |              |
 |Name       | String | Joe Smith    |
-|           |        |              |
 |Cell Phone | String | 405.867.5309 |
-|           |        |              |
 |Work Phone | String | 123.123.1234 |
-|           |        |              |
 |Email      | String |joe_s@gmail.com |
-|           |        |                |
 |Address    | String | 123 Vic Way, Dallas TX 75001 |
-
-
-Basic Widget Order Number 37
-Advanced Widget Order Number 12
-Protection Plan Boolean True
+|Basic Widget Order | Number | 37 |
+|Advanced Widget Order | Number | 12 |
+|Protection Plan | Boolean | True |
 
 *Part 2*
 
