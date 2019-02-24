@@ -10,13 +10,13 @@
 
 An exciting startup has approached us for help in developing their product and establishing an online presence. You have been tasked with quickly creating a placeholder web page for this startup to establish a basic online presence. This page has the following requirements:
 
-* Startup name title.
+* Startup name title
 
-* Startup logo as icon in browser tab.
+* Startup logo as icon in browser tab
 
-* Contact us web form that captures contact information.
+* Contact us web form that captures contact information
 
-* Google reCaptcha V2 implement in page. Submission of form requires Google captcha pass.
+* Google reCaptcha V2 implement in page. Submission of form requires Google captcha pass
 
 * Dump all the information from the form submission to browser console. Google reCaptcha Reference: https://developers.google.com/recaptcha/docs/display
 
