@@ -4,7 +4,7 @@
 
 ### Submission Instructions
 
-  Submit a Pull Request(PR) to this repository. Once your PR is created, engineers at Headstorm will review the request and engage in commentary and questions on your PR.
+  Submit a [Pull Request](https://help.github.com/en/articles/about-pull-requests) (PR) to this repository. Once your PR is created, engineers at Headstorm will review the request and engage in commentary and questions on your PR.
 
 ## Front End Challenge
 
@@ -21,7 +21,9 @@ An exciting startup has approached us for help in developing their product and e
 * Dump all the information from the form submission to browser console. Google reCaptcha Reference: https://developers.google.com/recaptcha/docs/display
 
 ## Back End Challenge
+
   **Part 1**
+  
   The startup client chose to use a NoSQL database in their original system so that they could skip data modeling. The number of users for their system is growing rapidly. To support the new demands the client has chosen to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization.
 
 Startup Order NoSQL Database
