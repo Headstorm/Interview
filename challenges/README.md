@@ -20,8 +20,8 @@ An exciting startup has approached us for help in developing their product and e
 
 * Dump all the information from the form submission to browser console. Google reCaptcha Reference: https://developers.google.com/recaptcha/docs/display
 
-# Back End Challenge
-
+## Back End Challenge
+  **Part 1**
   The startup client chose to use a NoSQL database in their original system so that they could skip data modeling. The number of users for their system is growing rapidly. To support the new demands the client has chosen to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization.
 
 Startup Order NoSQL Database
@@ -38,6 +38,6 @@ Startup Order NoSQL Database
 |Advanced Widget Order | Number | 12 |
 |Protection Plan | Boolean | True |
 
-*Part 2*
+**Part 2**
 
   The next step is to create a solution for the client that can migrate the data from their current database to your new relational database. Write a basic program in a language of your choice such as Python or Java. Read in a JSON file that contains the records from the old database, format the data to match your new data model, and print SQL statements to console/standard IO that would insert these records into the new database.
