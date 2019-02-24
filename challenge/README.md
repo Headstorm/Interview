@@ -7,8 +7,6 @@ Submission Instructions
 
 <Insert Submission Instructions>
 
-< Dropbox like upload site? Email zip files? >
-
 Front End Assignment
 
 An exciting startup has approached us for help in developing their product and establishing an online presence. You have been tasked with quickly creating a placeholder web page for this startup to establish a basic online presence. This page has the following requirements:
