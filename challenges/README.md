@@ -1,6 +1,6 @@
 # Headstorm Programming Challenges
 
-  The following is an optional front end and back end challenge that can be completed to supplement your resume as part of the interview process with Headstorm. Technology is a core element of our culture at Headstorm and we hope you find these challenges interesting. Complete as much of each challenge as you are able. It is acceptable to submit an incomplete solution but be sure to turn in your best work.
+  The following is a set of front-end and back-end challenges that can be completed to supplement your resume as part of the interview process with Headstorm. Technology is a core element of our culture at Headstorm and we hope you find these challenges interesting. Complete as much of each challenge as you are able. It is acceptable to submit an incomplete solution.
 
 ### Submission Instructions
 
