@@ -22,9 +22,9 @@ An exciting startup has approached us for help in developing their product and e
 
 ## Back End Challenge
 
-  Create a REST API using any language or framework that you like, that performs the following: 
+  Create a (REST API)[https://www.restapitutorial.com/] using any language or web framework you prefer, which performs the following functionality: 
   - Provides a POST endpoint at `/data` where a user can submit a JSON formatted list of 500 random numbers.
   - Provide a GET endpoint at `/data` which provides the same JSON formatted list of 500 numbers that are sorted from lowest to highest.
-  BONUS:
+  **BONUS:**
   - Provide a PATCH endpoint at `/data` which inserts a random number into the list in the proper order which will be returned by the above POST api.
   
