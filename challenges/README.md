@@ -8,7 +8,7 @@
 
 ## Front End Challenge
 
-An exciting startup has approached us for help in developing their product and establishing an online presence. You have been tasked with quickly creating a placeholder web page for this startup to establish a basic online presence. This page has the following requirements:
+A company has approached you for help in developing their product and establishing an online presence. You have been tasked with quickly creating a web page for this startup to launch their web page. This page has the following requirements:
 
 * Startup name title
 
@@ -23,7 +23,7 @@ An exciting startup has approached us for help in developing their product and e
 ## Back End Challenge
 
   Create a (REST API)[https://www.restapitutorial.com/] using any language or web framework you prefer, which performs the following functionality: 
-  - Provides a POST endpoint at `/data` where a user can submit a JSON formatted list of 500 random numbers.
+  - Provides a POST endpoint at `/data` where a user submits a JSON formatted list of 500 random numbers.  The list has to be exactly 500 numbers, if there are more or less than 500 an error must be returned.  Similarly, if something other than a list of numbers is submitted, an error must be returned.
   - Provide a GET endpoint at `/data` which provides the same JSON formatted list of 500 numbers that are sorted from lowest to highest.
   **BONUS:**
   - Provide a PATCH endpoint at `/data` which inserts a random number into the list in the proper order which will be returned by the above POST api.
