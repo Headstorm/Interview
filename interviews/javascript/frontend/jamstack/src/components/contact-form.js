@@ -8,26 +8,36 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(firstName, lastName, email, additionalInfo)
+
+    let form = {
+      firstName, 
+      lastName, 
+      email, 
+      additionalInfo
+    }
+
+    console.log(form)
   }
 
   return(
     <form onSubmit={(e) => handleSubmit(e)}>
-      <div>
-        <label htmlFor="firstName">First Name</label>
-        <input type="text" id="firstName" onChange={e => setFirstName(e.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="lastName">Last Name</label>
-        <input type="text" id="lastName" onChange={e => setLastName(e.target.value)} />
+      <div class="row">
+        <div class="six columns">
+          <label htmlFor="firstName">First Name</label>
+          <input class="u-full-width" type="text" id="firstName" onChange={e => setFirstName(e.target.value)} required/>
+        </div>
+        <div class="six columns">
+          <label htmlFor="lastName">Last Name</label>
+          <input class="u-full-width" type="text" id="lastName" onChange={e => setLastName(e.target.value)} required/>
+        </div>
       </div>
       <div>
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" onChange={e => setEmail(e.target.value)} />
+        <input class="u-full-width" type="email" id="email" onChange={e => setEmail(e.target.value)} required/>
       </div>
       <div>
         <label htmlFor="addtionalInfo">Additional Info</label>
-        <input type="text" id="addtionalInfo" onChange={e => setAdditionalInfo(e.target.value)} />
+        <input type="text" id="addtionalInfo" onChange={e => setAdditionalInfo(e.target.value)} required/>
       </div>
       <button type="submit">Contact JamStack</button>
     </form>
