@@ -8,7 +8,7 @@
 
 ## Front End Challenge
 
-A company has approached you for help in developing their product and establishing an online presence. You have been tasked with quickly creating a web page for this startup to launch their web page. This page has the following requirements:
+A company has approached you for help in developing their product and establishing an online presence. You have been tasked with quickly creating a web page for them. This page has the following requirements:
 
 * Startup name title
 
@@ -16,7 +16,7 @@ A company has approached you for help in developing their product and establishi
 
 * Contact us web form that captures contact information
 
-* Google reCaptcha V2 implement in page. Submission of form requires Google captcha pass
+* Google reCaptcha V3 implement in page. Submission of form requires Google captcha pass
 
 * Dump all the information from the form submission to browser console. Google reCaptcha Reference: https://developers.google.com/recaptcha/docs/display
 
