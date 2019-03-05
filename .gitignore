@@ -65,3 +65,4 @@ gradle-app.setting
 
 node_modules/
 .cache/
+public/
