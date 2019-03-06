@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import "./normalize.css"
 import "./skeleton.css"
 
 const Layout = ({ children }) => (
