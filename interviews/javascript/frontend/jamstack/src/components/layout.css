@@ -1,0 +1,25 @@
+body {
+  margin-bottom: 2em;
+}
+
+p {
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+button {
+  border: rgb(28, 145, 241) solid 1px;
+  color: rgb(28, 145, 241);
+}
+
+button:hover {
+  border: none;
+  background-color: rgb(28, 145, 241);
+  color: white;
+}
+
+button:active {
+  background-color: rgb(24, 117, 192) 
+}
