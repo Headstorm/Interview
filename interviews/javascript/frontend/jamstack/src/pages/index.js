@@ -10,23 +10,22 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div style={{display: "flex", justifyContent: "space-between"}}>
-        <div style={{ width: "400px" }}>
+      <div className="landing">
+        <div className="u-full-width" style={{ width: "400px" }}>
           <Logo />
         </div>
         <div className="banner">
-            <h1>Jamstack</h1>
-            <h4>Democratize the aux</h4>
+          <h1>Jamstack</h1>
+          <h4>Democratize the aux</h4>
         </div>
       </div>
       <div>
-        <h2>A new way to listen to music</h2>
+        <h2>A new way to listen to music <span role="img" aria-label="headphones">🎧</span></h2>
         <p>
           Listening to music is a social experience, so why not make it more
-          collaborative? JamStack allows you to create collaborative queues with
-          Spotify
+          collaborative? JamStack allows you to create collaborative queues using the power of Spotify. All you need is to download the application, give the room code to your friends, and let the party begin!
         </p>
-        <h3>Contact the JamStack Crew</h3>
+        <h3>Contact the Jamstack Crew <span role="img" aria-label="mail">💌</span></h3>
         <ContactForm />
       </div>
     </Layout>

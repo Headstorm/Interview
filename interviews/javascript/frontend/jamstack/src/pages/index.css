@@ -1,5 +1,11 @@
+.landing {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
 .banner {
-  height: 30em;
   display: flex;
   flex-direction: column;
   justify-content: center;
