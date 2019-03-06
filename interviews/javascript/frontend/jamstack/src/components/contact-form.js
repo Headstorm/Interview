@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Helmet from "react-helmet"
 import { ReCaptcha } from "recaptcha-v3-react"
-
+import './contact-form.css'
 const ContactForm = () => {
   const [captchaToken, setCaptchaToken] = useState("")
   const [firstName, setFirstName] = useState("")
@@ -45,7 +45,7 @@ const ContactForm = () => {
         action='formSubmission'
         verifyCallback={(token) => setCaptchaToken(token)}
       />
-      <form  onSubmit={e => handleSubmit(e)}>
+      <form onSubmit={e => handleSubmit(e)}>
         <div className="row">
           <div className="six columns">
             <label htmlFor="firstName">First Name</label>
