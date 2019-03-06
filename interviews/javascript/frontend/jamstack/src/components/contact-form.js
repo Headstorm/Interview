@@ -7,7 +7,7 @@ const ContactForm = () => {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
-  const [additionalInfo, setAdditionalInfo] = useState("")
+  const [message, setMessage] = useState("")
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -15,7 +15,8 @@ const ContactForm = () => {
     let result = await verifyCaptcha(captchaToken)
 
     if(result.score > 0.5) {
-      const form = { firstName, lastName, email, additionalInfo }
+      const form = { firstName, lastName, email, message }
+      
       console.log(form)
       
     } else {
@@ -44,7 +45,7 @@ const ContactForm = () => {
         action='formSubmission'
         verifyCallback={(token) => setCaptchaToken(token)}
       />
-      <form onSubmit={e => handleSubmit(e)}>
+      <form  onSubmit={e => handleSubmit(e)}>
         <div className="row">
           <div className="six columns">
             <label htmlFor="firstName">First Name</label>
@@ -52,6 +53,7 @@ const ContactForm = () => {
               className="u-full-width"
               type="text"
               id="firstName"
+              placeholder="John"
               onChange={e => setFirstName(e.target.value)}
               required
             />
@@ -62,6 +64,7 @@ const ContactForm = () => {
               className="u-full-width"
               type="text"
               id="lastName"
+              placeholder="Doe"
               onChange={e => setLastName(e.target.value)}
               required
             />
@@ -73,20 +76,22 @@ const ContactForm = () => {
             className="u-full-width"
             type="email"
             id="email"
+            placeholder="johnnyappleseed@gmail.com"
             onChange={e => setEmail(e.target.value)}
             required
           />
         </div>
         <div>
-          <label htmlFor="addtionalInfo">Additional Info</label>
-          <input
-            type="text"
-            id="addtionalInfo"
-            onChange={e => setAdditionalInfo(e.target.value)}
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            className="u-full-width"
+            style={{resize: "vertical"}}
+            onChange={e => setMessage(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Contact JamStack</button>
+        <button type="submit">Send email</button>
       </form>
     </>
   )
