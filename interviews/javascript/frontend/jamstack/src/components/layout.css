@@ -23,3 +23,10 @@ button:hover {
 button:active {
   background-color: rgb(24, 117, 192) 
 }
+
+.content {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0px 1.0875rem;
+  padding-top: 0;        
+}
