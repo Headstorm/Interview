@@ -1,0 +1,92 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+  background-color: black;
+}
+
+.main{
+  
+  padding: 25px;
+  height: 100%;
+}
+
+.head div {
+  display: inline-block;
+}
+
+.headpic {
+  content: url(https://cdn.discordapp.com/attachments/530984832529072129/551973880617500740/HeadStorm_bolt-220flat.png);
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  float: left;
+}
+
+.head {
+  position: relative;
+  float: center;
+  color: rgb(255, 128, 0);
+  font-size: 50px;
+  text-align: center;
+  
+}
+
+.head2 {
+  color: rgb(242, 242, 242);
+}
+
+.subhead {
+  color: rgb(255, 128, 0);
+  font-size: 25px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.input {
+  width: 400px;
+  background-color: rgba(255, 255, 255, .9);
+  position: relative;
+  margin: auto;
+}
+
+.infohead {
+  text-align: center;
+  font-size: 25px;
+  padding: 12.5px;
+  color: rgb(255, 128, 0)
+}
+
+.input:hover { 
+  background-color: rgb(255, 255, 255);
+}
+
+.field {
+  padding: 25px;
+  position: relative;
+  text-align: center;
+  font-size: 12.5px;
+  color: rgb(255, 128, 0);
+}
+
+.field div {
+  margin-bottom: 12.5px;
+}
+
+.field div:last-child {
+  margin-bottom: 0px;
+}
+
+.btn-enter {
+  background-color: rgb(255, 128, 0);
+  color: rgb(242, 242, 242);
+  border: 1px solid;
+  font-size: 12.5px;
+  padding: 6.25px;
+  cursor: pointer;
+}
+
+
