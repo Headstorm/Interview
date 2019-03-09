@@ -1,13 +1,15 @@
-defmodule DataController do
+defmodule ServerWeb.DataController do
   use ServerWeb, :controller
 
-  def index(conn, %{ "data" => data }) do
-     res = data
+  def index(conn, %{"data" => data}) do
+    { status, list } = Poison.decode(data)
+
+     res = list
       |> Map.to_list
       |> Enum.sort()
 
     conn
-      |> render(ServerWeb.DataView, "data.json", %{ "data" => res })
+      |> render(ServerWeb.DataView, "show.json", %{ "list" => res })
   end
 
   def create(conn, %{ "data" => data }) do
