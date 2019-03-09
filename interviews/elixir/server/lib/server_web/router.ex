@@ -5,7 +5,7 @@ defmodule ServerWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ServerWeb do
+  scope "/", ServerWeb do
     pipe_through :api
 
     get "/data", DataController, :index
