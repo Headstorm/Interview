@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Helmet from "react-helmet"
 import { ReCaptcha } from "recaptcha-v3-react"
 import './contact-form.css'
+
 const ContactForm = () => {
   const [captchaToken, setCaptchaToken] = useState("")
   const [firstName, setFirstName] = useState("")
@@ -28,7 +29,7 @@ const ContactForm = () => {
    let req = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `secret=6Lf7tJUUAAAAAA97fQZMreHBIQR7TvwV-4b70uQv&response=${token}`
+      body: `secret=${secret}&response=${token}`
     })
 
     let resp = await req.json()
