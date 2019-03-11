@@ -34,7 +34,12 @@ defmodule ServerWeb.DataController do
     { :bad_request, encoded_list }
   end
 
-  def update(res, req) do
+  def update(conn, %{ "num" => num }) do
+    num
+      |> String.to_integer()
+      |> Server.NumberStorage.add_num()
 
+    conn
+      |> send_resp(:ok, "Number added")
   end
 end
