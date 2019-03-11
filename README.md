@@ -10,6 +10,7 @@ docker-compose up --build
 3. Navigate to necessary urls
 
 ### Frontend
+**Note: Must have CORS enabled on browser in order to function**
 ```
 localhost:9000
 ```
