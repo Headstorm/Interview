@@ -46,8 +46,6 @@ hs_err_pid*
 .gradle
 build/
 
-*/config.js
-
 # Ignore Gradle GUI config
 gradle-app.setting
 
@@ -68,3 +66,4 @@ gradle-app.setting
 node_modules/
 .cache/
 public/
+interviews/javascript/jamstack/src/config.js
