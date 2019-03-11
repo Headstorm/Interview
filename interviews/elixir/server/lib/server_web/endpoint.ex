@@ -1,8 +1,6 @@
 defmodule ServerWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :server
 
-  socket "/socket", ServerWeb.UserSocket
-
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
@@ -20,7 +18,7 @@ defmodule ServerWeb.Endpoint do
   plug Plug.Logger
 
   plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
+    parsers: [:urlencoded, :json],
     pass: ["*/*"],
     json_decoder: Poison
 
