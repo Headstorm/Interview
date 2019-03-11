@@ -7,4 +7,5 @@ WORKDIR /frontend/
 COPY jamstack/ .
 RUN npm install && gatsby build
 
+EXPOSE 9000
 CMD ["gatsby", "serve"]
