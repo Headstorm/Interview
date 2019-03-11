@@ -8,8 +8,6 @@ defmodule ServerWeb.Router do
   scope "/", ServerWeb do
     pipe_through :api
 
-    get "/data", DataController, :index
-    post "/data", DataController, :create
-    patch "/data", DataController, :update
+    resources "/data", DataController, only: [:index, :create, :update]
   end
 end
