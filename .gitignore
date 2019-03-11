@@ -63,3 +63,7 @@ gradle-app.setting
 
 # End of https://www.gitignore.io/api/java,scala,kotlin,gradle
 
+node_modules/
+.cache/
+public/
+interviews/javascript/jamstack/src/config.js

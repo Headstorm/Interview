@@ -1,0 +1,10 @@
+form {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border-color: rgb(28, 145, 241);
+}
