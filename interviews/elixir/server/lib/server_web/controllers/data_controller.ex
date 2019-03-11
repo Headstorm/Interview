@@ -1,19 +1,37 @@
 defmodule ServerWeb.DataController do
   use ServerWeb, :controller
 
-  def index(conn, %{"data" => data}) do
-    { status, list } = Poison.decode(data)
-
-     res = list
-      |> Map.to_list
-      |> Enum.sort()
+  def index(conn, _) do
+    { _, list } = Server.NumberStorage.get_list() |> Poison.encode()
 
     conn
-      |> render(ServerWeb.DataView, "show.json", %{ "list" => res })
+      |> send_resp(200, list)
   end
 
   def create(conn, %{ "data" => data }) do
+    { _, list } = Poison.decode(data)
 
+    { status, body } = insert_list(list)
+
+    IO.inspect body
+    conn
+      |> send_resp(status, body)
+  end
+
+  # Adds list to storage iff the list is 500 ints long and is a valid list
+  def insert_list(list) when is_list(list) and length(list) == 500 do
+    list
+      |> Enum.sort()
+      |> Server.NumberStorage.add_list()
+
+    { :ok, "List updated"}
+  end
+
+  # Returns error and the list iff the posted list is invalid
+  def insert_list(list) do
+    { _, encoded_list } = list |> Poison.encode()
+
+    { :bad_request, encoded_list }
   end
 
   def update(res, req) do
