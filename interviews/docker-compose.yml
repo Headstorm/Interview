@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   backend: 
-    build: ./elixir/server
+    build: ./elixir
     ports: 
       - "4000:4000"
   frontend: 
