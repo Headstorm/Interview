@@ -12,6 +12,10 @@
 .idea
 .idea/
 
+challenges/data/generate/target/
+challenges/data/generate/target/*
+challenges/data/generate/target
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

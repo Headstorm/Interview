@@ -1,6 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/charles/projects/headstorm/Interview/challenges/data/generate/dataGenerator.scala:24:46: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : String[0m
-[0m[[0m[31merror[0m] [0m[0m required: Int[0m
-[0m[[0m[31merror[0m] [0m[0m  def gen(start: Int, end: Int): Int = start + rnd.nextInt( (end - start) + 1 ).toString[0m
-[0m[[0m[31merror[0m] [0m[0m                                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
