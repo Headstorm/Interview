@@ -2,9 +2,9 @@
 
 ### Description
 
-Can we use geographical coordinates paired with a point in time, representing someone's birthdate, to
+Can we use geographical coordinates paired with a point in time, representing someone's birth date, to
 determine the meteorological season? In this competition, the challenge is to develop an algorithm
-which accurately identifies a meteorological season based on the inputs of coordinates and birthdate.
+which accurately identifies a meteorological season based on the inputs of coordinates and birth date.
 
 The challenge is to ingest and interpret data from open APIs and other data sources. You need to determine
 which data is useful, finding the signal in the sea of information.
