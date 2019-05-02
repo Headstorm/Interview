@@ -3,7 +3,7 @@
 ### Description
 
 Can we use geographical coordinates paired with a point in time, representing someone's birth date, to
-determine the meteorological season in which someone were born? In this competition, the challenge is to
+determine the meteorological season in which someone was born? In this competition, the challenge is to
 develop an algorithm accurately identifying a meteorological season based on the inputs of coordinates
 and birth date.  In other words, we need to match location and birth date to a season. Definitions of the terms
 used are below.
