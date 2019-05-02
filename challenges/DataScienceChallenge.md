@@ -4,8 +4,9 @@
 
 Can we use geographical coordinates paired with a point in time, representing someone's birth date, to
 determine the meteorological season in which someone were born? In this competition, the challenge is to
-develop an algorithm which accurately identifies a meteorological season based on the inputs of coordinates
-and birth date.
+develop an algorithm accurately identifying a meteorological season based on the inputs of coordinates
+and birth date.  In other words, we need to match location and birth date to a season. Definitions for the terms
+used are below.
 
 You will need to ingest and interpret data from open APIs and other data sources to determine
 which data is useful, finding the signal in the sea of information.
@@ -38,6 +39,14 @@ Submit your script in the form of a `pull-request` to this repository.  How do I
 >   Meteorological spring begins on March 1 and includes the months of March, April, and May
 >   Meteorological summer begins on June 1. It includes the months of June, July, and August
 >   Meteorological fall begins on September 1 and includes the months of September, October, and November
+
+   <strong>What is a birth date?</strong>
+>   For the purposes of this challenge, the birth date is a Unix Timestamp in UTC between Jan 1 2018 and May 2 2019.
+ Examples can be found in the `data/birthdays.csv`.
+
+   <strong>What is a location?</strong>
+>   For the purposes of this challenge, the location is a lat/long pair anywhere in or near the United States. Examples 
+can be found in the `data/birthdays.csv`.
     
    <strong>What are some open data APIs I can use that would be useful for this challenge?</strong>
 >   https://openweathermap.org/api
