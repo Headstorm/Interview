@@ -7,7 +7,7 @@ object DataGenerator {
 
   def main(args: Array[String]): Unit = {
 
-    val file = new File("../events.csv")
+    val file = new File("../birthdays.csv")
     val writer = CSVWriter.open(file)
     writer.writeRow(List("Latitude", "Longitude", "Birth Date"))
     (1 to 500).foreach { i =>
