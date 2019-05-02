@@ -25,6 +25,12 @@ Your submission must be in the form of an executable script, using any platform 
 labels 3-tuples in a CSV in the same format as `data/events/csv`.  Examples of valid submissions
 include but are not limited to Jupyter Notebooks, RMarkdown, R, Python, Scala, or even Bash scripts.
 
-#### Definitions
+Submit your script in the form of a `pull-request` to this repository.  How do I submit a [Pull Request](https://help.github.com/en/articles/about-pull-requests)?
+
+#### FAQ
    <strong>What is a meteorological season?</strong>
     For the purposes of this challenge, a meteorological season is one of Winter, Spring, Summer, or Autumn.
+    
+   <strong>What are some open data APIs I can use that would be useful for this challenge?</strong>
+   https://openweathermap.org/api
+    
