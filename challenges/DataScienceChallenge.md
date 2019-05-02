@@ -45,6 +45,9 @@ Submit your script in the form of a `pull-request` to this repository.  How do I
    <strong>What is a location?</strong>
 >   For the purposes of this challenge, the location is a lat/long pair anywhere in or near the United States. Examples 
 can be found in the `data/birthdays.csv`.
+
+   <strong>Can I just calculate the season by checking which time frame included the given timestamp?</strong>
+>   Nice try.
     
    <strong>What are some open data APIs I can use that would be useful for this challenge?</strong>
 >   https://openweathermap.org/api
