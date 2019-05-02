@@ -4,8 +4,8 @@
 
 Can we use geographical coordinates paired with a point in time to determine the season?
 In this competition, the challenge is to develop an algorithm which accurately identifies
-a season based on coordinates and time. Doing so will allow ag-tech data providers to match
-agronomic activities to a season.
+a season based on the inputs of coordinates and time. Correct labeling of location and time
+data will allow ag-tech data providers to match agronomic activities to a growing season.
 
 The challenge is ingesting and interpreting data from open APIs and other data sources
 to determine which data is useful, finding the signal in the sea of information.
