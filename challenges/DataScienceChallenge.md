@@ -11,7 +11,7 @@ which data is useful, finding the signal in the sea of information.
 
 ### Evaluation
 For each `(longitude, latitude, time)` 3-tuple in the given training set, which represents the location
-and birth date (in UTC), your model should predict the season in which the 3-tuple occurred.
+and birth date (in UTC), your model should predict the season in which the birthday occurred.
 
 There is a data set provided in `data/birthdays.csv` you can use to train your model.  Your model
 will be evaluated against a similar data set with the same format.
