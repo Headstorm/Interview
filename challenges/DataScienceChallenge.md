@@ -30,7 +30,7 @@ Submit your script in the form of a `pull-request` to this repository.  How do I
 
 #### FAQ
    <strong>What is a meteorological season?</strong>
-        For the purposes of this challenge, a meteorological season is one of `Winter`, `Spring`, `Summer`, or `Autumn`.
+>For the purposes of this challenge, a meteorological season is one of `Winter`, `Spring`, `Summer`, or `Autumn`.
 
     
    <strong>When do meteorological seasons begin?</strong>
