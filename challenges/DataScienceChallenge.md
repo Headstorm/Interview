@@ -35,10 +35,10 @@ Submit your script in the form of a `pull-request` to this repository.  How do I
 >   For the purposes of this challenge, a meteorological season is one of `Winter`, `Spring`, `Summer`, or `Autumn`.
     
    <strong>When do meteorological seasons begin?</strong>
->   Winter begins on December 1 and includes December, January, and February
->   Spring begins on March 1 and includes March, April, and May
->   Summer begins on June 1 and includes June, July, and August
->   Fall begins on September 1 and includes September, October, and November
+>   * Winter begins on December 1 and includes December, January, and February
+>   * Spring begins on March 1 and includes March, April, and May
+>   * Summer begins on June 1 and includes June, July, and August
+>   * Fall begins on September 1 and includes September, October, and November
 
    <strong>What is a birth date?</strong>
 >   For the purposes of this challenge, the birth date is a Unix Timestamp in UTC between Jan 1 2018 and May 2 2019.
