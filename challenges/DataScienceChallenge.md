@@ -13,7 +13,7 @@ which data is useful, finding the signal in the sea of information.
 For each `(longitude, latitude, time)` 3-tuple in the given training set, which represents the location
 and birth date (in UTC), your model should predict the season in which the 3-tuple occurred.
 
-There is a data set provided in `data/events.csv` you can use to train your model.  Your model
+There is a data set provided in `data/birthdays.csv` you can use to train your model.  Your model
 will be evaluated against a similar data set with the same format.
 
 ### Metric
@@ -22,7 +22,7 @@ Your submission will be evaluated based on the categorization accuracy of your m
 
 ### Submission
 Your submission must be in the form of an executable script, using any platform or language, that correctly
-labels 3-tuples in a CSV in the same format as `data/events/csv`.  Examples of valid submissions
+labels 3-tuples in a CSV in the same format as `data/birthdays.csv`.  Examples of valid submissions
 include but are not limited to Jupyter Notebooks, RMarkdown, R, Python, Scala, or even Bash scripts.
 
 Submit your script in the form of a `pull-request` to this repository.  How do I submit a [Pull Request](https://help.github.com/en/articles/about-pull-requests)?
