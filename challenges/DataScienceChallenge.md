@@ -11,7 +11,7 @@ which data is useful, finding the signal in the sea of information.
 
 By analyzing location, time, weather and environmental data to label events, we have a unique
 opportunity to advance the state of technology to understand the connection between 
-activities and meteorological seasons with the possibility of generating a significant economic impact.
+events and meteorological seasons with the possibility of generating a significant economic impact.
 
 ### Evaluation
 For each `(longitude, latitude, time)` 3-tuple in the given training set, which represents the location and time 
