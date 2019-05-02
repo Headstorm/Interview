@@ -25,12 +25,19 @@ Your submission must be in the form of an executable script, using any platform 
 labels 3-tuples in a CSV in the same format as `data/birthdays.csv`.  Examples of valid submissions
 include but are not limited to Jupyter Notebooks, RMarkdown, R, Python, Scala, or even Bash scripts.
 
-Submit your script in the form of a `pull-request` to this repository.  How do I submit a [Pull Request](https://help.github.com/en/articles/about-pull-requests)?
+Submit your script in the form of a `pull-request` to this repository.  How do I submit a
+[Pull Request](https://help.github.com/en/articles/about-pull-requests)?
 
 #### FAQ
    <strong>What is a meteorological season?</strong>
-    For the purposes of this challenge, a meteorological season is one of Winter, Spring, Summer, or Autumn.
+        For the purposes of this challenge, a meteorological season is one of Winter, Spring, Summer, or Autumn.
+    
+   <strong>When do meteorological seasons begin?</strong>
+        Meteorological winter begins on December 1. It includes the months of December, January, and February
+        Meteorological spring begins on March 1 and includes the months of March, April, and May
+        Meteorological summer begins on June 1. It includes the months of June, July, and August
+        Meteorological fall begins on September 1 and includes the months of September, October, and November
     
    <strong>What are some open data APIs I can use that would be useful for this challenge?</strong>
-   https://openweathermap.org/api
+        https://openweathermap.org/api
     
