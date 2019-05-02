@@ -9,10 +9,6 @@ a meteorological season based on the inputs of coordinates and time.
 The challenge is to ingest and interpret data from open APIs and other data sources. You need to determine
 which data is useful, finding the signal in the sea of information.
 
-By analyzing location, time, weather and environmental data to label events, we have a unique
-opportunity to advance the state of technology to understand the connection between 
-events and meteorological seasons with the possibility of generating a significant economic impact.
-
 ### Evaluation
 For each `(longitude, latitude, time)` 3-tuple in the given training set, which represents the location and time 
 (in UTC) of an activity, you must predict the season in which the 3-tuple occurred.
