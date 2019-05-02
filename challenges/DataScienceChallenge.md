@@ -15,7 +15,7 @@ opportunity to advance the state of technology to understand the connection betw
 activities and seasons with the possibility of generating a significant economic impact.
 
 ### Evaluation
-For each `(longitude, latitude, time)` 3-tuple in the given test set, which represents the location and time 
+For each `(longitude, latitude, time)` 3-tuple in the given training set, which represents the location and time 
 (in UTC) of an agronomic activity, you must predict the season in which the 3-tuple occurred.
 
 There is a data set provided in `data/events.csv` you can use to train your model.  Your model
