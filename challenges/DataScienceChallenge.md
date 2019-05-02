@@ -46,8 +46,11 @@ Submit your script in the form of a `pull-request` to this repository.  How do I
 >   For the purposes of this challenge, the location is a lat/long pair anywhere in or near the United States. Examples 
 can be found in the `data/birthdays.csv`.
 
-   <strong>Can I just calculate the season by checking which time frame included the given timestamp?</strong>
+   <strong>Can I just calculate the season by checking which time frame includes the given timestamp?</strong>
 >   Nice try.
+
+   <strong>Can I generate more test data to train my model?</strong>
+>   Easily! Just run `sbt run` inside the `data/generate/` directory.  You will need to install `sbt`.
     
    <strong>What are some open data APIs I can use that would be useful for this challenge?</strong>
 >   https://openweathermap.org/api
