@@ -6,4 +6,4 @@ Welcome to the Headstorm interview challenge!  This repository is designed for c
 These are domain specific problems that can be submitted individually.  You can choose from backend, frontend, databases, or data-science.  You can submit a PR for one, many, or all the challenges.
 
 ### Interviews
-These are language specific interview questions and you can choose the language in which you implement your solution.  <strong>These interview problems are not yet complete, so they can not yet be attemped. Planned completion by 7/01/2019</strong>
+These are language specific interview questions and you can choose the language in which you implement your solution.
