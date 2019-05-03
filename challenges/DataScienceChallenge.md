@@ -9,6 +9,10 @@ location and birth date to a season. Definitions of the terms used are below.
 You will need to ingest and interpret data from open APIs and other data sources to determine
 which data is useful, finding the signal in the sea of information.
 
+Of course, we could simply look up the UTC timestamp to determine the season. Unfortunately, we can only
+use the season table described below to train and evaluate the correctness of our model.  The model
+must determine the season based on other factors, such as weather, location of the earth
+
 ### Evaluation
 For each `(longitude, latitude, time)` 3-tuple in the given training set, which represents the location
 and birth date (in UTC), your model should predict the season in which the birthday occurred.
