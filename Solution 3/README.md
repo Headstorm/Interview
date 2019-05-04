@@ -10,4 +10,5 @@ Has keys id and workphone. Motivation behind it similar to relation CELLPHONE.
 ## RECORDS: 
 Has key r_id (record id) which is obtained from the json file. Person is identified by the foreign key id: Reference PERSON. Has attributes Basic#, Advanced# and ProtectionPlan.
 
+The attribute names are exactly as stated in the question.
 Queries are generated to the console.

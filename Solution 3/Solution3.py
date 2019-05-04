@@ -1,4 +1,6 @@
 import json
+import sys
+
 ids = {}
 i = 1
 rid = 0
