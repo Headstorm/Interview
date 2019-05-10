@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Startup Title</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcN6KIUAAAAAAjD-iopcxFkPfpeRRDA_FcvuakT"></script>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-6 offset-3">
+			{% if messages %}
+				{% for message in messages %}
+				<div class="alert alert-{{ message.tags }}">
+					{{ message }}
+				</div>
+				{% endfor %}
+			{% endif %}
+			<h5>Contact Us</h5>
+			<form method="post" id="form">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<button class="btn btn-outline-info" type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	$('form').submit(function() { 
+		printObj(event);
+		event.preventDefault();
+		grecaptcha.ready(function() {
+		grecaptcha.execute('6LcN6KIUAAAAAAjD-iopcxFkPfpeRRDA_FcvuakT', {action: 'contact'}).then(function(token) {
+				// add token to form
+				$('form').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+				// submit form now
+				$('form').unbind('submit').submit();
+			});;
+		});
+	});
+
+	function printObj(e) {
+		e.preventDefault();
+		var obj = {
+			name: $('input[name=name]').val(),
+			email: $('input[name=email]').val()
+		}
+		console.log(obj);
+	}
+</script>
