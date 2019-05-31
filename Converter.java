@@ -1,4 +1,4 @@
-
+//This file is for the backend challenge. It takes a json file and converts to MySQL output
 import java.io.FileReader;
 import java.io.IOException;
 import org.json.simple.JSONObject;
