@@ -1,0 +1,16 @@
+.contactIp{
+    font-size: 1.3rem;
+}
+
+.submitButton{
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+}
+.submitButton:hover{
+    background-color: lightgreen;
+}
+
+.sec2{
+    margin-top: 2rem;
+}

@@ -1,0 +1,61 @@
+{%load static%}
+{% load widget_tweaks %}
+{%load jsonify%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Headstorm</title>
+        <link rel="icon" type="image/png" href="https://www.headstorm.com/wp-content/uploads/2017/10/headstorm_website_2017-08.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="https://www.headstorm.com/wp-content/uploads/2017/10/headstorm_website_2017-08.png" sizes="32x32">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"> </script>
+        <link rel="stylesheet" href="{% static 'homepage/css/homepage.css' %}">
+
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script> -->
+        <script src="https://www.google.com/recaptcha/api.js?render=6LdPwqcUAAAAALEPET3zl_ih7mirFlKMYF5r7CbS"></script>
+        <script type="text/javascript"> var formData={{formData|jsonify}}; </script>
+    </head>
+    <body>
+        <div id="id_homepage">
+            <h1>Headstorm</h1>
+
+            <form class="" action="{%url 'homepage:homepage'%}" method="post" v-on:submit="submitClicked($event)" id="id_contactform">
+                {%csrf_token%}
+                <div > <input class="contactIp" type="text" name="name" v-model="name" placeholder="Name"> </div>
+                <div class="">
+                    <input class="contactIp" type="email" name="email" v-model="email" placeholder="Email">
+                </div>
+
+                <div class="">
+                    <textarea class="contactIp" name="message" rows="8" cols="80" v-model="message" placeholder="Message"></textarea>
+                </div>
+
+                <input type="hidden" name="captchToken" id='recaptcha' v-model="recaptchaValue">
+
+                <div class="">
+                    <button class="submitButton" type="submit" name="contactSubmitButton" value=1 >Submit</button>
+                </div>
+                Form submition {{status}}
+            </form>
+
+            <div class="sec2">
+                <div class=""> <button class="submitButton" type="button" name="postData" v-on:click="postData" >POST 500 RANDOM NUMBERS</button> </div>
+                <div class="">[[randomNumbersPost]]</div>
+
+                <div class=""> <button class="submitButton" type="button" name="getData" v-on:click="getData" >GET PREVIOUSLY POSTED RANDOM NUMBERS</button> </div>
+                <div class="">[[randomNumbersGet]]</div>
+
+                <div class=""> <button class="submitButton" type="button" name="patchData" v-on:click="patchData" >PATCH A RANDOM NUMBERS</button> </div>
+                <div class="">[[randomNumbersPatch]]</div>
+
+                <div class=""> <button class="submitButton" type="button" name="loadNosqlJsonInDB" v-on:click="loadNosqlJsonInDB" >LOAD NOSQL JSON IN POSTGRES DB</button> </div>
+            </div>
+        </div>
+
+
+        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+        <script type="text/javascript" src="{%static 'homepage/js/homepage.js'%}"></script>
+    </body>
+</html>
