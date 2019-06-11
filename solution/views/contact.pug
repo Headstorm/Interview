@@ -1,0 +1,14 @@
+extends ./layouts/main
+
+block content
+  form(action="/contact-us", method="post")
+    .form-group
+      label(for='exampleFormControlInput1') Name
+      input#exampleFormControlInput1.form-control(type='text', placeholder='Deckard Cain', name="name")
+    .form-group
+      label(for='exampleFormControlInput1') Email address
+      input#exampleFormControlInput1.form-control(type='email', placeholder='name@example.com', name="email")
+    .form-group
+      label(for='exampleFormControlTextarea1') What can we help with?
+      textarea#exampleFormControlTextarea1.form-control(rows='3', name="desc")
+    button.btn.btn-primary(type='submit', action=submit) Submit

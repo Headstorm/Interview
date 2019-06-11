@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{title}
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap")
+        script(src="/js/bootstrap.min.js")
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+
+    body
+        header
+          nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='/') #{title}
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+              ul.navbar-nav
+                li.nav-item
+                  a.nav-link(href='/..') Home
+                li.nav-item
+                  a.nav-link(href='/contact-us') Contact Us
+
+        main
+            block content
