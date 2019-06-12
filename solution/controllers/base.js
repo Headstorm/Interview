@@ -33,6 +33,8 @@ exports.postContact = (req, res, next) => {
   res.send({...req.body});
 };
 
+// This logic should be abstracted out of the controller and into a model
+// We aren't working with a DB and the application is small, so I decided to leave it in the controller
 exports.postData = (req, res, next) => {
   let input = req.body.data;
   let userKey = '';
