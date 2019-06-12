@@ -10,4 +10,8 @@ router.get('/contact-us', baseController.getContact);
 
 router.post('/contact-us', baseController.postContact);
 
+router.get('/data', baseController.getData);
+
+router.post('/data', baseController.postData);
+
 module.exports = router;

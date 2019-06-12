@@ -1,0 +1,15 @@
+extends ./layouts/main
+
+block content
+  div
+    ul
+      each num in data
+        li #{num}
+
+  hr
+
+  form(action="/data", method="post")
+    .form-group
+      label(for='exampleFormControlTextarea1') Enter exactly 500 numbers in a JSON formatted list:
+      textarea#exampleFormControlTextarea1.form-control(rows='3', name="data", placeholder="Proper format: {\"myList\": [1,2,3,...500]}")
+    button.btn.btn-primary(type='submit') Submit
