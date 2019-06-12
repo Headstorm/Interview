@@ -4,6 +4,7 @@
 
 ### CUSTOM ###
 .eslintrc.json
+.vscode
 
 ### Database ###
 *.accdb

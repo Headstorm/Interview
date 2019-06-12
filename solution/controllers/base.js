@@ -1,3 +1,8 @@
+var fs = require('fs');
+const formidable = require('formidable');
+
+//--- GET ---//
+
 exports.getRoot = (req, res, next) => {
   res.render('index', {
     title: 'Tristram'
@@ -25,6 +30,14 @@ exports.getData = (req, res, next) => {
     data: sorted
   })
 }
+
+exports.getMigrate = (req, res, next) => {
+  res.render('migrate', {
+    title: 'DB Migration'
+  })
+}
+
+//--- POST ---//
 
 exports.postContact = (req, res, next) => {
   console.log('Form: ', JSON.stringify(req.body));
@@ -67,3 +80,22 @@ exports.postData = (req, res, next) => {
     res.redirect('/data?data=' + sorted);
   }
 };
+
+exports.postMigrate = (req, res, next) => {
+  new formidable.IncomingForm().parse(req, (err, fields, files) => {
+    if (err) {
+      console.error('Error', err)
+      res.send('Error!');
+    }
+
+    const filePath = files.file.path;
+
+    fs.readFile(filePath, 'utf-8', (err, data) => {
+      if(err) {
+        return console.log
+      };
+      console.log(data);
+      return res.send(data);
+    })
+  })
+}

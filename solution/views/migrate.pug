@@ -1,0 +1,8 @@
+extends ./layouts/main
+
+block content
+  p Purpose: Read in a JSON file that contains the records from the old database, format the data to match your new data model, and print SQL statements to console/standard IO that would insert these records into the new database.
+
+  form#uploadForm(ref='uploadForm', action='/migrate', method='post', enctype='multipart/form-data')
+    input(type='file', name='file')
+    input(type='submit', value='Upload!')

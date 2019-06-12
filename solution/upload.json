@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "Kody",
+      "age": 30,
+      "location": "New Jersey"
+    },
+    {
+      "name": "Tom",
+      "age": 34,
+      "location": "Missouri"
+    },
+    {
+      "name": "Tina",
+      "age": 44,
+      "location": "Texas"
+    }
+  ]
+}
