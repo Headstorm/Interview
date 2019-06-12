@@ -5,9 +5,7 @@ exports.getRoot = (req, res, next) => {
 };
 
 exports.getContact = (req, res, next) => {
-  res.render('contact', {
-    title: 'Tristram'
-  });
+  res.render('contact', {title: 'Captcha V3', post:'/captcha', captcha: res.recaptcha, path:req.path })
 };
 
 exports.getData = (req, res, next) => {
@@ -29,9 +27,13 @@ exports.getData = (req, res, next) => {
 }
 
 exports.postContact = (req, res, next) => {
-  console.log(JSON.stringify(req.body));
+  console.log('Form: ', JSON.stringify(req.body));
   res.send({...req.body});
 };
+
+exports.postCaptcha = (req, res, next) => {
+  res.render('contact', {title: 'Contact Form', post:'/captcha',error:req.recaptcha.error, path:req.path, data:JSON.stringify(req.recaptcha.data)})
+}
 
 // This logic should be abstracted out of the controller and into a model
 // We aren't working with a DB and the application is small, so I decided to leave it in the controller
