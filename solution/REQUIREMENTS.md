@@ -45,7 +45,7 @@ Startup Order NoSQL Database
 |Advanced Widget Order | Number | 12 |
 |Protection Plan | Boolean | True |
 
-[] **Part 2**
+[x] **Part 2**
 
 The next step is to create a solution for the client that can migrate the data from their current database to your new relational database. Write a basic program in a language of your choice such as Python or Java. Read in a JSON file that contains the records from the old database, format the data to match your new data model, and print SQL statements to console/standard IO that would insert these records into the new database.
   

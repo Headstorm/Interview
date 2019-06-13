@@ -11,8 +11,18 @@ Headstorm's collaborative, pull-request based technical interview challenges.
 
 ## Challenge Requirements
 
-See [requirements](REQUIREMENTS.md)
+See [requirements](REQUIREMENTS.md) checklist.
 
 ## Relational Visualization
 
-See [relational data model visualization](relational_data_model_visualization.pdf)
+See [relational data model visualization.pdf](relational_data_model_visualization.pdf)
+
+## Testing the Features
+
+**All console logs are outputted to the Node console, not the browser.**
+
+Back End Challenge/JSON Numbers: [numbers.json](numbers.json) is available for quick copy/pasting to show functionality.
+
+Front End Challenge/Contact Us: Clicking the `I am not a bot!` button too fast or too many times will make the recaptcha fail.
+
+Database Challenge/DB Migration: Upload [upload.json](upload.json) for quick display of functionality.
