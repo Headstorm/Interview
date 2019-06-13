@@ -1,19 +1,59 @@
 {
   "users": [
     {
+      "id": 1,
       "name": "Kody",
-      "age": 30,
-      "location": "New Jersey"
+      "cell_phone": "555.555.5555",
+      "work_phone": "555.555.5555",
+      "email": "kody@nowhere.com",
+      "address": "1400 Main St., Lena, IL 00000",
+      "basic_widget": 37,
+      "advanced_widget": 12,
+      "protection_plan": true
     },
     {
-      "name": "Tom",
-      "age": 34,
-      "location": "Missouri"
-    },
-    {
+      "id": 2,
       "name": "Tina",
-      "age": 44,
-      "location": "Texas"
+      "cell_phone": "555.555.5555",
+      "work_phone": "555.555.5555",
+      "email": "tina@nowhere.com",
+      "address": "1200 Main St., Lena, IL 00000",
+      "basic_widget": 3,
+      "advanced_widget": 14,
+      "protection_plan": false
+    },
+    {
+      "id": 1,
+      "name": "Mark",
+      "cell_phone": "555.555.5555",
+      "work_phone": "555.555.5555",
+      "email": "mark@nowhere.com",
+      "address": "140 Brown St., Lena, IL 00000",
+      "basic_widget": 37,
+      "advanced_widget": 12,
+      "protection_plan": true
+    },
+    {
+      "id": 1,
+      "name": "Tom",
+      "cell_phone": "555.555.5555",
+      "work_phone": "555.555.5555",
+      "email": "tom@nowhere.com",
+      "address": "12400 Side St., Lena, IL 00000",
+      "basic_widget": 3,
+      "advanced_widget": 1,
+      "protection_plan": true
+    },
+    {
+      "id": 1,
+      "name": "Jerry",
+      "cell_phone": "555.555.5555",
+      "work_phone": "555.555.5555",
+      "email": "jerry@nowhere.com",
+      "address": "1400 Main St., Lena, IL 00000",
+      "basic_widget": 37,
+      "advanced_widget": 12,
+      "protection_plan": true
     }
   ]
 }
