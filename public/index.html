@@ -6,15 +6,80 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" href="/public/images/ComputerIcon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="./styles.css" type="text/css">
-    <title>Contact Me Company</title>
+    <title>The Contact Company</title>
 
 </head>
 <body>
     <div class="jumbotron">
-        <h1>Contact Company</h1>
-        <h2>We are a company all about contact forms! For more information, take a look at our site!</h2>
+            <nav class="navbar navbar-default navbar-fixed-top"></nav>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="#about">ABOUT</a></li>
+                          <li><a href="#services">CONTACT US!</a></li>
+                       
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+       
     </div>
 
+    <div class="form-inline">
+    <div class="card">
+        <img src="./images/Product1.jpg" style="width: 100%" align="left">
+        <h1>Name of Product</h1>
+        <p>Info on that product</p>
+        <p>Price</p>
+    </div>
+
+    <div class="card">
+            <img src="./images/Product2.jpg" style="width: 100%" align="center">
+            <h1>Name of Product</h1>
+            <p>Info on that product</p>
+            <p>Price</p>
+    </div>
+
+    <div class="card">
+            <img src="./images/Product3.jpg" style="width: 100%" align="right">
+            <h1>Name of Product</h1>
+            <p>Info on that product</p>
+            <p>Price</p>
+    </div>
+    </div>
+    <hr>
+    <div class="form-inline">
+        <h1>About The Company</h1>
+        <h2>We are a company all about contact forms!</h2>
+        <h2>For more information, take a look at our site!</h2>
+    </div>
     
+    <div class="container-fluid">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+              <div class="col-sm-5">
+                <p>We work around the clock to provide our customers with the best service possible!
+                    One of our peeps from the team will reach out to you shortly. 
+                </p>
+            </div>
+
+              <div class="col-sm-7">
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                  </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <button type="submit">Submit Info!</button>
+                    <button type="reset">Clear Info!</button> /**fix tis button
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
 </body>
 </html>

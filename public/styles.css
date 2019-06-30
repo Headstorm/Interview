@@ -14,3 +14,26 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+a {
+    font-family: 'Courier New', Courier, monospace;
+}
+.jumbotron {
+    background-color: honeydew;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+    background-color: honeydew;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
