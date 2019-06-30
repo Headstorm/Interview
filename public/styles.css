@@ -1,0 +1,16 @@
+body, html {
+    background-color: rosybrown;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
