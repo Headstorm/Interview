@@ -1,0 +1,23 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "Welcome to the Headstorm interview challenge!  This repository is designed for candidates to [fork and create Pull Requests](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) with their solutions.  There are two types of 'take-home' problems here:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saw0541/Interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saw0541/Interview/issues"
+  },
+  "homepage": "https://github.com/saw0541/Interview#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

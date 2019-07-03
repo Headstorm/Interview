@@ -4,26 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="icon" href="/public/images/ComputerIcon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="./images/icons8-glossy-lips-50.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="./styles.css" type="text/css">
-    <title>The Contact Company</title>
+    <title>Galore</title>
     <script src="https://www.google.com/recaptcha/api.js?render=6LcDxKsUAAAAANV-BhXKotM_b--fSyCDyvCL0vBv"></script>
 
 </head>
 <body>
-    <div class="hero-image">
-        <div class="hero-text">
-          <h1>Welcome</h1>
-        </div>
-      </div>
-     
-    <div class="form-inline">
-    <div class="card">
-        <img src="./images/gabrielle-henderson-1DMNn6gBbwQ-unsplash.jpg" style="width: 100%" align="left">
-        <h1>Maui Moisture</h1>
-        <p>Say goodbye to dry shampoo, and hello to Maui Moisture.</p>
-        <p>$17.99</p>
-    </div>
+    <h1 class="header">ga·lore/ɡəˈlôr/</h1>
+    <h2 class="header1">In abundance.</h2>
+<hr>
+        
+  <div class="form-inline">
+  <div class="card">
+      <img src="./images/nery-montenegro-SmEty_TVr80-unsplash.jpg" style="width: 100%" align="center">
+      <h1>Face Powder</h1>
+      <p>Improve the appearance of the face by reducing blemishes!</p>
+      <p>$17.00 + Shipping</p>
+  </div>
 
     <div class="card">
             <img src="./images/Product2.jpg" style="width: 100%" align="center">
@@ -40,28 +38,28 @@
     </div>
     </div>
     <hr>
+
     <div>
-        <h1><b>About The Company</b></h1>
-        <h2>As your favorite brand, our speciality is providing beauty products that
-          you can implement into your daily routine to make you feel awesome, rejuventated and ready for the day!! 
+        <h1 class="company"><b>About The Company</b></h1>
+        <h2 class="summary">As your favorite brand, our speciality is providing beauty products that
+          you can implement into your daily routine to not only make you look good, but feel rejuventated and ready for the day!! 
         </h2>
-        <h2>For more information, contact us below!</h2>
+        <h2 class="info">For more information, contact us below!</h2>
     </div>
     <hr>
     
     <h1><b>Contact Us</b></h1>
     <div class="container">
       <form id="contact-form">
-        <label for="firstname">First Name</label><input type="text" id="firstname" placeholder="First Name" required>
+        <label for="firstname"></label><input type="text" id="firstname" placeholder="First Name" required>
 
-        <label for="lastname">Last Name</label><input type="text" id="lastname" placeholder="Last Name" required>
+        <label for="lastname"></label><input type="text" id="lastname" placeholder="Last Name" required>
 
-        <label for="luan">Leave us a note!</label>
-        <textarea id="luan" name="luan" placeholder="Start typing" style="height: 200px" required></textarea>
+        <label for="luan"></label>
+        <textarea id="luan" name="luan" placeholder="Leave us a note!" style="height: 200px" required></textarea>
 
         <input id="submit" type="submit" value="Submit">
        
-        <!-- <div class="g-recaptcha" data-sitekey="6LcDxKsUAAAAANV-BhXKotM_b--fSyCDyvCL0vBv"></div> -->
       </form>
     </div>
 
@@ -69,9 +67,7 @@
       var contactform = document.getElementById('contact-form');
       contactform.onsubmit = function(event) {
         event.preventDefault();
-        console.log(contactform.firstname.value);
-        console.log(contactform.lastname.value);
-        console.log(contactform.luan.value);
+        console.log(contactform.firstname.value, contactform.lastname.value, contactform.luan.value);
         contactform.reset();
       }
     </script>
