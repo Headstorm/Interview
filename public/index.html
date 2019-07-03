@@ -7,79 +7,86 @@
     <link rel="icon" href="/public/images/ComputerIcon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="./styles.css" type="text/css">
     <title>The Contact Company</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcDxKsUAAAAANV-BhXKotM_b--fSyCDyvCL0vBv"></script>
 
 </head>
 <body>
-    <div class="jumbotron">
-            <nav class="navbar navbar-default navbar-fixed-top"></nav>
-                      <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav navbar-right">
-                          <li><a href="#about">ABOUT</a></li>
-                          <li><a href="#services">CONTACT US!</a></li>
-                       
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-       
-    </div>
-
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>Welcome</h1>
+        </div>
+      </div>
+     
     <div class="form-inline">
     <div class="card">
-        <img src="./images/Product1.jpg" style="width: 100%" align="left">
-        <h1>Name of Product</h1>
-        <p>Info on that product</p>
-        <p>Price</p>
+        <img src="./images/gabrielle-henderson-1DMNn6gBbwQ-unsplash.jpg" style="width: 100%" align="left">
+        <h1>Maui Moisture</h1>
+        <p>Say goodbye to dry shampoo, and hello to Maui Moisture.</p>
+        <p>$17.99</p>
     </div>
 
     <div class="card">
             <img src="./images/Product2.jpg" style="width: 100%" align="center">
-            <h1>Name of Product</h1>
-            <p>Info on that product</p>
-            <p>Price</p>
+            <h1>Mad About Waves</h1>
+            <p>Curly hair can be tamed!</p>
+            <p>$23.99 + Shipping</p>
     </div>
 
     <div class="card">
-            <img src="./images/Product3.jpg" style="width: 100%" align="right">
-            <h1>Name of Product</h1>
-            <p>Info on that product</p>
-            <p>Price</p>
+            <img src="./images/charisse-kenion-3bdSGpKVAmk-unsplash.jpg" style="width: 100%" align="right">
+            <h1>Super Facial</h1>
+            <p>Summer is here, and so is THE perfect facial routine! </p>
+            <p>$15.99 + Shipping</p>
     </div>
     </div>
     <hr>
-    <div class="form-inline">
-        <h1>About The Company</h1>
-        <h2>We are a company all about contact forms!</h2>
-        <h2>For more information, take a look at our site!</h2>
+    <div>
+        <h1><b>About The Company</b></h1>
+        <h2>As your favorite brand, our speciality is providing beauty products that
+          you can implement into your daily routine to make you feel awesome, rejuventated and ready for the day!! 
+        </h2>
+        <h2>For more information, contact us below!</h2>
     </div>
+    <hr>
     
-    <div class="container-fluid">
-            <h2 class="text-center">CONTACT</h2>
-            <div class="row">
-              <div class="col-sm-5">
-                <p>We work around the clock to provide our customers with the best service possible!
-                    One of our peeps from the team will reach out to you shortly. 
-                </p>
-            </div>
+    <h1><b>Contact Us</b></h1>
+    <div class="container">
+      <form id="contact-form">
+        <label for="firstname">First Name</label><input type="text" id="firstname" placeholder="First Name" required>
 
-              <div class="col-sm-7">
-                <div class="row">
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                  </div>
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                  </div>
-                </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                  <div class="col-sm-12 form-group">
-                    <button type="submit">Submit Info!</button>
-                    <button type="reset">Clear Info!</button> /**fix tis button
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>
+        <label for="lastname">Last Name</label><input type="text" id="lastname" placeholder="Last Name" required>
+
+        <label for="luan">Leave us a note!</label>
+        <textarea id="luan" name="luan" placeholder="Start typing" style="height: 200px" required></textarea>
+
+        <input id="submit" type="submit" value="Submit">
+       
+        <!-- <div class="g-recaptcha" data-sitekey="6LcDxKsUAAAAANV-BhXKotM_b--fSyCDyvCL0vBv"></div> -->
+      </form>
+    </div>
+
+    <script>
+      var contactform = document.getElementById('contact-form');
+      contactform.onsubmit = function(event) {
+        event.preventDefault();
+        console.log(contactform.firstname.value);
+        console.log(contactform.lastname.value);
+        console.log(contactform.luan.value);
+        contactform.reset();
+      }
+    </script>
+
+  <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script> 
+  <script>
+  grecaptcha.ready(function() {
+      grecaptcha.execute('6LcDxKsUAAAAANV-BhXKotM_b--fSyCDyvCL0vBv', {action: 'homepage'}).then(function(token) {
+      });
+  });
+  </script>
+  </script>
+  <footer>
+    <h3>© 2019 Products Galore Designed and Developed by Sunnie Ward</h3>
+    <h4>All Rights Reserved</h4>
+  </footer>
 </body>
 </html>

@@ -2,6 +2,24 @@ body, html {
     background-color: rosybrown;
 }
 
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521185496955-15097b20c5fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1547&q=80');
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rosybrown;
+}
+
 h1 {
     text-align: center;
     color: black;
@@ -13,6 +31,7 @@ h2 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
 
 a {
     font-family: 'Courier New', Courier, monospace;
@@ -36,4 +55,46 @@ a {
 
 p {
     font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+/*contact information*/
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+a, article, body, div, figcaption, figure, footer, header, h1, h2, h3, img, 
+input, label, li, nav, p, section, textarea, ul {
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
