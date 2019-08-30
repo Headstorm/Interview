@@ -1,0 +1,34 @@
+h1 {
+  margin: 10px;
+  color: white;
+}
+.contact-form {
+  text-align: center;
+  margin: 5vh auto 5vh;
+  padding: 20px;
+  color: white;
+  background-color: rgba(52, 58, 64, 0.25);
+}
+.submit-button {
+  margin: 15px;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 20px 7px;
+  opacity: 0.5;
+}
+.submit-button:hover {
+  opacity: 1;
+}
+.form-input {
+  width: 60%;
+}
+body {
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
