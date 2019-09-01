@@ -1,9 +1,8 @@
-/* eslint-disable key-spacing */
 const Promise = require('bluebird');
 
 const initOptions = { promiseLib: Promise };
 const pgp = require('pg-promise')(initOptions);
-const debug = require('../server/helpers/loggers')('DATABASE');
+
 const {
   nodeEnv,
   databaseUrl,
@@ -16,7 +15,6 @@ const {
   pgSslMode,
   pgUser,
 } = require('../config');
-// console.log(`__dirname in database index.js:     ${__dirname}`)
 
 
 if (nodeEnv === 'development') {
@@ -31,8 +29,8 @@ if (nodeEnv === 'development') {
     ssl                : pgSslMode,
   };
 
-  debug(pgConfig);
   const db = pgp(pgConfig);
+  console.log(pgConfig);
 
   module.exports = db;
 } else {
