@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg-promise": "^9.1.2"
+  },
+  "engines": {
+    "node": "9.8.0"
+  }
+}

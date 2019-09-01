@@ -1,0 +1,8 @@
+.eslint*
+**/node_modules
+**/bower_components
+**/lib
+**/vendor
+**/*.sublime-project
+**/*.sublime-workspace
+**/*.min.js

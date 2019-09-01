@@ -1,0 +1,62 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Make stuff inaccessible.",
+  "main": "index.js",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0"
+  },
+  "author": "John Hillert",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jehillert/timelockr-server"
+  },
+  "scripts": {
+    "start-dev-server": "cd scripts && ./start-dev-server.sh",
+    "start": "node server/index.js",
+    "dev-server": "nodemon localhost 5000 --ignore node_modules --inspect server",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "run-terminal": "cd scripts && ./run-terminal.sh"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "connect-pg-simple": "^5.0.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "express-ws": "^4.0.0",
+    "moment": "^2.24.0",
+    "password-generator": "^2.1.0",
+    "pbkdf2-password": "^1.2.1",
+    "pg-promise": "^8.6.5",
+    "socket.io": "^2.2.0",
+    "uuid": "^3.3.2",
+    "ws": "^7.0.1"
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "faker": "^4.1.0",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
+  }
+}

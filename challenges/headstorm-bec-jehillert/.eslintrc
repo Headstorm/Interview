@@ -1,0 +1,54 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "settings": {
+      "import/resolver": "webpack"
+    },
+    "rules": {
+      "no-console": "off",
+      "indent": "off",
+      "jsx-quotes": [
+        2,
+        "prefer-single"
+      ],
+      "arrow-parens": "off",
+      "import/extensions": "off",
+      "import/named": "off",
+      "import/no-cycle": "off",
+      "import/no-duplicates": "off",
+      "import/no-extraneous-dependencies": "off",
+      "import/no-named-as-default-member": "off",
+      "import/no-named-as-default": "off",
+      "import/no-self-import": "off",
+      "import/no-unresolved": "off",
+      "import/no-useless-path-segments": "off",
+      "import/order": "off",
+      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react/jsx-filename-extension": "off",
+      "react/jsx-quotes": 0,
+      "template-curly-spacing": "off"
+    }
+}
