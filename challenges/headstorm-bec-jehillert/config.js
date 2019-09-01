@@ -1,0 +1,13 @@
+module.exports.nodeEnv = process.env.NODE_ENV;
+module.exports.apiHost = process.env.API_HOST;
+module.exports.sessionSecret = process.env.SESSION_SECRET;
+module.exports.port = process.env.PORT;
+module.exports.pgMax = process.env.PG_MAX;
+module.exports.pgIdleTimeoutMilliS = process.env.PG_IDLETIMEOUTMILLIS;
+module.exports.pgSslMode = process.env.PGSSLMODE;
+module.exports.pgUser = process.env.PGUSER;
+module.exports.pgPassword = process.env.PGPASSWORD;
+module.exports.pgHost = process.env.PGHOST;
+module.exports.pgPort = process.env.PGPORT;
+module.exports.pgDatabase = process.env.PGDATABASE;
+module.exports.databaseUrl = process.env.DATABASE_URL;
