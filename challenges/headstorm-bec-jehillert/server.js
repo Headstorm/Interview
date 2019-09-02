@@ -45,29 +45,26 @@ app.get('/api/data', function (req, res) {
 });
 
 exports.pgPostNumbersList = (food, quantity, callback) => {
-/*
-  UNORDERED_JSON
-    Terminal:
-      INSERT INTO list_sets (unsorted_json_list) VALUES ('[9053,-1069,7056,-5551,775]');
-    WIP:
-      const unordered_json_list = [9053,-1069,7056,-5551,775];
-      .query('INSERT INTO list_sets (unsorted_json_list) VALUES ($1)', unordered_json_list)
-  UNSORTED_LIST
-    Terminal:
-      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 9053);
-      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, -1069);
-      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 7056);
-      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, -5551);
-      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 775);
-    WIP:
-      const list_set_id = 1;
-      const unsorted_value = __________;
-      params = [list_set_id, unsorted_value];
-      .query('INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES ($1, $2)', params)
-    SORTED_LIST
+  /*
+    UNORDERED_JSON
       Terminal:
+        INSERT INTO list_sets (unsorted_json_list) VALUES ('[9053,-1069,7056,-5551,775]');
       WIP:
-*/
+        const unordered_json_list = [9053,-1069,7056,-5551,775];
+        .query('INSERT INTO list_sets (unsorted_json_list) VALUES ($1)', unordered_json_list)
+    UNSORTED_LIST
+      Terminal:
+        INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 9053);
+        INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, -1069);
+        INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 7056);
+        INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, -5551);
+        INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 775);
+      WIP:
+        const list_set_id = 1;
+        const unsorted_value = __________;
+        params = [list_set_id, unsorted_value];
+        .query('INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES ($1, $2)', params)
+  */
   connection.query('insert into groceries (food, quantity) values (?, ?)', [food, quantity], (error, results) => {
     callback(error, results);
   });
@@ -75,13 +72,18 @@ exports.pgPostNumbersList = (food, quantity, callback) => {
 
 exports.pgGetNumbersList = (callback) => {
   /*
+    CREATE INDEX unsorted_as_sorted_index
+    ON unsorted_list(unsorted_value);
+    DROP INDEX unsorted_as_sorted_index;
+    EXPLAIN SELECT * FROM unsorted_list WHERE unsorted_value = '9053';
+
     NOTE: You should change
       sorted_list_val_id ==> sorted_val_id
       unsorted_list_val_id ==> unsorted_val_id
     GET sorted_list:
-      .query('SELECT * FROM sorted_list LEFT JOIN list_sets ON list_sets.list_set_id = sorted_list.list_set_id WHERE list_sets.list_set_id = $1 ORDER BY sorted_list.sorted_value ASC', list_set_id)
+      .query('SELECT unsorted_value FROM unsorted_list ORDER BY unsorted_value');
     GET unsorted_list:
-      .query('SELECT * FROM unsorted_list LEFT JOIN list_sets ON list_sets.list_set_id = unsorted_list.list_set_id WHERE list_sets.list_set_id = $1 ORDER BY unsorted_list.unsorted_value ASC', list_set_id)
+      .query('SELECT unsorted_value FROM unsorted_list')
   */
   connection.query('SELECT * FROM numbers', (error, results) => {
     console.log(results)
@@ -97,18 +99,4 @@ const server = app.listen(app.get('port'), app.get('host'), () => (
   console.log(`Node app started. Listening on port ${port}`)
 ));
 
-// NOTES
-// In JSON, array values must be of type string, number, object,
-// array, boolean or null.
-
-// GRAVEYARD
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static(path.join(__dirname, '/../client/build')));
-// app.get('/', function(req, res) {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-// router.post('/data', controllers.data.post);
-// router.get('/data', controllers.data.get);
-// app.use('/api/db', router);
-// app.use(`/api/${pgDatabase}`, router);
 
