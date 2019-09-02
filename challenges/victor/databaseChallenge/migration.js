@@ -1,20 +1,20 @@
-const mysql = require("mysql");
+// const mysql = require("mysql");
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "password",
-  database: "headStormClientDB"
-});
+// const connection = mysql.createConnection({
+//   host: "localhost",
+//   port: 3306,
+//   user: "root",
+//   password: "password",
+//   database: "headStormClientDB"
+// });
 
-// assumes new database is created and being used in MySQL *****
+// // assumes new database is created and being used in MySQL *****
 
-connection.connect(function(err) {
-  if (err) throw err;
-  console.log("connected as id " + connection.threadId + "\n");
-  dataMigrate(data);
-});
+// connection.connect(function(err) {
+//   if (err) throw err;
+//   console.log("connected as id " + connection.threadId + "\n");
+//   dataMigrate(data);
+// });
 
 // grab old database data with a find() command
 data = {
