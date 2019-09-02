@@ -12,7 +12,6 @@ const {
   port,
 } = require('./config');
 
-// Note to self: "By default, axios serializes JavaScript objects to JSON."
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -72,14 +71,10 @@ exports.pgPostNumbersList = (food, quantity, callback) => {
 
 exports.pgGetNumbersList = (callback) => {
   /*
-    CREATE INDEX unsorted_as_sorted_index
-    ON unsorted_list(unsorted_value);
-    DROP INDEX unsorted_as_sorted_index;
-    EXPLAIN SELECT * FROM unsorted_list WHERE unsorted_value = '9053';
-
     NOTE: You should change
       sorted_list_val_id ==> sorted_val_id
       unsorted_list_val_id ==> unsorted_val_id
+
     GET sorted_list:
       .query('SELECT unsorted_value FROM unsorted_list ORDER BY unsorted_value');
     GET unsorted_list:

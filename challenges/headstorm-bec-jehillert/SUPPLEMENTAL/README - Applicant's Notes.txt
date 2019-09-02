@@ -5,10 +5,34 @@ PLANNING
 
 NOTES
 ———————————————————————————————————————————————————————————————————————————————
+- "By default, axios serializes JavaScript objects to JSON."
+- "In JSON, array values must be of type string, number, object, array, boolean or null."
 
-REMINDERS
+
+GRAVEYARD
 ———————————————————————————————————————————————————————————————————————————————
+express language:
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(express.static(path.join(__dirname, '/../client/build')));
 
+  app.get('/', function(req, res) {
+      res.sendFile(path.join(__dirname, 'index.html'));
+  });
+
+  router.post('/data', controllers.data.post);
+  router.get('/data', controllers.data.get);
+  app.use('/api/db', router);
+  app.use(`/api/${pgDatabase}`, router);
+
+SQL queries:
+  .query('SELECT * FROM sorted_list LEFT JOIN list_sets ON list_sets.list_set_id = sorted_list.list_set_id WHERE list_sets.list_set_id = $1 ORDER BY sorted_list.sorted_value ASC', list_set_id)
+  .query('SELECT * FROM unsorted_list LEFT JOIN list_sets ON list_sets.list_set_id = unsorted_list.list_set_id WHERE list_sets.list_set_id = $1 ORDER BY unsorted_list.unsorted_value ASC', list_set_id)
+
+  SORTED INDEX (interesting but unnecessary):
+    CREATE INDEX unsorted_as_sorted_index
+    ON unsorted_list(unsorted_value);
+    DROP INDEX unsorted_as_sorted_index;
+    EXPLAIN SELECT * FROM unsorted_list WHERE unsorted_value = '9053';
 
 ENDPOINTS
 ———————————————————————————————————————————————————————————————————————————————
