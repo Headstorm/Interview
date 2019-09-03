@@ -10,9 +10,9 @@
 
 A company has approached you for help in developing their product and establishing an online presence. You have been tasked with quickly creating a web page for them. This page has the following requirements:
 
-* Startup name title
+* Company name title
 
-* Startup logo as icon in browser tab
+* Company logo as icon in browser tab
 
 * Contact us web form that captures contact information
 
@@ -35,7 +35,7 @@ A company has approached you for help in developing their product and establishi
 
   **Part 1**
   
-  The startup client chose to use a NoSQL database in their original system so that they could skip data modeling. The number of users for their system is growing rapidly. To support the new demands the client has chosen to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization.
+  The client chose to use a NoSQL database in their original system so that they could skip data modeling. The number of users for their system is growing rapidly. To support the new demands the client has chosen to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization.
 
 Startup Order NoSQL Database
 
