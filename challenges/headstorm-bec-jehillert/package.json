@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "nodemon localhost 3000 --ignore node_modules --inspect server"
+    "start": "nodemon localhost 3000 --ignore node_modules --inspect server",
+    "create-numbers-list": "cd scripts && node create-numbers-list.js",
+    "test": "cd scripts && ./stop-drop-and-reload-db.sh"
   },
   "dependencies": {
     "bluebird": "^3.5.5",

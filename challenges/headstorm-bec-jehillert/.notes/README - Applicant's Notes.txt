@@ -1,51 +1,33 @@
 TO DO
 ———————————————————————————————————————————————————————————————————————————————
-  Make sure error from bodyparser indicates the correct information.
-
-  X Make sure content of rest api tutorial is not something that is going to change what you thought the assignment was about.
-
   Provide API documentation.  Specifically, instructions on the form the data should be in (e.g., array or object), json, etc.
 
-  Changes to make to variable names:
-    sorted_list_val_id ==> sorted_val_id
-    unsorted_list_val_id ==> unsorted_val_id
-
-QUESTIONS
+REMARKS & FEEDBACK
 ———————————————————————————————————————————————————————————————————————————————
-  Hi Gianna,
+  - If you would like to test the code but you do not use Postgres, I can create the database on my Heroku account, and change the code to query the host url instead of localhost.  It should not take me too long to set up.  Errors should show up on the client size for all circumstances specified in the instructions, but note that some of my customized error messages I was only able to make show up on the server-side console.
 
-  Would it be possible to pass the following questions on to the developers in charge of the Back End Challenge?  Brief answers would be fine (and greatly appreciated)
+  - I did not include formal tests that use a 3rd party library, but did include a few scripts that should make testing the code relatively painless:
 
-  Thanks much,
+    $ npm run create-numbers-list
+      This script creates an array of 500 numbers in a file called 'numbers-list-out.json'. Requirements can be tested by modifying the generated file (e.g., by adding or removing numbers from the file, changing some numbers to words, etc.), or by modifying the script (e.g., changing the 'listLength' variable at the head of the file).
 
-  John
+    $ npm run test
+      This script does the following:
+        - terminates active sessions (which would otherwise prevent the next steps)
+        - wipes the database
+        - creates a new database and tables according to 'scripts/schema.sql'
+        - makes a Post request to populate the database table with the contents of 'numbers-list-out.json' as a list of unsorted numbers.
+        - makes a Get request to retrieve the numbers as a sorted JSON-formatted list.
 
-  -----------------------------------------------
+      $ Testing different requirements:
+        - I may have missed something, but I believe all requirements can be tested by running "npm run create-numbers-list" once, then modifying the generated list file, 'numbers-list-out.json' between different runs of 'npm run test' to produce breaking conditions.
+        - Some times the test script will get stuck at the beginning for about 10 seconds and show some errors. If this happens, just execute the command again and the script will run normally the second time.
 
-  QUESTION 1: Should we store the data as a table row containing a JSON, a table of parsed number values (each number a row), or is there another preferred structure. My [imperfect] understanding is that a table of values is strongly preferred, at least in the context of relational databases.
+  - I added the unicode characters (e.g., '❗') just to try out a new way to distinguish my logs from those generate by node and 3rd party packages. So if it is bad practice, I am happy to delete. For most of this year, I have been using debugJS and chalk for my logging. But the setup involves a little too much overhead for a project this size, which is another reason I tried out the unicode.
 
-  QUESTION 2:  May we store the data in unsorted form, and handle sorting at the retrieval stage?  My understanding is that adding new values to the bottom rows of a table as the values come in, and then handling sorting when the data is needed, is preferred.
-
-  QUESTION 3:  Is the 500 number constraint only applicable to execution of the Post request or is the PATCH request supposed to conform to the same limitation?  In the latter case, should the code delete another member of the list every time a new one is inserted?
-
-  QUESTION 4: Can you clarify what is meant by "a PATCH endpoint at `/data` which inserts a random number into the list in the proper order which will be returned by the above POST api?"  This question ties in to 2nd and 3rd. Is this part of the instructions suggesting that the data should be maintained/stored at the back-end as an ordered list (Q2)?  Is the PATCH supposed to conclude by utilizing some part of the POST route? Also, the POST API suggests the list should stay at 500 members, but the effect of the PATCH would create 501 (Q3).
-
-  // BACKSTORY
-
-
-  QUESTION 1: Should we store the data as a JSON, a table of values, or is there another preferred structure.
-
-  I ask for two reasons. First, I have run into a few Stack Overflow questions where the OP asks about storing a list as a single entry/row in a database table. The question is always met with three or four backend engineers warning that it is bad practice to do so, even if it is possible.
-
-  Storing as a table seems fine to me, except for the second part.  The bonus instructions indicate that the PATCH request should "insert a random number into the list." I may misunderstand, but it seems a PATCH request would be applicable to modifying a json than it would inserting values into a table.  An article I read descries a PATCH request as follows:
-
-    A PATCH request...is used to make changes to part of the resource at a location. That is, it PATCHES the resource — changing its properties... [I]f a PATCH request is made to a non-existent url...it should simply fail without creating a new resource unlike PUT.
-
-  If I store the list in the database as a JSONB, then I think I see how "inserting the number" is changing 'part of the resource at a location'.  But if the list is stored as a table of values, then I am confused, as inserting the value creates a new entry, either by the new value occupying a new spot in memory or by the new value forcing an old one to move to a new spot (unless the 500 limit is enforced here, then I can see how a substitution would count).
-
-  QUESTION 2: Are the instructions requesting that we store the data as a sorted list, or in unsorted form?
-
-  Is storing in unsorted form and then sorting via retrieval query acceptable? My [somewhat unscholarly] understanding of databases is that it is better to add new values to the end of a database table and not worry about moving stuff around.  Then when the data is needed, it can be reorganzied appropriately.
+  - One thing I tried and could not make work was bubbling my personalized errors back to the client console.  An error is returned, but it is Axios's mega-error, with everything possible included.  When I tried to end the response early in my route with a custom error message, Express returned it's own error message:
+    "Error Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"
+  I understand the point of the message, but cannot finding anything in the preceding code that is writing to headers. Still have a bit to learn about express...
 
 INSTRUCTIONS
 ———————————————————————————————————————————————————————————————————————————————
@@ -103,6 +85,15 @@ TESTING QUERIES VIA POSTGRES TERMINAL
 
 GRAVEYARD
 ———————————————————————————————————————————————————————————————————————————————
+
+  // axios.post(url, { list })
+  //   .then(response => console.log(response.data))
+  //   .catch(err => console.log(err));
+  //
+  // axios.get(url)
+  //   .then(response => console.log(response.data))
+  //   .catch(err => console.log(err));
+
   // rejects if 'list' payload is not an array
   function rejectIfNotArray(req, res, next) {
     Promise.resolve().then(() => {

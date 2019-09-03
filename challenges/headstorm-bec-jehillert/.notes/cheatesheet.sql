@@ -59,7 +59,21 @@ THIS WORKED IN THE TERMINAL:
   INSERT INTO unsorted(unsorted_val)
   SELECT * FROM UNNEST (ARRAY[-5149,-1573,8342,-4624...]);
 
-INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST ($1)
+INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST($1)
 INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST($1::numeric[])
 INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST($1::[])
+INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST ARRAY[$1]
 
+
+let strList = String(list).replace(/[|]/gi, '');
+
+
+    text: `INSERT INTO tsd_stream (js) SELECT unnest(string_to_array(left($1, -${delimiter.length}), '${delimiter}')::jsonb[])`,
+
+STRING_TO_ARRAY(string, delimiter, optional_null_string)
+
+list
+const delimiter = ',';
+
+
+INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST(STRING_TO_ARRAY($1, $2))

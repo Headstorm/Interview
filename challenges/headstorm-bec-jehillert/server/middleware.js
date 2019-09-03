@@ -19,28 +19,28 @@ module.exports.validateJSON = function(req, res, next) {
 module.exports.validateAndParseList = function(req, res, next) {
   Promise.resolve().then(() => {
     var { list } = req.body;
-    list = JSON.parse(list);
+    pardedList = JSON.parse(list);
 
     // Verify that request payload is an array (i.e., list);
-    if (!Array.isArray(list)) {
+    if (!Array.isArray(pardedList)) {
       throw new Error(`Request body does not contain a resource designated as 'list' of type 'Array'.`);
     }
-    console.log(`...parsed resource 'list' is an array? OK`);
 
     // Check whether list contains only 500 members
-    if (list.length !== 500) {
-      throw new Error(`Resource 'list[]' should contain 500 members/elements, but has ${list.length} instead.`);
+    if (pardedList.length !== 500) {
+      next(`\n❗❗❗ 'List' should contain 500 members/elements, but has ${pardedList.length} instead.`);
+      // res.status(400).send({ error: `\n❗❗❗ 'List' should contain 500 members/elements, but has ${pardedList.length} instead.` });
+      // throw new Error(`\n❗❗❗ 'List' should contain 500 members/elements, but has ${pardedList.length} instead.`);
     }
-    console.log(`...list contains 500 members? OK`);
 
     // Check that all list members are numbers
-    const numbersOnly = list.every((val) => typeof val === 'number');
+    const numbersOnly = pardedList.every((val) => typeof val === 'number');
     if (!numbersOnly) {
-      throw new Error(`One or more list members are not numbers`);
+      throw new Error(`❗❗❗ One or more list members are not numbers`);
     }
     console.log('...all numeric list members? OK');
 
-    req.body.list = list;
+    req.body.list = pardedList;
 
     next();
   }).catch(next);

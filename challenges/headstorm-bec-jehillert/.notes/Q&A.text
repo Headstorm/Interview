@@ -1,0 +1,92 @@
+-----------------------------------------------------------------------------------------
+  QUESTION 1: Should we store the data as a table row containing a JSON, a table of parsed number values (each number a row), or is there another preferred structure. My [imperfect] understanding is that a table of values is strongly preferred, at least in the context of relational databases.
+
+  ANSWER 1: I would say that having a table of parsed number values would be preferable, your explanation below hits the nail right on the head, it is generally a bad idea to just through a list in one row in a relational db.
+-----------------------------------------------------------------------------------------
+  QUESTION 2:  May we store the data in unsorted form, and handle sorting at the retrieval stage?  My understanding is that adding new values to the bottom rows of a table as the values come in, and then handling sorting when the data is needed, is preferred.
+
+  ANSWER 2: Your assumption makes sense to me, and using a relational DB with each number in a row would make getting the sorted results back easy. Go ahead and store it unsorted.
+-----------------------------------------------------------------------------------------
+  QUESTION 3:  Is the 500 number constraint only applicable to execution of the Post request or is the PATCH request supposed to conform to the same limitation?  In the latter case, should the code delete another member of the list every time a new one is inserted?
+
+  QUESTION 4: Can you clarify what is meant by "a PATCH endpoint at `/data` which inserts a random number into the list in the proper order which will be returned by the above POST api?"  This question ties in to 2nd and 3rd. Is this part of the instructions suggesting that the data should be maintained/stored at the back-end as an ordered list (Q2)?  Is the PATCH supposed to conclude by utilizing some part of the POST route? Also, the POST API suggests the list should stay at 500 members, but the effect of the PATCH would create 501 (Q3).
+
+  ANSWER 3-4: In regards to Q3/Q4 I think that it would be acceptable to have the POST be restricted to 500 at a time, and then allow the user to add one value at a time with the PATCH request. I think that then the GET should return ALL the numbers in the db sorted from lowest to highest, even if there are more than 500.
+
+  I think that this is probably an error in how we wrote the question, upon rereading, the PATCH part of the instruction does seem to conflict with the rules for the other two endpoints. Nice catch!
+-----------------------------------------------------------------------------------------
+  In challenges/headstorm-bec-jehillert/.notes/README - Applicant's Notes.txt:
+
+  > +      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, -1069);
+    +      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 7056);
+    +      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, -5551);
+    +      INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES (1, 775);
+    +
+    +      const list_set_id = 1;
+    +      const unsorted_value = __________;
+    +      params = [list_set_id, unsorted_value];
+    +      db.query('INSERT INTO unsorted_list (list_set_id, unsorted_value) VALUES ($1, $2)', params)
+    +
+
+    +  GET QUERY - Retrieve numbers as ordered list
+    +      db.query('SELECT unsorted_value FROM unsorted_list ORDER BY unsorted_value');
+    +
+    +  GET QUERY - Retrieve numbers as unordered list
+    +      db.query('SELECT unsorted_value FROM unsorted_list')
+    +
+
+  All these queries look good to me!
+-----------------------------------------------------------------------------------------
+  In challenges/headstorm-bec-jehillert/server/middleware.js:
+  > +// Parses json requests only; returns error if invalid json
+  +module.exports.validateJSON = function(req, res, next) {
+  +  // eslint-disable-next-line consistent-return
+  +  express.json('strict'/* consider only arrays/objects */)(req, res, err => {
+  +    if (err) {
+  +      console.error(err);
+  +      return res.sendStatus(400); // Bad request
+  +    }
+  +
+  +    console.log('...req.body valid JSON?  OK');
+  +    next();
+  +  });
+  +}
+  +
+  +// rejects if 'list' payload is not an array
+  +module.exports.validateAndParseList = function(req, res, next) {
+
+  I like this error handler, is there a reason you left the console.log's in here?
+———————————————————————————————————————————————————————————————————————————————
+  Hi Gianna,
+
+  Would it be possible to pass the following questions on to the developers in charge of the Back End Challenge?  Brief answers would be fine (and greatly appreciated)
+
+  Thanks much,
+
+  John
+  -----------------------------------------------
+
+  QUESTION 1: Should we store the data as a table row containing a JSON, a table of parsed number values (each number a row), or is there another preferred structure. My [imperfect] understanding is that a table of values is strongly preferred, at least in the context of relational databases.
+
+  QUESTION 2:  May we store the data in unsorted form, and handle sorting at the retrieval stage?  My understanding is that adding new values to the bottom rows of a table as the values come in, and then handling sorting when the data is needed, is preferred.
+
+  QUESTION 3:  Is the 500 number constraint only applicable to execution of the Post request or is the PATCH request supposed to conform to the same limitation?  In the latter case, should the code delete another member of the list every time a new one is inserted?
+
+  QUESTION 4: Can you clarify what is meant by "a PATCH endpoint at `/data` which inserts a random number into the list in the proper order which will be returned by the above POST api?"  This question ties in to 2nd and 3rd. Is this part of the instructions suggesting that the data should be maintained/stored at the back-end as an ordered list (Q2)?  Is the PATCH supposed to conclude by utilizing some part of the POST route? Also, the POST API suggests the list should stay at 500 members, but the effect of the PATCH would create 501 (Q3).
+
+  // BACKSTORY
+
+
+  QUESTION 1: Should we store the data as a JSON, a table of values, or is there another preferred structure.
+
+  I ask for two reasons. First, I have run into a few Stack Overflow questions where the OP asks about storing a list as a single entry/row in a database table. The question is always met with three or four backend engineers warning that it is bad practice to do so, even if it is possible.
+
+  Storing as a table seems fine to me, except for the second part.  The bonus instructions indicate that the PATCH request should "insert a random number into the list." I may misunderstand, but it seems a PATCH request would be applicable to modifying a json than it would inserting values into a table.  An article I read descries a PATCH request as follows:
+
+    A PATCH request...is used to make changes to part of the resource at a location. That is, it PATCHES the resource — changing its properties... [I]f a PATCH request is made to a non-existent url...it should simply fail without creating a new resource unlike PUT.
+
+  If I store the list in the database as a JSONB, then I think I see how "inserting the number" is changing 'part of the resource at a location'.  But if the list is stored as a table of values, then I am confused, as inserting the value creates a new entry, either by the new value occupying a new spot in memory or by the new value forcing an old one to move to a new spot (unless the 500 limit is enforced here, then I can see how a substitution would count).
+
+  QUESTION 2: Are the instructions requesting that we store the data as a sorted list, or in unsorted form?
+
+  Is storing in unsorted form and then sorting via retrieval query acceptable? My [somewhat unscholarly] understanding of databases is that it is better to add new values to the end of a database table and not worry about moving stuff around.  Then when the data is needed, it can be reorganzied appropriately.

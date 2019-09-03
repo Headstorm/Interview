@@ -18,6 +18,8 @@ module.exports.tableOfUnsortedListValues = {
       .query('SELECT unsorted_val FROM unsorted ORDER BY unsorted_val')
       .catch(err => console.log(err))
   }
+
+  // addNumberValue: () => {}
 }
 
 // queries.data.postListAsUnparsedJSON = () => db
