@@ -4,23 +4,23 @@
 -- DESCRIBE TABLE
 \dt json_lists;
 \dt sorted_list;
-\dt unsorted_list;
+\dt unsorted;
 
 -- DESCRIBE TABLE (in detail)
 \d+ json_lists;
 \d+ sorted_list;
-\d+ unsorted_list;
+\d+ unsorted;
 
 -- DESCRIBE ALL TABLES (\t general; \+ detailed)
-\d+ json_lists; \d+ sorted_list; \d+ unsorted_list;
-\dt json_lists; \dt sorted_list; \dt unsorted_list;
+\d+ json_lists; \d+ sorted_list; \d+ unsorted;
+\dt json_lists; \dt sorted_list; \dt unsorted;
 -- ———————————————————————————————————————————————————————————————————————————————
 -- SHOW TABLES
 SELECT * FROM json_lists;
 SELECT * FROM sorted_list;
-SELECT * FROM unsorted_list;
+SELECT * FROM unsorted;
 
-SELECT * FROM json_lists; SELECT * FROM sorted_list; SELECT * FROM unsorted_list;
+SELECT * FROM json_lists; SELECT * FROM sorted_list; SELECT * FROM unsorted;
 
 -- INSERTING ARRAY
 UPDATE test t
@@ -30,10 +30,10 @@ WHERE  t.column1 = a.column1;
 
 -- ———————————————————————————————————————————————————————————————————————————————
 
-UPDATE unsorted_list SET column2 = (ARRAY[2,3,5,23,4])[column1];
-UPDATE unsorted_list SET unsorted_element_value = (ARRAY[2,3,5,23,4])[unsorted_element_id];
+UPDATE unsorted SET column2 = (ARRAY[2,3,5,23,4])[column1];
+UPDATE unsorted SET unsorted_val = (ARRAY[2,3,5,23,4])[unsorted_id];
 
-SELECT * FROM unsorted_list;
+SELECT * FROM unsorted;
 
 
 UPDATE integer_tbl t
@@ -47,9 +47,7 @@ CREATE TABLE IF NOT EXISTS integer_tbl (
 );
 
 
-
-
-INSERT INTO unsorted_list VALUES
+INSERT INTO unsorted VALUES
 ———————————————————————————————————————————————————————————————————————————————
 INSERT INTO table(column1,column2,...)
 SELECT column1,column2,...
@@ -57,14 +55,11 @@ FROM another_table
 WHERE condition;
 ———————————————————————————————————————————————————————————————————————————————
 
+THIS WORKED IN THE TERMINAL:
+  INSERT INTO unsorted(unsorted_val)
+  SELECT * FROM UNNEST (ARRAY[-5149,-1573,8342,-4624...]);
 
+INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST ($1)
+INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST($1::numeric[])
+INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST($1::[])
 
-
-
-
-
-INSERT INTO unsorted_list(unsorted_element_value)
-SELECT * FROM UNNEST (ARRAY[-5149,-1573,8342,-4624...]);
-
-INSERT INTO unsorted_list(unsorted_element_value)
-SELECT * FROM UNNEST ($1);

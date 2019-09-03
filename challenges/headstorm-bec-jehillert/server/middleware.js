@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-const express = require('./index.js');
+const express = require('express');
 
 // Parses json requests only; returns error if invalid json
 module.exports.validateJSON = function(req, res, next) {
@@ -16,7 +16,7 @@ module.exports.validateJSON = function(req, res, next) {
 }
 
 // rejects if 'list' payload is not an array
-module.exports.validateList = function(req, res, next) {
+module.exports.validateAndParseList = function(req, res, next) {
   Promise.resolve().then(() => {
     var { list } = req.body;
     list = JSON.parse(list);
@@ -39,6 +39,8 @@ module.exports.validateList = function(req, res, next) {
       throw new Error(`One or more list members are not numbers`);
     }
     console.log('...all numeric list members? OK');
+
+    req.body.list = list;
 
     next();
   }).catch(next);

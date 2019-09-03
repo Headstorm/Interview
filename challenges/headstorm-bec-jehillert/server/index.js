@@ -20,5 +20,3 @@ app.use(`/api/${pgDatabase}/data`, router); // heroku
 app.listen(app.get('port'), app.get('host'), () => (
   console.log(`Node app started. Listening on port ${port}`)
 ));
-
-module.exports = express;
