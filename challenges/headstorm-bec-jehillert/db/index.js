@@ -1,3 +1,4 @@
+/* eslint-disable key-spacing */
 const Promise = require('bluebird');
 
 const initOptions = { promiseLib: Promise };
@@ -16,7 +17,6 @@ const {
   pgUser,
 } = require('../config');
 
-
 if (nodeEnv === 'development') {
   const pgConfig = {
     user               : pgUser,
@@ -30,7 +30,7 @@ if (nodeEnv === 'development') {
   };
 
   const db = pgp(pgConfig);
-  console.log(pgConfig);
+  // console.log(pgConfig);
 
   module.exports = db;
 } else {

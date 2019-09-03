@@ -1,5 +1,4 @@
 {
-    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "es6": true,
@@ -19,10 +18,6 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "react-hooks"
-    ],
     "settings": {
       "import/resolver": "webpack"
     },
@@ -45,10 +40,6 @@
       "import/no-unresolved": "off",
       "import/no-useless-path-segments": "off",
       "import/order": "off",
-      "react-hooks/exhaustive-deps": "warn",
-      "react-hooks/rules-of-hooks": "error",
-      "react/jsx-filename-extension": "off",
-      "react/jsx-quotes": 0,
       "template-curly-spacing": "off"
     }
 }
