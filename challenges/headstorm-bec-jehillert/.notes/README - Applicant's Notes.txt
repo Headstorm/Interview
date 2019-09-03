@@ -2,6 +2,8 @@ TO DO
 ———————————————————————————————————————————————————————————————————————————————
   Provide API documentation.  Specifically, instructions on the form the data should be in (e.g., array or object), json, etc.
 
+  Figure out why square brackets in GET response are removed in response.body received by client.
+
 REMARKS & FEEDBACK
 ———————————————————————————————————————————————————————————————————————————————
   - If you would like to test the code but you do not use Postgres, I can create the database on my Heroku account, and change the code to query the host url instead of localhost.  It should not take me too long to set up.  Errors should show up on the client size for all circumstances specified in the instructions, but note that some of my customized error messages I was only able to make show up on the server-side console.

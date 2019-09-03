@@ -30,8 +30,8 @@ router.get('/', (req, res) => queries.tableOfUnsortedListValues
       return Number(val.unsorted_val);
     });
     const numListJSON = JSON.stringify(numListArr);
-    console.log('numListJSON:\n', numListJSON);
-
+    // const numListJSON = '[' + JSON.stringify(numListArr) + ']';
+    // console.log(numListJSON)
     return numListJSON;
   })
   .then(results => res.send(results))

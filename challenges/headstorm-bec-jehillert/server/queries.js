@@ -1,25 +1,26 @@
 const db = require('../db');
 
 module.exports.tableOfUnsortedListValues = {
+  // re POST request
   post: list => {
-    console.log('Insert list...');
-
     let strList = String(list)
     const delimiter = ',';
-
     return db
       .query('INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST(STRING_TO_ARRAY($1, $2)::numeric[])', [strList, delimiter])
       .catch(err => console.log(err))
   },
 
+  // re GET request
   getSorted: () => {
-    console.log('Getting and sorting unsorted list...');
     return db
       .query('SELECT unsorted_val FROM unsorted ORDER BY unsorted_val')
       .catch(err => console.log(err))
   }
 
-  // addNumberValue: () => {}
+  // re PATCH request
+//   addNumberValue: () => {
+//
+//   },
 }
 
 // queries.data.postListAsUnparsedJSON = () => db
