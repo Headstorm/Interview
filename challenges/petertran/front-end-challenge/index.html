@@ -4,19 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="./favicon.ico" type="icon">
+  <link rel="shortcut icon" href="./favicon.ico?v=1.0" type="image/x-icon">
   <title>Awesome Company</title>
 </head>
 <body>
-  <header><nav><span>Logo</span><ul><li><button >contact us</button></li></ul></nav></header>
+  <header>
+    <nav>
+      <h1>Logo</h1>
+      <ul>
+        <li><button>contact us</button></li>
+      </ul>
+    </nav>
+  </header>
   <main>
     <form action="" id='contact'>
-      <legend>Contact Us</legend>
-      <label>First Name</label><input id='first-name' type='text' />
-      <label>Last Name</label><input id='last-name' type='text' />
-      <label>Email</label><input id='email' type='email' />
-      <label>Phone</label><input id='phone' type='tel'/>
-      <button type="submit">Submit</button>
+      <fieldset>
+        <legend>Contact Us</legend>
+        <div>
+          <label>First Name</label>
+          <input id='first-name' type='text' />
+        </div>
+
+        <div>
+          <label>Last Name</label>
+          <input id='last-name' type='text' />
+        </div>
+
+        <div>
+          <label>Email</label>
+          <input id='email' type='email' />
+        </div>
+
+        <div>
+          <label>Phone</label>
+          <input id='phone' type='tel'/>
+        </div>
+
+        <button type="submit">Submit</button>
+      </fieldset>
     </form>
   </main>
   <footer></footer>
