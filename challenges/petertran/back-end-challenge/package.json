@@ -1,0 +1,15 @@
+{
+  "name": "back-end-challenge",
+  "version": "1.0.0",
+  "description": "Back-end challenege",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Peter Tran",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
