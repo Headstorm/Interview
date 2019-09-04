@@ -2,6 +2,9 @@
 # Created by https://www.gitignore.io/api/java,scala,kotlin,gradle
 # Edit at https://www.gitignore.io/?templates=java,scala,kotlin,gradle
 
+### macOS ###
+.DS_Store
+
 ### Java ###
 # Compiled class file
 *.class
