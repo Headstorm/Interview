@@ -1,24 +1,39 @@
 * {
   box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background: 
+    linear-gradient(
+      135deg,
+      rgb(118, 222, 154),
+      rgb(118, 222, 201),
+      rgb(118, 205, 222)
+    )
+    100% 100%
+    fixed;
 }
+
 a:hover,
 button:hover {
   cursor: pointer;
 }
 
-.hidden{
-  display: none;
+legend,
+h1{
+  font-family: 'Rubik', sans-serif;
 }
 
 .top-nav{
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
+  box-shadow: 0 1px 4px 2px rgb(0,0,0, .9);
+  background-color: black;
 }
 
 .nav-brand-logo{
@@ -27,22 +42,8 @@ button:hover {
 
 .nav-brand-title{
   margin: 0 10px;
-}
-
-.nav-links-container{
-  margin-left: auto;
-}
-
-.nav-links{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
+  font-size: 34px;
+  color: rgb(255, 240, 240);
 }
 
 main{
@@ -52,13 +53,15 @@ main{
 
 #contact{
   max-width: 500px;
-  padding: 10px;
-  border: 1px solid grey;
+  padding: 20px 10px 10px;
   margin: 40px 20px 20px;
+  background-color: rgb(243, 231, 177);
+  border-radius: 12px;
 }
 
 .contact-legend{
   text-align: center;
+  font-size: 28px;
 }
 
 fieldset{
@@ -76,9 +79,24 @@ fieldset{
   padding: 10px;
 }
 
+.form-grp input,
+.form-grp label{
+  font-size: 20px;
+}
+
+.form-grp label{
+  display: inline-block;
+  margin: 0 0 5px 8px;
+}
+
+.form-grp input{
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
 
 .form-grp{
-  flex: 1 1 180px;
+  flex: 1 0 190px;
 }
 
 .form-grp input{
@@ -93,10 +111,5 @@ fieldset{
 @media screen and (min-width: 400px) {
   .nav-toggle{
     display: none;
-  }
-
-  .nav-links{
-    position: relative;
-    flex-direction: row;
   }
 }
