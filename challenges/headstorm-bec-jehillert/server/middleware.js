@@ -21,18 +21,18 @@ module.exports.validateAndParseList = (req, res, next) => {
 
     // Verify that request payload is an array (i.e., list);
     if (!Array.isArray(list)) {
-      throw new Error(`❗❗❗ Request body does not contain a resource designated as 'list' of type 'Array'.`);
+      throw new Error(`\x1b[91mRequest body does not contain a resource designated as 'list' of type 'Array'.\x1b[39m`);
     }
 
     // Check whether list contains only 500 members
     if (list.length !== 500) {
-      next(`\n❗❗❗ 'List' should contain 500 members/elements, but has ${list.length} instead.`);
+      next(`\n\x1b[91m'List' should contain 500 members/elements, but has ${list.length} instead.\x1b[39m`);
     }
 
     // Check that all list members are numbers
     const numbersOnly = list.every((val) => typeof val === 'number');
     if (!numbersOnly) {
-      throw new Error(`❗❗❗ One or more list members are not numbers`);
+      throw new Error(`\x1b[91mOne or more list members are not numbers\x1b[39m`);
     }
 
     req.body.list = list;

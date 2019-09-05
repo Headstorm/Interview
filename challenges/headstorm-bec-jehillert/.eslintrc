@@ -29,6 +29,7 @@
         "prefer-single"
       ],
       "arrow-parens": "off",
+      "no-confusing-arrow": "off",
       "import/extensions": "off",
       "import/named": "off",
       "import/no-cycle": "off",

@@ -25,8 +25,6 @@ REMARKS & FEEDBACK
         - I may have missed something, but I believe all requirements can be tested by running "npm run create-numbers-list" once, then modifying the generated list file, 'numbers-list.json' between different runs of 'npm run test' to produce breaking conditions.
         - Some times the test script will get stuck at the beginning for about 10 seconds and show some errors. If this happens, just execute the command again and the script will run normally the second time.
 
-  - I added the unicode characters (e.g., '❗') just to try out a new way to distinguish my logs from those generate by node and 3rd party packages. So if it is bad practice, I am happy to delete. For most of this year, I have been using debugJS and chalk for my logging. But the setup involves a little too much overhead for a project this size, which is another reason I tried out the unicode.
-
   - One thing I tried and could not make work was bubbling my personalized errors back to the client console.  An error is returned, but it is Axios's mega-error, with everything possible included.  When I tried to end the response early in my route with a custom error message, Express returned it's own error message:
     "Error Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"
   I understand the point of the message, but cannot finding anything in the preceding code that is writing to headers. Still have a bit to learn about express...
@@ -123,8 +121,8 @@ GRAVEYARD
     }
   }
 
-  const isNumber = (val) => {
-    return typeof val === 'number';
+  const isNumber = (randomValue) => {
+    return typeof randomValue === 'number';
   }
   list.every(isNumber);
 
