@@ -5,20 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="./favicon.ico?v=1.0" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Awesome Company</title>
 </head>
 <body>
   <header>
     <nav class="top-nav">
-      <img class="nav-brand-logo" src='./company.png' />
-      <h1 class="nav-brand-title">Awesome Company</h1>
-      <div class='nav-links-container'>
-        <button class="nav-toggle"><i class="fas fa-bars"></i></button>
-        <ul class="nav-links">
-          <li><a>Contact</a></li>
-        </ul>
-      </div>
+        <img class="nav-brand-logo" src='./company.png' />
+        <h1 class="nav-brand-title">Awesome Company</h1>
     </nav>
   </header>
   <main>
@@ -27,23 +23,40 @@
         <legend class='contact-legend'>Contact Us</legend>
         <div class='input-ctnr'>
           <div class='form-grp'>
-            <label>First Name</label><br>
-            <input id='first-name' type='text' />
+            <label class="contact-label">First Name</label><br>
+            <input 
+              id='first-name' 
+              name='first-name' 
+              type='text' 
+              placeholder="Jane"/>
           </div>
 
           <div class='form-grp'>
-            <label>Last Name</label><br>
-            <input id='last-name' type='text' />
+            <label class="contact-label">Last Name</label><br>
+            <input 
+              id='last-name' 
+              name='last-name' 
+              type='text' 
+              placeholder="Doe" />
           </div>
 
           <div class='form-grp'>
-            <label>Email</label><br>
-            <input id='email' type='email' />
+            <label class="contact-label">Email</label><br>
+            <input 
+              id='email' 
+              name='email' 
+              type='email' 
+              placeholder="name@domain" />
           </div>
 
           <div class='form-grp'>
-            <label>Phone</label><br>
-            <input id='phone' type='tel'/>
+            <label class="contact-label">Phone</label><br>
+            <input 
+              id='phone' 
+              name='phone' 
+              type='tel' 
+              placeholder="8015558609" 
+              pattern="[0-9]{10}"/>
           </div>
 
           <div class="form-submit-ctnr">
