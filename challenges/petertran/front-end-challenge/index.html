@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="./favicon.ico?v=1.0" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
   <title>Awesome Company</title>
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Logo</h1>
-      <ul>
-        <li><button>contact us</button></li>
-      </ul>
+    <nav class="top-nav">
+      <h1 class="nav-brand">Awesome Company</h1>
+      <div class='nav-links-container'>
+        <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+          <li><a>contact us</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
@@ -41,10 +45,13 @@
         </div>
 
         <button type="submit">Submit</button>
+
+        <div class='error'></div>
       </fieldset>
     </form>
   </main>
   <footer></footer>
+  <script src="https://kit.fontawesome.com/f810e98638.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?render=6LfltbYUAAAAALTUQnldvI439ba0lyamcx_0Mi9r"></script>
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
