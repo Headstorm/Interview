@@ -1,3 +1,5 @@
+# Table Layout
+
 | Field | Type | Null | KEY |
 |  ---  | ---  |  ---  |  ---  |
 | Record_ID | int | Not Null | PK |
@@ -8,4 +10,8 @@
 | Address | nvarchar(255) |   |   |
 | BasicWidgetOrder | int |   |   |
 | AdvancedWidgetOrder |  int  |   |   |
-ProtectionPlan | bit |   |   |
+| ProtectionPlan | bit |   |   |
+
+# Smaple Model
+
+| Record_ID| Name | CellPhone | WorkPhone | Email | Address | BasicWidgetOrder | AdvancedWidgetOrder | ProtectionPlan |
