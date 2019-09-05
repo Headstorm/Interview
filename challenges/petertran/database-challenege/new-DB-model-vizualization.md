@@ -1,4 +1,4 @@
-# Table Layout
+# Database Model Visualization
 
 | Field | Type | Null | KEY |
 |  ---  | ---  |  ---  |  ---  |
@@ -11,7 +11,3 @@
 | BasicWidgetOrder | int |   |   |
 | AdvancedWidgetOrder |  int  |   |   |
 | ProtectionPlan | bit |   |   |
-
-# Smaple Model
-
-| Record_ID| Name | CellPhone | WorkPhone | Email | Address | BasicWidgetOrder | AdvancedWidgetOrder | ProtectionPlan |
