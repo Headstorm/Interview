@@ -37,12 +37,12 @@ h1{
 }
 
 .nav-brand-logo{
-  width: 40px;
+  width: 24px;
 }
 
 .nav-brand-title{
   margin: 0 10px;
-  font-size: 34px;
+  font-size: 24px;
   color: rgb(255, 240, 240);
 }
 
@@ -57,6 +57,7 @@ main{
   margin: 40px 20px 20px;
   background-color: rgb(243, 231, 177);
   border-radius: 12px;
+  box-shadow: 0 0 6px 2px rgba(0,0,0,0.4);
 }
 
 .contact-legend{
@@ -103,6 +104,11 @@ fieldset{
 
 .form-grp input{
   width: 100%;
+  background-color: azure;
+}
+
+.form-grp input::placeholder{
+  color: rgb(180, 180, 180);
 }
 
 .form-submit-ctnr{
@@ -125,8 +131,24 @@ fieldset{
   font-size: 18px;
 }
 
-@media screen and (min-width: 400px) {
-  .nav-toggle{
-    display: none;
+@media screen and (min-width: 350px) {
+  .nav-brand-logo{
+    width: 30px;
+  }
+
+  .nav-brand-title{
+    font-size: 28px;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 416px) {
+  .nav-brand-logo{
+    width: 40px;
+  }
+
+  .nav-brand-title{
+    font-size: 34px;
+    display: inherit;
   }
 }
