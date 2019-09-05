@@ -18,11 +18,15 @@ button:hover {
 .top-nav{
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
-.nav-brand{
-  margin: 0;
+.nav-brand-logo{
+  width: 40px;
+}
+
+.nav-brand-title{
+  margin: 0 10px;
 }
 
 .nav-links-container{
@@ -38,6 +42,51 @@ button:hover {
   position: absolute;
   left: 0;
   width: 100%;
+  text-align: center;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+#contact{
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid grey;
+  margin: 40px 20px 20px;
+}
+
+.contact-legend{
+  text-align: center;
+}
+
+fieldset{
+  border: none;
+  padding: 0;
+}
+
+.input-ctnr{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.form-submit-ctnr,
+.form-grp{
+  padding: 10px;
+}
+
+
+.form-grp{
+  flex: 1 1 180px;
+}
+
+.form-grp input{
+  width: 100%;
+}
+
+.form-submit-ctnr{
+  flex: 1 0 100%;
   text-align: center;
 }
 
