@@ -79,6 +79,7 @@ fieldset{
   padding: 10px;
 }
 
+.form-submit,
 .form-grp input,
 .form-grp label{
   font-size: 20px;
@@ -89,6 +90,7 @@ fieldset{
   margin: 0 0 5px 8px;
 }
 
+.form-submit,
 .form-grp input{
   border: none;
   border-radius: 5px;
@@ -96,7 +98,7 @@ fieldset{
 }
 
 .form-grp{
-  flex: 1 0 190px;
+  flex: 1 0 200px;
 }
 
 .form-grp input{
@@ -106,6 +108,21 @@ fieldset{
 .form-submit-ctnr{
   flex: 1 0 100%;
   text-align: center;
+}
+
+.form-submit{
+  background-color: rgb(102, 186, 237);
+  color:black;
+}
+
+.form-submit:hover{
+  background-color: rgb(151, 215, 255);
+  color:black;
+}
+
+.error{
+  color: red;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 400px) {
