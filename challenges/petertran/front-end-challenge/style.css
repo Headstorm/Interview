@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+.top-nav{
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-brand{
+  margin: 0;
+}
+
+.nav-links-container{
+  margin-left: auto;
+}
+
+.nav-links{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+  .nav-toggle{
+    display: none;
+  }
+
+  .nav-links{
+    position: relative;
+    flex-direction: row;
+  }
+}
