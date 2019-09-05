@@ -33,8 +33,12 @@ function onSuccess() {
   contactData = {};
 }
 
-function onErr({responseJSON: {message}}) {
-  $('.error').html(message);
+function onErr(error) {
+  if (!error.responseJSON) {
+    return $('.error').html('Something went wrong :(');
+  }
+
+  $('.error').html(error.responseJSON.message);
 }
 
 $(submitForm());
