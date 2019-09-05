@@ -2,7 +2,7 @@
 const express = require('express');
 
 // Parses json requests only; returns error if invalid json
-module.exports.validateJSON = function(req, res, next) {
+module.exports.validateJSON = (req, res, next) => {
   // eslint-disable-next-line consistent-return
   express.json('strict'/* consider only arrays/objects */)(req, res, err => {
     if (err) {
@@ -11,12 +11,12 @@ module.exports.validateJSON = function(req, res, next) {
     }
     next();
   });
-}
+};
 
 // rejects if 'list' payload is not: an array; having 500 memebers; each member being a number.
-module.exports.validateAndParseList = function(req, res, next) {
+module.exports.validateAndParseList = (req, res, next) => {
   Promise.resolve().then(() => {
-    var { list } = req.body;
+    let { list } = req.body;
     list = JSON.parse(list);
 
     // Verify that request payload is an array (i.e., list);
@@ -39,7 +39,7 @@ module.exports.validateAndParseList = function(req, res, next) {
 
     next();
   }).catch(next);
-}
+};
 
 /*
   MIDDLEWARE ORDER

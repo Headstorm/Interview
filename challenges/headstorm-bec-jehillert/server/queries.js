@@ -1,12 +1,16 @@
 const db = require('../db');
 
+
+// const ids = [1, 2, 3];
+// db.any('SELECT * FROM table WHERE id IN ($1:csv)', [ids])
+//=> SELECT * FROM table WHERE id IN (1,2,3)
+
 module.exports.tableOfUnsortedListValues = {
   // re POST request
   post: list => {
-    let strList = String(list)
-    const delimiter = ',';
+    console.log(Array.isArray(list));
     return db
-      .query('INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST(STRING_TO_ARRAY($1, $2)::numeric[])', [strList, delimiter])
+      .query('INSERT INTO unsorted(unsorted_val) SELECT * FROM UNNEST(ARRAY[$1:csv])', [list])
       .catch(err => console.log(err))
   },
 
@@ -34,4 +38,3 @@ module.exports.tableOfUnsortedListValues = {
 /* queries.data.patch = () => db
   .query('INSERT_QUERY_HERE', params)
   .catch(err => console.log(err)); */
-

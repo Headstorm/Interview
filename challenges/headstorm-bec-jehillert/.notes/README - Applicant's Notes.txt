@@ -11,18 +11,18 @@ REMARKS & FEEDBACK
   - I did not include formal tests that use a 3rd party library, but did include a few scripts that should make testing the code relatively painless:
 
     $ npm run create-numbers-list
-      This script creates an array of 500 numbers in a file called 'numbers-list-out.json'. Requirements can be tested by modifying the generated file (e.g., by adding or removing numbers from the file, changing some numbers to words, etc.), or by modifying the script (e.g., changing the 'listLength' variable at the head of the file).
+      This script creates an array of 500 numbers in a file called 'numbers-list.json'. Requirements can be tested by modifying the generated file (e.g., by adding or removing numbers from the file, changing some numbers to words, etc.), or by modifying the script (e.g., changing the 'listLength' variable at the head of the file).
 
     $ npm run test
       This script does the following:
         - terminates active sessions (which would otherwise prevent the next steps)
         - wipes the database
         - creates a new database and tables according to 'scripts/schema.sql'
-        - makes a Post request to populate the database table with the contents of 'numbers-list-out.json' as a list of unsorted numbers.
+        - makes a Post request to populate the database table with the contents of 'numbers-list.json' as a list of unsorted numbers.
         - makes a Get request to retrieve the numbers as a sorted JSON-formatted list.
 
       $ Testing different requirements:
-        - I may have missed something, but I believe all requirements can be tested by running "npm run create-numbers-list" once, then modifying the generated list file, 'numbers-list-out.json' between different runs of 'npm run test' to produce breaking conditions.
+        - I may have missed something, but I believe all requirements can be tested by running "npm run create-numbers-list" once, then modifying the generated list file, 'numbers-list.json' between different runs of 'npm run test' to produce breaking conditions.
         - Some times the test script will get stuck at the beginning for about 10 seconds and show some errors. If this happens, just execute the command again and the script will run normally the second time.
 
   - I added the unicode characters (e.g., '❗') just to try out a new way to distinguish my logs from those generate by node and 3rd party packages. So if it is bad practice, I am happy to delete. For most of this year, I have been using debugJS and chalk for my logging. But the setup involves a little too much overhead for a project this size, which is another reason I tried out the unicode.
