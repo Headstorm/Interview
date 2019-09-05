@@ -1,6 +1,12 @@
+'use strict';
+require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
 const fetch = require('node-fetch');
 const cors = require('cors');
+const {validate} = require('./validate');
+const {Numbers} = require('./models');
+const {PORT, RECAPTCHA_SECRET, DB_URL} = require('./config');
 
 const app = express();
 
@@ -13,9 +19,8 @@ app.get('/', (req, res) => {
 
 // this endpoint is for verifying front-end reCaptcha
 app.get('/grecaptcha', async (req, res) => {
-  
   const url = 'https://www.google.com/recaptcha/api/siteverify';
-  const secret = '6LfltbYUAAAAAMD8Lb-S58aGgohZuOKRGBsqpztI';
+  const secret = RECAPTCHA_SECRET;
 
   let query = req.url.split('?')[1] + '&secret=' + secret;
 
@@ -27,7 +32,7 @@ app.get('/grecaptcha', async (req, res) => {
   }
 
   try {
-    const resp = await fetch(url + '?' + query);
+    const resp = await fetch(url + '?' + query, options);
     const code = resp.status;
     const data = await resp.json();
 
@@ -38,38 +43,37 @@ app.get('/grecaptcha', async (req, res) => {
     return res.status(code).json({data});
 
   } catch (error) {
-
     return res.status(500).json({message: 'Something went wrong...'});
   }
 });
 
 
-let numbers;
+
 
 // back-end challenege
-app.post('/data', (req, res) => {
-  const arr = req.body;
-  const message = 'Payload must a be list of EXACTLY 500 numbers!';
+app.post('/data', validate, async (req, res, next) => {
+  const numbers = req.body;
 
-  if (!Array.isArray(arr)) {
-    return res.status(400).json({message});
+  try {
+    const result = await Numbers.create({numbers});
+    return res.status(200).json(result.serialize());
+
+  } catch (error) {
+    console.log('ERROR:\n', error);
+    return res.status(500).json({message: error.message});
   }
-
-  for (let item of arr) {
-    if (typeof item !== 'number') {
-      return res.status(400).json({message});
-    }
-  }
-
-  if (arr.length !== 500) {
-    return res.status(400).json({message});
-  }
-
-  numbers = arr;
-
-  res.status(200).json('ok');
 });
 
-app.listen(8080, () => {
-  console.log(`App is listening on port: 8080`);
+mongoose.connect(DB_URL, { useNewUrlParser: true }, error => {
+  if (error) {
+    return Promise.reject(error);
+  }
+
+  app.listen(PORT, () => {
+    console.log(`App is listening on port: ${PORT}`);
+  });
+
+}).catch(error => {
+  console.log(error);
+  mongoose.disconnect();
 });
