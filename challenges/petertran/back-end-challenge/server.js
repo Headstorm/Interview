@@ -1,11 +1,9 @@
 'use strict';
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
 const fetch = require('node-fetch');
 const cors = require('cors');
 const {validate} = require('./validate');
-const {Numbers} = require('./models');
 const {PORT, RECAPTCHA_SECRET, DB_URL} = require('./config');
 
 const app = express();
@@ -51,29 +49,28 @@ app.get('/grecaptcha', async (req, res) => {
 
 
 // back-end challenege
+let arr;
+
 app.post('/data', validate, async (req, res, next) => {
-  const numbers = req.body;
-
-  try {
-    const result = await Numbers.create({numbers});
-    return res.status(200).json(result.serialize());
-
-  } catch (error) {
-    console.log('ERROR:\n', error);
-    return res.status(500).json({message: error.message});
-  }
+  arr = req.body;
+  res.status(201).json(arr);
 });
 
-mongoose.connect(DB_URL, { useNewUrlParser: true }, error => {
-  if (error) {
-    return Promise.reject(error);
+app.get('/data', (req, res) => {
+  if (!arr) {
+    return res.status(404).json({message: 'No list found.'});
   }
 
-  app.listen(PORT, () => {
-    console.log(`App is listening on port: ${PORT}`);
-  });
-
-}).catch(error => {
-  console.log(error);
-  mongoose.disconnect();
+  res.status(200).json(arr.sort((a, b) => a - b));
 });
+
+app.patch('/data', (req, res) => {
+  const num = Math.floor(Math.random() * 1000);
+  arr.push(num);
+
+  res.status(200).end();
+});
+
+app.listen(PORT, () => {
+  console.log(`App is listening on port: ${PORT}`);
+})
