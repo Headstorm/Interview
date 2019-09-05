@@ -11,11 +11,12 @@
 <body>
   <header>
     <nav class="top-nav">
-      <h1 class="nav-brand">Awesome Company</h1>
+      <img class="nav-brand-logo" src='./company.png' />
+      <h1 class="nav-brand-title">Awesome Company</h1>
       <div class='nav-links-container'>
         <button class="nav-toggle"><i class="fas fa-bars"></i></button>
         <ul class="nav-links">
-          <li><a>contact us</a></li>
+          <li><a>Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -23,29 +24,33 @@
   <main>
     <form action="" id='contact'>
       <fieldset>
-        <legend>Contact Us</legend>
-        <div>
-          <label>First Name</label>
-          <input id='first-name' type='text' />
+        <legend class='contact-legend'>Contact Us</legend>
+        <div class='input-ctnr'>
+          <div class='form-grp'>
+            <label>First Name</label><br>
+            <input id='first-name' type='text' />
+          </div>
+
+          <div class='form-grp'>
+            <label>Last Name</label><br>
+            <input id='last-name' type='text' />
+          </div>
+
+          <div class='form-grp'>
+            <label>Email</label><br>
+            <input id='email' type='email' />
+          </div>
+
+          <div class='form-grp'>
+            <label>Phone</label><br>
+            <input id='phone' type='tel'/>
+          </div>
+
+          <div class="form-submit-ctnr">
+              <button class="form-submit" type="submit">Submit</button>
+          </div>
+          
         </div>
-
-        <div>
-          <label>Last Name</label>
-          <input id='last-name' type='text' />
-        </div>
-
-        <div>
-          <label>Email</label>
-          <input id='email' type='email' />
-        </div>
-
-        <div>
-          <label>Phone</label>
-          <input id='phone' type='tel'/>
-        </div>
-
-        <button type="submit">Submit</button>
-
         <div class='error'></div>
       </fieldset>
     </form>
