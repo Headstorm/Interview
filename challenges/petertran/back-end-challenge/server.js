@@ -11,8 +11,7 @@ app.get('/', (req, res) => {
   res.status(200).send({message: 'hello world'});
 });
 
-
-// this endpoint used to verify front-end reCaptcha
+// this endpoint is for verifying front-end reCaptcha
 app.get('/grecaptcha', async (req, res) => {
   
   const url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -42,6 +41,33 @@ app.get('/grecaptcha', async (req, res) => {
 
     return res.status(500).json({message: 'Something went wrong...'});
   }
+});
+
+
+let numbers;
+
+// back-end challenege
+app.post('/data', (req, res) => {
+  const arr = req.body;
+  const message = 'Payload must a be list of EXACTLY 500 numbers!';
+
+  if (!Array.isArray(arr)) {
+    return res.status(400).json({message});
+  }
+
+  for (let item of arr) {
+    if (typeof item !== 'number') {
+      return res.status(400).json({message});
+    }
+  }
+
+  if (arr.length !== 500) {
+    return res.status(400).json({message});
+  }
+
+  numbers = arr;
+
+  res.status(200).json('ok');
 });
 
 app.listen(8080, () => {
