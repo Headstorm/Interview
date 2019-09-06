@@ -22,7 +22,7 @@ The server will be served on: *localhost:8080*
 
 ## Database Challenge
 
-**Techstack:** HTML, CSS, Javascript, Node.js, Express
+**Techstack:** HTML, Javascript, Node.js, Express
 
 To start the server, in the database-challenge directory, run the command in terminal: 
 
