@@ -124,4 +124,4 @@ GRAVEYARD
 
   test:schema Creates database based on schema file. Prerequisite: Local installation of PostgreSQL.
 
-  test:app Runs the script for Part II of the Database Challenge: dataMigrationScript.js.
+  test:app Runs the script for Part II of the Database Challenge:     migrateData.js.

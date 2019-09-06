@@ -1,54 +1,70 @@
 const fs = require('fs');
 
+const div = ['═'.repeat(65), '-'.repeat(65)];
 const rawData = fs.readFileSync('data/legacyRecords.json');
 const records = JSON.parse(rawData);
 
-console.log(`\
-  SQL statements are formatted according to the syntax\
-  requirements of "pg-promise", a promise-based 3rd party\
-  JavaScript library for querying PostgreSQL.\
-`)
+console.clear();
 
-records.forEach((record) => {
-  const {
-    recordId,
-    name,
-    cellPhone,
-    workPhone,
-    email,
-    address,
-    basicWidgetOrder,
-    advancedWidgetOrder,
-    protectionPlan,
-  } = record;
+// PLAIN SQL QUERIES
+// I have tested these on a testing database and they inserted the data as intended.
+console.log('\n\nPLAIN QUERIES');
+console.log(div[0]);
+records.forEach((r) => {
+  const t = '    ';
 
   const customerParams = [
-    recordId,
-    name,
-    cellPhone,
-    workPhone,
-    email,
-    address,
+    r.recordId,
+    r.name,
+    r.cellPhone,
+    r.workPhone,
+    r.email,
+    r.address,
   ];
 
-  const basicWidgetOrderParams = [
-    recordId,
+  const orderParams = [
+    r.recordId,
     'Basic Widget',
-    basicWidgetOrder,
-  ];
-
-  const advancedWidgetOrderParams = [
-    recordId,
+    r.basicWidgetOrder,
+    r.recordId,
     'Advanced Widget',
-    advancedWidgetOrder,
+    r.advancedWidgetOrder,
   ];
 
-  console.log(
-    `db.query('INSERT INTO records (record_id) VALUES ($1)', recordID)`,
-    `db.query('INSERT INTO customer(record_id, name, cell_phone, work_phone, email, address) VALUES ($1, $2, $3)', customerParams)`,
-    `db.query('INSERT INTO customer(record_id, order_type, quantity) VALUES ($1, $2, $3)', basicWidgetOrderParams)`,
-    `db.query('INSERT INTO customer(record_id, order_type, quantity) VALUES ($1, $2, $3)', advancedWidgetOrderParams)\n\n`
-  );
+  console.log(`INSERT INTO records (record_id) VALUES (${r.recordId});\n`);
+  console.log(`INSERT INTO customer\n${t}(record_id, name, cell_phone, work_phone, email, address)\nVALUES\n${t}(${r.recordId}, '${r.name}', '${r.cellPhone}', '${r.workPhone}', '${r.email}', '${r.address}');\n`);
+  console.log(`INSERT INTO orders\n${t}(record_id, order_type, quantity)\nVALUES\n${t}(${r.recordId}, 'Basic Widget', ${r.basicWidgetOrder}),\n${t}(${r.recordId}, 'Advanced Widget', ${r.advancedWidgetOrder});`);
+  console.log(`${div[1]}`)
 });
 
-console.log('done.');
+// PG-PROMISE QUERIES
+// I have not had a chance to test these out so there are likely bugs in the code.
+// If you would like me to build this out and test, let me know.
+console.log('\n\nPG-PROMISE QUERIES');
+console.log(div[0]);
+records.forEach((r) => {
+  const customerParams = [
+    r.recordId,
+    r.name,
+    r.cellPhone,
+    r.workPhone,
+    r.email,
+    r.address,
+  ];
+
+  const orderParams = [
+    r.recordId,
+    'Basic Widget',
+    r.basicWidgetOrder,
+    r.recordId,
+    'Advanced Widget',
+    r.advancedWidgetOrder,
+  ];
+
+  console.log(`db.query('INSERT INTO records (record_id) VALUES ($1)', recordID)`);
+  console.log(`db.query('INSERT INTO customer(record_id, name, cell_phone, work_phone, email, address) VALUES ($1, $2, $3, $4, $5, $6)', customerParams)`);
+  console.log(`db.query('INSERT INTO orders(record_id, order_type, quantity) VALUES ($1, $2, $3), ($4, $5, $6)', orderParams)\n`);
+});
+
+console.log('\ndone.\n\n');
+

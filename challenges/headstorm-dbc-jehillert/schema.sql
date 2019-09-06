@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS public.orders (
     id SERIAL PRIMARY KEY,
     record_id INT NOT NULL,
     order_type TEXT NOT NULL DEFAULT '',
-    quanity INT NOT NULL DEFAULT '0',
+    quantity INT NOT NULL DEFAULT '0',
     CONSTRAINT fk_record_id
         FOREIGN KEY (record_id)
         REFERENCES public.records (record_id)

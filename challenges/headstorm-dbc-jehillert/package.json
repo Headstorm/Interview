@@ -5,7 +5,8 @@
   "main": "migrateData.js",
   "scripts": {
     "test:schema": "cd scripts && ./loadSchema.sh",
-    "test": "node dataMigrationScript.js"
+    "test:export": "cd scripts && ./export_db.sh",
+    "start": "node migrateData.js"
   },
   "repository": {
     "type": "git",
