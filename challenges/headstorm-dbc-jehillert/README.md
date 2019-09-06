@@ -13,6 +13,6 @@ The following table is a reference for installing and running the scripts for Pa
 | npm run...  | Description                                                                                                       |
 |-------------|-------------------------------------------------------------------------------------------------------------------|
 | install     | Installs project dependencies and dev dependencies for local execution of app and testing files.                  |
-| pretest     | Generates mock data for running migrateData.js, which is the code requested for Part II of the Database Challenge |
+| pretest     | Generates mock data for running migrateData.js, which is the code requested for Part II of the Database Challenge (WORK-IN-PROGRESS)|
 | test:schema | Creates database based on schema file. Prerequisite: Local installation of PostgreSQL.                            |
-| test:app    | Runs the script for Part II of the Database Challenge: dataMigrationScript.js.                                    |
+| test:app    | Runs the script for Part II of the Database Challenge: dataMigrationScript.js. (WORK-IN-PROGRESS)                                   |
