@@ -8,6 +8,8 @@ const app = express();
 
 app.use(express.json());
 
+app.use(express.static('./public'));
+
 app.post('/mergeDB', upload.single('noSQL'),  (req, res) => {
   const jsonData = fs.readFileSync(req.file.path, {encoding: 'utf8'});
   const data = JSON.parse(jsonData);
@@ -38,7 +40,7 @@ app.post('/mergeDB', upload.single('noSQL'),  (req, res) => {
     VALUES (${values.join(',')})
   `;
 
-  fs.unlinkSync(req.file.path);
+  fs.unlink(req.file.path);
   res.status(200).end();
 });
 
