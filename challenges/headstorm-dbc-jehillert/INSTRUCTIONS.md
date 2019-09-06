@@ -2,9 +2,9 @@
 
   **Part 1**
 
-  The startup client chose to use a NoSQL database in their original system so that they could skip data modeling. The number of users for their system is growing rapidly. To support the new demands the client has chosen to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization.
+  The company client chose to use a NoSQL database in their original system so that they could skip data modeling. The number of users for their system is growing rapidly. To support the new demands the client has chosen to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization.
 
-Startup Order NoSQL Database
+Company Order NoSQL Database
 
 |Field Name              | Type    | Sample Value                 |
 | -----------------------| ------  | -----------------------------|
