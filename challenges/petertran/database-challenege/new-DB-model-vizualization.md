@@ -1,4 +1,4 @@
-# Database Model Visualization
+# SQL Database Model Visualization
 
 | Field | Type |  Null  |  KEY  | Constraints |
 |  ---  | ---  |  ---   |  ---  |     ---     |
