@@ -11,7 +11,7 @@ function submitForm() {
       contactData[field] = e.target[field].value;
     }
 
-    if (!(contactData.email || contactData.phone)) {
+    if (!contactData.email && !contactData.phone) {
       $('.error').html(errMsg);
     } else {
       grecaptcha
@@ -24,17 +24,24 @@ function submitForm() {
   });
 }
 
-function verify(token) {
-  const settings = {
-    contentType: 'application/json',
-    dataType: 'json',
-    method: 'GET',
-    url: `http://localhost:8080/grecaptcha?response=${token}`
-  }
+// ** for testing reCaptcha account **
+// function verify(token) {
+//   const settings = {
+//     contentType: 'application/json',
+//     dataType: 'json',
+//     method: 'GET',
+//     url: `http://localhost:8080/grecaptcha?response=${token}`
+//   }
 
-  $.ajax(settings)
-    .done(onSuccess)
-    .fail(onErr)
+//   $.ajax(settings)
+//     .done(onSuccess)
+//     .fail(onErr)
+// }
+
+
+//  ** mock positive responsive form server side **
+function verify() {
+  onSuccess();
 }
 
 function onSuccess() {
@@ -46,7 +53,7 @@ function onSuccess() {
 
 function onErr(error) {
   if (!error.responseJSON) {
-    $('.error').html('Something went wrong :(');
+    return $('.error').html('Something went wrong :(');
   }
 
   $('.error').html(error.responseJSON.message);
