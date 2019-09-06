@@ -1,0 +1,21 @@
+{
+  "name": "headstorm-dbc-jehillert",
+  "version": "1.0.0",
+  "description": "Dev dependencies for 2nd part of Database Challenge",
+  "main": "migrateData.js",
+  "scripts": {
+    "pretest": "npm scripts/generateMockData.js",
+    "test:schema": "npm scripts/loadSchema.js",
+    "test": "npm dataMigrationScript.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jehillert/Interview.git"
+  },
+  "author": "John Hillert <john.hillert@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jehillert/Interview/issues"
+  },
+  "homepage": "https://github.com/jehillert/Interview#readme"
+}

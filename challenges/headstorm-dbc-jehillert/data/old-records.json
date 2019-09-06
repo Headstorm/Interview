@@ -1,0 +1,11 @@
+{
+  record_id: 1234,
+  name: "Joe Smith",
+  cell_phone: "405.867.5309",
+  work_phone: "123.123.1234",
+  email: "joe_s@gmail.com",
+  address: "123 Vic Way, Dallas TX 75001",
+  basic_widget_order: 37,
+  advanced_widget_order: 12,
+  protection_plan: "True",
+}

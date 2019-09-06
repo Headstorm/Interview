@@ -98,3 +98,25 @@ INITIAL QUESTIONS
 
     3) Is the Protection Plan for all widgets, a certain type of widget, widgets purchased in the transaction the Protection Plan was obtained.
 
+GRAVEYARD
+———————————————————————————————————————————————————————————————————————————————
+  npm run...            Description
+  build Compile, bundle and minify all CSS and JS files..
+  build:css Compile, autoprefix and minify all CSS files to dist/index.css.
+  build:js  Compile, bundle and minify all JS files to dist/index.js.
+  start Starts a server on http://localhost:3000.
+  test  Run all unit and end-to-end tests.
+  Installs project dependencies and dev dependencies for local execution of app and testing files.
+
+
+      "pretest":db "npm scripts/generateMockData.js",
+      "loadDatabase": "npm scripts/loadReloadDatabase.js",
+
+
+  install   Installs project dependencies and dev dependencies for local execution of app and testing files.
+
+  pretest   Generates mock data for running migrateData.js, which is the code requested for Part II of the Database Challenge
+
+  test:schema Creates database based on schema file. Prerequisite: Local installation of PostgreSQL.
+
+  test:app Runs the script for Part II of the Database Challenge: dataMigrationScript.js.
