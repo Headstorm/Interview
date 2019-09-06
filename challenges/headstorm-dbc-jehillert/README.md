@@ -4,8 +4,6 @@ Additional documentation for this project may be found ".notes/README - Applican
 
 ## Part I - Relational Data Model Visualization
 
-![Visualization of database schema](https://github.com/jehillert/Interview/blob/master/challenges/headstorm-dbc-jehillert/headstorm_db_visualization.png)
-
 ![Visualization of database schema](./headstorm_db_visualization.png)
 
 ## Part II - Data Migration
