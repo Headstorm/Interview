@@ -1,6 +1,5 @@
 *.code-workspace
 *.log
-*.notes
 *.pid
 *.pid.lock
 *.seed
@@ -23,7 +22,6 @@
 .scripts/
 .vscode/
 .yarn-integrity
-_notes/
 amplify.yml
 archive/
 bookmarks.json
