@@ -30,4 +30,4 @@ To start the server, in the database-challenge directory, run the command in ter
 node server.js
 ```
 
-Once the server has started, choose the file to be uploaded by accessing this [site](localhost:8080).
+Once the server has started, choose the file to be uploaded by accessing this [site](http://localhost:8080).
