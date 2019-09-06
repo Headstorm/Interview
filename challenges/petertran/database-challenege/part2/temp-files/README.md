@@ -1,0 +1,1 @@
+Temp folder to hold files so they can be read.
