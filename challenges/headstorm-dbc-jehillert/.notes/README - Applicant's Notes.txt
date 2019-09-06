@@ -98,6 +98,11 @@ INITIAL QUESTIONS
 
     3) Is the Protection Plan for all widgets, a certain type of widget, widgets purchased in the transaction the Protection Plan was obtained.
 
+PART I COMMENTS
+———————————————————————————————————————————————————————————————————————————————
+
+
+
 GRAVEYARD
 ———————————————————————————————————————————————————————————————————————————————
   npm run...            Description

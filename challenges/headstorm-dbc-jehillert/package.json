@@ -4,9 +4,8 @@
   "description": "Dev dependencies for 2nd part of Database Challenge",
   "main": "migrateData.js",
   "scripts": {
-    "pretest": "npm scripts/generateMockData.js",
-    "test:schema": "npm scripts/loadSchema.js",
-    "test": "npm dataMigrationScript.js"
+    "test:schema": "cd scripts && ./loadSchema.sh",
+    "test": "node dataMigrationScript.js"
   },
   "repository": {
     "type": "git",
