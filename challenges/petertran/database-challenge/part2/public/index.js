@@ -1,31 +1,47 @@
-const fileInput = document.getElementById('upload');
-
-async function fetchReq(files) {
-  const url = '/mergeDB';
-  const settings = {
-    method: 'POST',
-    headers: {
-      'Content-Type' : 'multipart/form-data'
-    },
-    body: {noSQL: files}
-  }
-  const res = await fetch()
-}
-
 function handleSubmit(e) {
   e.preventDefault();
+  const file = document.getElementById('upload-input').files[0];
+  const reader = new FileReader();
+  
+  let dataset;
 
+  reader.onload = function (e) {
+    dataset = e.target.result
+    fetchReq(dataset);
+  }
+
+  reader.readAsText(file);
 }
 
-function handleChange(event) {
+async function fetchReq(dataset) {
+  const url = '/mergedb';
+  const settings = {
+    method: 'POST',
+    headers: {'Content-Type' : 'application/json'},
+    body: dataset
+  }
 
-  console.log(event.target.files[0]);
+  try {
+    await fetch(url, settings);
+    onSuccess();
+  } catch (error) {
+    onError();
+  }
+}
+
+function onSuccess() {
+  const status = document.querySelector('.status');
+  status.innerHTML = `<p>Success!</p>`;
+}
+
+function onError() {
+  const status = document.querySelector('.status');
+  status.innerHTML = `<p>Something went wrong :(</p>`;
 }
 
 function addEvents() {
-  fileInput.addEventListener('submit', handleSubmit);
-  fileInput.addEventListener('change', handleChange);
+  const form = document.getElementById('upload');
+  form.addEventListener('submit', handleSubmit);
 }
-
 
 addEvents();
