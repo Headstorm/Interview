@@ -1,6 +1,10 @@
 function handleSubmit(e) {
   e.preventDefault();
   const file = document.getElementById('upload-input').files[0];
+
+  if (!file) {
+    return onError({message: 'Please select a file.'})
+  }
   const reader = new FileReader();
   
   let dataset;
@@ -22,21 +26,24 @@ async function fetchReq(dataset) {
   }
 
   try {
-    await fetch(url, settings);
-    onSuccess();
+    const res = await fetch(url, settings);
+    const data = await res.json();
+    onSuccess(data);
   } catch (error) {
-    onError();
+    onError(error);
   }
 }
 
-function onSuccess() {
+function onSuccess(data) {
   const status = document.querySelector('.status');
-  status.innerHTML = `<p>Success!</p>`;
+  const input = document.getElementById('upload-input');
+  input.value = '';
+  status.innerHTML = `<p>${data.message}</p>`;
 }
 
-function onError() {
+function onError(error) {
   const status = document.querySelector('.status');
-  status.innerHTML = `<p>Something went wrong :(</p>`;
+  status.innerHTML = `<p>${error.message}</p>`;
 }
 
 function addEvents() {
