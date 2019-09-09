@@ -4,7 +4,7 @@ Hello! Thank you for giving me an opportunity to demonstrate my skills!  Please 
 
 ## Front End Challenge
 
-Techstack: HTML, CSS, jQuery
+**Techstack:** HTML, CSS, jQuery
 
 I wanted to make sure the syntax was correct and the reCaptcha was working so I used the server for the back-end challenge to test the reCaptcha token.  Since it was not required for the challenge, I commented out the "verify" function that would have made a request to the server.
 
@@ -22,7 +22,7 @@ The server will be served on: *localhost:8080*
 
 ## Database Challenge
 
-**Techstack:** HTML, CSS, Javascript, Node.js, Express
+**Techstack:** HTML, Javascript, Node.js, Express
 
 To start the server, in the database-challenge directory, run the command in terminal: 
 
