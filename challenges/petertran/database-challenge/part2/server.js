@@ -7,11 +7,25 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.post('/mergedb', (req, res) => {
+  const fields = [
+    'recordID',
+    'name',
+    'cellPhone',
+    'workPhone',
+    'email',
+    'address',
+    'basicWidgetOrder',
+    'advanceWidgetOrder',
+    'protectionPlan'
+  ];
+
   const values = req.body.map(entry => {
     const row = [];
-    for (let key in entry) {
-      row.push(entry[key]);
+
+    for(let field of fields) {
+      row.push(entry[field]);
     }
+
     return `(${row.join(',')})`;
   });
 
