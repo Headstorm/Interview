@@ -19,14 +19,26 @@ app.post('/mergedb', (req, res) => {
     'protectionPlan'
   ];
 
+  if (!Array.isArray(req.body)) {
+    return res.status(400).json({message: 'Payload must be an array.'})
+  }
+
   const values = req.body.map(entry => {
     const row = [];
+    const keys = Object.keys(entry);
+    const wrongKeys = keys.filter(key => !fields.includes(key));
+
+    if (wrongKeys.length > 0) {
+      return res.status(400).json(
+        {message: `File contains invalid fields: ${wrongKeys.join(', ')}. Accepted fields: ${fields.join(', ')}.`
+      });
+    }
 
     for(let field of fields) {
       row.push(entry[field]);
     }
 
-    return `(${row.join(',')})`;
+    return `(${row.join(', ')})`;
   });
 
   const insertIntoDb = `
@@ -48,7 +60,7 @@ app.post('/mergedb', (req, res) => {
 
   console.log(insertIntoDb);
 
-  res.status(200).end();
+  res.status(200).json({message: `Success!`});
 });
 
 app.listen('8080', () => {
