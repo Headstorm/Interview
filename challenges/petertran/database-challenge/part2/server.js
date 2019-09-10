@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.post('/mergedb', (req, res) => {
+  const collection = req.body;
   const fields = [
     'recordID',
     'name',
@@ -19,30 +20,44 @@ app.post('/mergedb', (req, res) => {
     'protectionPlan'
   ];
 
-  if (!Array.isArray(req.body)) {
-    return res.status(400).json({message: 'Payload must be an array.'})
+  if (!Array.isArray(collection)) {
+    return res.status(400).json({message: 'Payload must be an array.'});
+  } else if (!collection.length) {
+    return res.status(400).json({message: 'Empty collection.'})
   }
 
-  const values = req.body.map(entry => {
-    const row = [];
-    const keys = Object.keys(entry);
-    const wrongKeys = keys.filter(key => !fields.includes(key));
+  const values = [];
 
-    if (wrongKeys.length > 0) {
-      return res.status(400).json(
-        {message: `File contains invalid fields: ${wrongKeys.join(', ')}. Accepted fields: ${fields.join(', ')}.`
+  for (let doc of collection) {
+    const keys = Object.keys(doc);
+
+    if (!keys.length) {
+      return res.status(400).json({
+        message: 'Invalid dataset.' + 
+          ' Expected collection to contain Object(s) with valid keys.'
       });
     }
 
-    for(let field of fields) {
-      row.push(entry[field]);
+    const wrongKeys = keys.filter(key => !fields.includes(key));
+
+    if (wrongKeys.length) {
+      return res.status(400).json({
+        message: `File contains invalid fields: ${wrongKeys.join(', ')}.` + 
+          ` Accepted fields: ${fields.join(', ')}.`
+      });
     }
 
-    return `(${row.join(', ')})`;
-  });
+    const row = [];
+
+    for (let field of fields) {
+      row.push(doc[field]);
+    }
+
+    values.push(`(${row.join(',')})`);
+  }
 
   const insertIntoDb = `
-    INSERT INTO newDB 
+    INSERT INTO new_table 
       (
       RecordID,
       Name,
