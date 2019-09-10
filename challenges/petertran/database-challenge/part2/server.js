@@ -55,7 +55,7 @@ app.post('/mergedb', (req, res) => {
       ProtectionPlan
       )
   
-    VALUES (${values.join(',')})
+    VALUES ${values.join(',')};
   `;
 
   console.log(insertIntoDb);
