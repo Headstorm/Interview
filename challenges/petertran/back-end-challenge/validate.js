@@ -1,6 +1,6 @@
 exports.validate = function (req, res, next) {
   const numbers = req.body;
-  const message = 'Payload must a be list of EXACTLY 500 numbers!';
+  const message = 'Payload must be a list of EXACTLY 500 numbers!';
 
   if (!Array.isArray(numbers)) {
     return res.status(400).json({message});
