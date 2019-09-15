@@ -1,0 +1,49 @@
+Table Schema Name: orders
+
+Table Schema Attributes:
+| record_id INT | name VARCHAR(100) | cell_phone VARCHAR(20) | work_phone VARCHAR(20) | email VARCHAR(100) | address VARCHAR(100) | basic_widget_order SMALLINT | advanced_widget_order SMALLINT | protection_plan TINYINT(1) |
+
+Table Schema Constraints:
+// Unknown which types of data the client requires, but the sample data suggests all are needed, so require a value for each attribute
+record_id - NOT NULL AUTO_INCREMENT
+name - NOT NULL
+cell_phone - NOT NULL
+work_phone - NOT NULL
+email - NOT NULL
+address - NOT NULL
+basic_widget_order - NOT NULL
+advanced_widget_order - NOT NULL
+protection_plan - NOT NULL
+
+Table Schema Keys:
+// Unknown what types of data the client would like to search by, so index potentially relevant fields
+record_id - PRIMARY KEY
+cell_phone - INDEX
+work_phone - INDEX
+email - INDEX
+address - INDEX
+basic_widget_order - INDEX
+advanced_widget_order - INDEX
+protection_plan - INDEX
+
+SQL Create Statement:
+CREATE TABLE orders (
+    record_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    cell_phone VARCHAR(20) NOT NULL,
+    work_phone VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    basic_widget_order SMALLINT NOT NULL,
+    advanced_widget_order SMALLINT NOT NULL,
+    protection_plan TINYINT(1) NOT NULL,
+    PRIMARY KEY(record_id),
+    INDEX name_index(name),
+    INDEX cell_phone_index(cell_phone),
+    INDEX work_phone_index(work_phone),
+    INDEX email_index(email),
+    INDEX address_index(address),
+    INDEX basic_order_index(basic_widget_order),
+    INDEX advanced_order_index(advanced_widget_order),
+    INDEX protection_plan_index(protection_plan)
+);

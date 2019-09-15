@@ -1,0 +1,1 @@
+#Run compiled jar file with: java -cp "database-1.0.0.jar;database-1.0.0-libraries/*" com.headstorm.interview.database.App <JSON File Path>
