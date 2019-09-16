@@ -10,7 +10,7 @@ namespace backend_challenge.Controllers
     public class DataController : ControllerBase
     {
         private static List<double> Values {get; set;}
-
+        
         [HttpGet]
         public ActionResult<IEnumerable<double>> Get()
         {
@@ -21,6 +21,15 @@ namespace backend_challenge.Controllers
         public void Post([FromBody] DataModel data)
         {
             Values = data.Values.ToList();
+            Values.Sort();
+        }
+
+        [HttpPatch]
+        public void Patch([FromBody] double data)
+        {
+            Values.Add(data);
+            Values.Sort();
+            Values = Values.Take(DataModel.ListLength).ToList();
         }
     }
 }

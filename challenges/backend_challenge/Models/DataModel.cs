@@ -6,8 +6,10 @@ namespace backend_challenge.Models
 {
     public class DataModel
     {
+        public const int ListLength = 2;
+
         [Required]
-        [ListLength(2)]
+        [ListLength(ListLength)]
         public IEnumerable<double> Values { get; set; }
     }
 }
