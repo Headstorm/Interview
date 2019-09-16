@@ -19,15 +19,21 @@ namespace backend_challenge.Validators
         {
             DataModel dataModel = (DataModel) validationContext.ObjectInstance;
             IEnumerable<double> values = (IEnumerable<double>) value;
+            int length = values.Count();
 
-            if (values.Count() < _requiredLength)
+            if (length < _requiredLength)
             {
-                return new ValidationResult($"Invalid number of values supplied{Environment.NewLine}" +
-                $"Received: {values.Count()}{Environment.NewLine}" +
-                $"Required: {_requiredLength}");
+                return new ValidationResult(GetErrorMessage(length));
             }
 
             return ValidationResult.Success;
+        }
+
+        private String GetErrorMessage(int invalidLength)
+        {
+            return $"Invalid number of values supplied{Environment.NewLine}" +
+                $"Received: {invalidLength}{Environment.NewLine}" +
+                $"Required: {_requiredLength}";
         }
     }
 }

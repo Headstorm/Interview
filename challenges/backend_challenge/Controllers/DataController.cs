@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using backend_challenge.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_challenge.Controllers 
@@ -17,9 +18,9 @@ namespace backend_challenge.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] IEnumerable<double> values)
+        public void Post([FromBody] DataModel data)
         {
-            Values = values.ToList();
+            Values = data.Values.ToList();
         }
     }
 }

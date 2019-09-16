@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using backend_challenge.Validators;
 
 namespace backend_challenge.Models
 {
     public class DataModel
     {
         [Required]
-        public IEnumerable<double> values { get; set; }
+        [ListLength(2)]
+        public IEnumerable<double> Values { get; set; }
     }
 }
