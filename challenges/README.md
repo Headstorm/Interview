@@ -28,7 +28,7 @@ A company has approached you for help in developing their product and establishi
   
   **BONUS:**
   
-  - Provides a PATCH endpoint at `/data` which inserts a random number into the list in the proper order which will be returned by the above POST api.
+  - Provides a PATCH endpoint at `/data` which allows insertion of a single number into the list which gets placed in the proper order.
   
 
 ## Database Challenge
