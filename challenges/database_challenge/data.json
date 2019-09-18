@@ -1,6 +1,6 @@
 [
     {
-        "Record ID": "1234",
+        "Record ID": 1234,
         "Name": "Joe Smith",
         "Cell Phone": "405.867.5309",
         "Work Phone": "123.123.1234",
@@ -9,5 +9,16 @@
         "Basic Widget Order": 37,
         "Advanced Widget Order": 12,
         "Protection Plan": true
+    },
+    {
+        "Record ID": 9876,
+        "Name": "Morty Smith",
+        "Cell Phone": "123.456.7890",
+        "Work Phone": "555.666.7788",
+        "Email": "morty_s@gmail.com",
+        "Address": "123 Vic Way, Dallas TX 75001",
+        "Basic Widget Order": 27,
+        "Advanced Widget Order": 42,
+        "Protection Plan": false
     }
 ]
