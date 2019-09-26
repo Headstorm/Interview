@@ -1,0 +1,46 @@
+#Back-end Coding challenge for Headstorm
+
+#Meet Pandya
+#email id : mnpandya10@gmail.com
+
+import flask
+import random
+from flask import jsonify, request
+
+app = flask.Flask(__name__)
+app.config["DEBUG"] = True
+
+def rand (start, end, num):
+    numbers = []
+    if num!=500:
+        print("Numbers are not 500")
+    for i in range(num):
+        numbers.append(random.randint(start,end))
+    return numbers
+
+numbers_incount = rand(1,1000,500)
+
+@app.route('/', methods=['GET'])
+def message():
+    return jsonify({'message' : 'Coding Challenge for Headstorm'})
+
+@app.route('/data', methods=['GET'])
+def returnAllNum():
+    numbers_incount.sort()
+    return jsonify({'numbers' : numbers_incount})
+
+@app.route('/data', methods=['POST'])
+def addNum():
+    new_number = request.get_json()
+    numbers_incount.append(new_number)
+    return jsonify({'numbers' : numbers_incount})
+
+@app.route('/data', methods=['PATCH'])
+def addoneNum():
+    new_number = request.get_json()
+    numbers_incount.append(new_number)
+    numbers_incount.sort()
+    return jsonify({'numbers' : numbers_incount})
+
+
+app.run()
