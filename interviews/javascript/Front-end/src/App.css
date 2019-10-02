@@ -1,0 +1,17 @@
+@import '~antd/dist/antd.css';
+
+body{
+  background-image: linear-gradient(to bottom right, orange , yellow);
+}
+
+.container{
+  min-height: 100vh;
+  vertical-align: text-bottom;
+  text-align: center;
+  padding: 5vw;
+}
+
+.form-button{
+  float: right;
+  right: 1vw;
+}
