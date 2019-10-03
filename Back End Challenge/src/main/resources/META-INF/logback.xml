@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds" debug="false">
+	<property name="logRoot" value="/opt/logs/mytest/challenge/logs" />
+	<property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{mdcKey}] %-5level [%thread] %logger{10} :%msg%n" />
+
+	<appender name="CONSOLE-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %red([%X{mdcKey}]) %highlight([%thread]) %green(%-5level) %logger{36} :%msg%n</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="DEFAULT-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logRoot}/default.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${logRoot}/default.log.%d{yyyy-MM-dd}</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>${pattern}</Pattern>
+		</layout>
+	</appender>
+
+
+	<!-- root -->
+	<root level="info">
+		<appender-ref ref="CONSOLE-APPENDER" />
+	</root>
+</configuration>
