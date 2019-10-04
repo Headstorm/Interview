@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <title>XYZ Company</title>
+    <link
+      href="./main.css"
+      rel="stylesheet"
+    />
+
+    </head>
+  <body>
+    <div id="heading">
+        <h1>XYZ Company</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aspernatur illo nulla veniam. Magnam esse nemo ullam corrupti distinctio enim quod rerum, molestias suscipit nobis doloribus soluta at consequatur perspiciatis!&Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis quasi ullam quo voluptates exercitationem ut sint omnis quisquam, laudantium architecto magnam eveniet id harum voluptatum hic quos pariatur. Eligendi, neque.</p>  
+    </div>
+              
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Contact Us</h1>
+        <p>We will reach out to you shortly.</p>
+        <form action="">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="firstName" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="lastName" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <button type="submit" class="btn" onclick="formHandler(event)">Sign Up</button>
+        </form>
+      </div>
+      <footer>
+        <p>&copy; XYZ Company</p>
+      </footer>
+    </div>
+
+    <script>
+        function formHandler(event) {
+            event.preventDefault();
+            const firstName = document.getElementById("first-name").value;
+            const lastName = document.getElementById("last-name").value;
+            const email = document.getElementById("email").value;
+
+            console.log(`First name is: ${firstName} \nLast name is: ${lastName} \nEmail is : ${email}`);
+        }
+    </script>
+  </body>
+</html>
