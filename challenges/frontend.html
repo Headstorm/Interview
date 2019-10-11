@@ -1,0 +1,90 @@
+<?php
+define('SITE_KEY', '6LcLHrwUAAAAAOKdzvYV1pG1IZYYHsSi9-A880CP');
+define('SECRET_KEY', '6LcLHrwUAAAAALJBUF4gYr2KdyYrDZY1RcnPTTcH');
+
+if($_POST){
+    function getCaptcha($SecretKey){
+        $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
+        $Return = json_decode($Response);
+        return $Return;
+    }
+    $Return = getCaptcha($_POST['g-recaptcha-response']);
+    //var_dump($Return);
+    if($Return->success == true && $Return->score > 0.5){
+        echo "Succes!";
+    }else{
+        echo "You are a Robot!";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <!--I created the company "Dango" as a filler-->
+	<title>Dango Headstorm Challenge</title>
+ 
+	<!--browser tab icon-->
+	<link rel="shortcut icon" type="image/x-icon" href="dango1.png" />
+
+  <link rel="stylesheet" type="text/css" href="frontend.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Muli|Nunito|PT+Sans|Quicksand&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcLHrwUAAAAAOKdzvYV1pG1IZYYHsSi9-A880CP"></script>
+
+</head>
+  
+<body>
+   <div class="top-nav">
+     <img id="logo" src="dango logo.png">
+     <li><a class="active" href="#contact">contact</a></li>
+     <li><a href="#shop">shop</a></li>
+   </div>  
+
+   <div class="contact-title">
+     <h1><span class="normal">contact </span>dango<span class="dot">.</span></h1>
+   </div>
+
+   <div class="contact-form">
+    <form id="contact-form" method="post" actions="">
+    	<input id="name" name="name" type="text" class="form-control" placeholder="full name" required><br>
+      <input id="email" name="email" type="text" class="form-control" placeholder="email" required><br>
+      <input id="subject" name="subject" type="text" class="form-control" placeholder="subject"><br>
+      <textarea id="message" name="message" type="text" class="form-control" placeholder="message" rows="7" required style="resize:none"></textarea><br>
+      <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" /><br >
+      <input type="submit" class="form-control submit" value="send">
+     </form>
+    </div>
+
+		<script>
+       	var nameInput = document.getElementById('name');
+       	var emailInput= document.getElementById('email');
+       	var subjectInput = document.getElementById('subject');
+       	var messageInput = document.getElementById('message');
+
+	  	document.querySelector("form").addEventListener('submit', function (e) {
+
+    	e.preventDefault();
+
+    	console.log(nameInput.value); 
+    	console.log(emailInput.value); 
+    	console.log(subjectInput.value); 
+    	console.log(messageInput.value); 
+
+		});
+    </script>
+
+    <script>
+    	grecaptcha.ready(function() {
+    	grecaptcha.execute('6LcLHrwUAAAAAOKdzvYV1pG1IZYYHsSi9-A880CP', {action: 'homepage'})
+    	.then(function(token) {
+      console.log(token);
+      document.getElementById('g-recaptcha-response').value=token;
+   		});
+    	});
+		</script>
+</body>
+</html>
+
