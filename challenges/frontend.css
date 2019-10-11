@@ -1,0 +1,250 @@
+body{
+  margin:0;
+  background: linear-gradient(to bottom, #BFCE96 68%, white 60%);
+  background-repeat:no-repeat;
+  font-family: 'Nunito', 'Muli', helvetica;
+  font-weight: normal;
+  color: white
+}
+
+/*navigation bar*/
+.top-nav #logo{
+  top:0;
+  height: 40px;
+  padding:17px 5%;
+  display: inline-block;
+  transition:.7s;
+  background: white;
+  border-bottom: 4px solid white;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  left:10%;
+  position:absolute;
+}
+
+.top-nav{
+  font-family:calibri;
+  list-style-type: none;
+  background: #BFCE96;
+  overflow: hidden;
+  transition: .7s;
+  top:0;   
+}
+
+.top-nav a{
+  font-size: 22.3px;
+  text-decoration: none;  
+  padding: 18px 1%;
+  color: white;
+  border-top: 7px solid #BFCE96;
+  line-height:;
+}
+
+.top-nav li a{
+  float:right;
+  margin-right: 4%;
+}
+
+.top-nav li a:hover{
+  color: white;
+  border-top: 7px solid pink;
+  line-height:;
+}
+
+.top-nav .active{
+  color: white;
+  border-top: 7px solid pink;
+  line-height:;
+}
+/*navigation bar*/
+
+/*heading*/
+.contact-title{
+  margin-left: 15%;
+  transition: .4s
+}
+
+.contact-title h1{
+  font-size: 5em;
+}
+
+.normal{
+  font-weight:normal;
+}
+
+.dot{
+  font-family: times new roman;
+  color:pink
+}
+/*heading*/
+
+/*contact form*/
+.contact-form{
+  text-align: center;
+  margin-bottom:10%;
+}
+
+.form-control{
+  width: 70%;
+  padding-top:0;
+  line-height: 20px;
+  background: white;
+  border:14px solid #BFCE96;
+  border-radius: 18px;
+  font-family: 'Nunito', 'Muli', helvetica;
+  font-size: 17px;
+  transition: 0.7s
+}
+
+.contact-form input[type="text"]{
+  padding-left: 20px;
+  height:55px;
+}
+
+.contact-form textarea{
+  padding-top:20px;
+  padding-left: 20px;
+  transition: 0.7s
+}
+
+.contact-form input[type="text"]:focus,textarea[type="text"]:focus{
+  outline:none;
+  background: #F1ECE0;
+}
+
+form .submit{
+  background: #BFCE96;
+  outline:none;
+  margin-top:20px;
+  height: 50px;
+  border: 10px solid #BFCE96;
+  font-family: 'Nunito', 'Muli', helvetica;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  color: white;
+  width: 73%;
+  transition: 0.8s
+}
+
+form .submit:hover{
+  background:pink; 
+  border: 10px solid pink;
+}
+/*contact form*/
+
+@media screen and (max-width: 700px) {
+
+  body{
+    background:#BFCE96;
+  }
+
+/*navigation bar*/
+  .top-nav{
+    padding:0px;
+    overflow-x: : hidden;
+    background:white;
+
+  }
+
+  .top-nav a{
+    color:pink;
+    float:none;
+  }
+
+  .top-nav #logo{
+    top:10px;
+    position:static;
+    height: 30px;
+    padding: 20px;
+    display:block;
+    background: transparent;
+    border-bottom:0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin:0 auto;
+  }
+ 
+  .top-nav li a{
+    display: block;
+    float:none;
+    text-align:center;
+    width:100%;
+    line-height:100%;
+    background:white;
+    transition:.4s;
+    font-size:20px;
+  }
+
+  .top-nav li a:hover{
+    background: pink;
+    border-top:none;
+    color:white;
+    line-height:100%;
+  }
+
+  .top-nav .active{
+    color: white;
+    background:pink;
+  }
+/*navigation bar*/
+
+/*contact form*/
+  textarea[type="text"], input[type="text"]{
+    height: 28px;
+    width: 90%;
+    margin-top: 0;
+    border:0px;
+    border-radius:0px;
+    margin-bottom:12px;
+    font-size: 14px;
+  }  
+
+  textarea[type="text"]{
+    height: 74px;
+  }
+
+  form .submit{
+    background: pink;
+    height: 40px;
+    border: 10px solid pink;
+    padding:0;
+    font-family: 'Nunito', 'Muli', helvetica;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    width: 20%;
+    transition: 0.8s;   
+}
+
+  form .submit:hover{
+    background:white; 
+    border: 10px solid white;
+    color: pink;
+}
+/*contact form*/
+
+/*heading*/
+  .contact-title{
+     margin-left:0;
+     padding-top: 5%;
+     margin-bottom:9%;
+     text-align: center;
+     line-height: 25px;
+     font-size: 12px;
+}
+/*heading*/
+
+  
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
