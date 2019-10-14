@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SJ Infotech</title>
+	<script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+       ...
+    });
+});
+</script>
+</head>
+<body>
+	<form action="page2.php">
+		Name: <input type="text" id="username"><br>
+		Number: <input type="text" id="number"><br>
+		Comments: <input type="text" id="number"><br>
+		<input type="submit" value="submit">
+	</form>
+
+</body>
+
+
+</html>
