@@ -135,7 +135,9 @@ grecaptcha.ready(function() {
             error.innerHTML = "Sorry, No Robots"
         }
         else{
-           var output = "\n\nName: " + Form.Last.value + ", " + Form.First.value + "\n\nEmail: " + Form.Email.value + "\n\nMessage: " + Form.Message.value;
+            var now = new Date();
+          Form.dateTime.value = now.format("dd/MM/yyyy hh:mm TT");
+           var output = "\n\nName: " + Form.Last.value + ", " + Form.First.value + "\n\nEmail: " + Form.Email.value + "\n\nMessage: " + Form.Message.value + "\n\n" + Form.dateTime.value;
            Form.Submit.innerHTML = "<b>SENT!</b>";
            console.log(output);
         }
