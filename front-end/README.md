@@ -21,5 +21,5 @@ Web  | Mobile
 By no stretch of the imagination am I an engineer with years of experience. However, I have had the opportunity to work
 with multiple front end technologies throughout my college career, which I have thoroughly enjoyed and want to continue to
 work with, amongst many other technologies that I can learn and improve from. Thus, I hope my front end challenge can 
-relatively make up for what I may have lacked in the backend challenge and in this way can be provided the opportunity 
-to leverage my skillset in adding value to a team at Headstorm, while learning from the engineers there.
+relatively make up for what I may have lacked in the backend challenge and in this way, be provided the opportunity 
+to leverage my skill set in adding value to a team at Headstorm, while learning from the engineers there.

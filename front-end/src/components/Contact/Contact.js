@@ -101,7 +101,7 @@ class Contact extends React.Component {
   // function renders button dependant on what conditions are met
   showButton = () => {
     const { classes } = this.props;
-    // A ternary could be used below, however I feel it would make the code harder to read
+    // A ternary could be used below, however I feel the multi line jsx would make the code harder to read
     if (this.state.email && this.state.text !== "" && this.state.isVerified) {
       return (
         <Button
@@ -113,18 +113,12 @@ class Contact extends React.Component {
           Submit
         </Button>
       );
-    } else {
-      return (
-        <Button
-          fullWidth
-          variant="contained"
-          className={classes.submit}
-          disabled
-        >
-          Submit
-        </Button>
-      );
     }
+    return (
+      <Button fullWidth variant="contained" className={classes.submit} disabled>
+        Submit
+      </Button>
+    );
   };
   render() {
     const { classes } = this.props;
