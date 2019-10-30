@@ -9,4 +9,4 @@ These are domain specific problems that can be submitted individually.  You can 
 These are language specific interview questions and you can choose the language in which you implement your solution.
 
 ### Solutions
-The ```solution``` folder contains answers to the specific questions in ```challenges``` folder. This folder also contains details about the implementation of solutions.
+The ```solution``` folder contains answers to the specific questions in ```challenges``` folder. This folder also contains a ```README``` document that contains details about the implementation of solutions.
