@@ -1,0 +1,35 @@
+[
+	{
+		Record_ID:1,
+		Name: "hemanth",
+		Cell_Phone:"8175047033",
+		Work_Phone:"8175047033",
+		Email:"velagahemanth@gmail.com",
+		Address:"7575 Frankford Road, Apt 3221, Dallas, TX, 75252",
+		Basic_Widget_Order:23,
+		Advanced_Widget_Order:21,
+		Protection_Plan:true
+	},
+	{
+		Record_ID:2,
+		Name: "shiva",
+		Cell_Phone:"8176797033",
+		Work_Phone:"123457033",
+		Email:"shivajfkmanth@gmail.com",
+		Address:"7575 Frankford Road, Apt 3112, Dallas, TX, 75252",
+		Basic_Widget_Order:21,
+		Advanced_Widget_Order:26,
+		Protection_Plan:true
+	},
+	{
+		Record_ID:3,
+		Name: "rohith",
+		Cell_Phone:"9963797033",
+		Work_Phone:"9876457033",
+		Email:"shivrohithh@gmail.com",
+		Address:"7421 Frankford Road, Apt 3112, Dallas, TX, 75252",
+		Basic_Widget_Order:14,
+		Advanced_Widget_Order:78,
+		Protection_Plan:false
+	}
+]

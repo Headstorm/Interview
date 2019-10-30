@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Head_Storm Form</title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="headstorm_validation.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="shortcut icon" href="https://www.headstorm.com/wp-content/uploads/2017/10/headstorm_website_2017-08.png" />
+	
+	<!---- Please insert your site key here in the place of 6LdGy74UAAAAAP5yXlrRT4yUPovGNBdrebwsD8r7---->
+	
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdGy74UAAAAAP5yXlrRT4yUPovGNBdrebwsD8r7"></script>
+	<nav class="navbar navbar-light bg-dark">
+	  <a class="navbar-brand" href="#">
+		<img src="https://www.headstorm.com/wp-content/uploads/2018/07/hs_logo_hero-19.png" width="300" height="30" alt="">
+	  </a>
+	</nav>
+  </head>
+  <body>
+	<h1 align="center">Contact</h1>
+	<h6 align="center">Get in Touch</h6>
+    <div class="col-md-12 row">
+	<div class="col-md-5"><p style="color:white">mainblock</p></div>
+	<div class="col-md-4 row" class="login-form">
+ 
+    <form id="headstorm_form" action="headstorm_submit.php" method="post">
+      <div>
+          <input type="text" id="firstname" placeholder="First Name" size="20">
+			<input type="text" id="lastname" placeholder="Last Name" size="20">
+			<br><br>
+			<input type="text" id="phone_number" placeholder="Phone Number" width="400px">
+			<br><br>
+			<input type="email" id="email" placeholder="Email" size="40">
+			<br><br>
+			<input type="text" id="address" placeholder="Address" size="45">
+			<br><br>
+			<textarea cols="45" rows="5" id="purpose" placeholder="Purpose of Contacting" form="headstorm_form"></textarea>
+			<br>
+			<input type="checkbox" id="mycheck"> I agree to the terms and conditions
+			<!---- Please insert your site key here in the place of 6LdGy74UAAAAAP5yXlrRT4yUPovGNBdrebwsD8r7---->
+			<div class="g-recaptcha" data-sitekey="6LdGy74UAAAAAP5yXlrRT4yUPovGNBdrebwsD8r7"></div>
+			<br>
+			<div>
+              <button type="submit" value="submit" id="submit">Submit</button>
+          </div>
+      </div>
+    </form>
+	</div>
+	<div class="col-md-3"><p style="color:white">mainblock</p></div>
+    
+  </body>
+</html>
