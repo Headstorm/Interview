@@ -8,5 +8,5 @@ These are domain specific problems that can be submitted individually.  You can 
 ### Interviews
 These are language specific interview questions and you can choose the language in which you implement your solution.
 
-### Solution
+### Solutions
 The ```solution``` folder contains answers to the specific questions in ```challenges``` folder.
