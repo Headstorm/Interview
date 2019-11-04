@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+
+li h1 {
+    margin: 2%;
+}
+
+li p {
+    margin: 1%;
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    font-weight: 700;
+}
+
+input, textarea {
+    padding-left: 2%;
+    width: 50vw;
+    height: 10vh;
+    font-size: 2em;
+    margin: 2%;
+}
+
+textarea {
+    min-width: 50vw;
+    max-width: 50vw;
+    min-height: 20vh;
+}

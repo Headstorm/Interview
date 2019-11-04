@@ -1,0 +1,134 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Zach Poole's Swagger API Documentation for HeadStorm Interview Backend Challenge.",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3001",
+    "basePath": "/swagger",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/data": {
+            "post": {
+                "tags": [
+                    "List"
+                ],
+                "summary": "Adding a List",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "The list",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/List"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/RequestStatus"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "schema": {
+                            "$ref": "#/definitions/RequestStatus"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "List"
+                ],
+                "summary": "Gets stored list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/List"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "schema": {
+                            "$ref": "#/definitions/RequestStatus"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "List"
+                ],
+                "summary": "Adds number to current list",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Number to be added to the list",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Element"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/RequestStatus"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "schema": {
+                            "$ref": "#/definitions/List"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "RequestStatus": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "List": {
+            "type": "object",
+            "properties": {
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "Element": {
+            "type": "object",
+            "properties": {
+                "num": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}
