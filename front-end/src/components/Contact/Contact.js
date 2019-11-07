@@ -75,7 +75,7 @@ class Contact extends React.Component {
   verifyCallback = response => {
     if (response) {
       this.setState({
-        isVerified: true // we set state to true if response if provided
+        isVerified: true // we set state to true if response is provided
       });
     }
   };
