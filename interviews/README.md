@@ -8,7 +8,7 @@ find your own solution.
 
 Implement "run-length encoding" data compression for a list of characters:
 
-*Example:*
+### Example:
 
  *define:* encode(List('t, 't, 't, 't, 'b, 'c, 'c, 'a, 'a, 'd, 'r, 'r, 'r, 'r))
 
