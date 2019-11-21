@@ -16,5 +16,6 @@ Implement "run-length encoding" data compression for a list of characters:
  
  # Language Specific Interview Problems
 
-* Use the language specific directory to implement your solution given the template provided in the form of _Solve.lang_
+* Use the language specific directory(i.e.: ./scala) to implement your solution given the template provided in the form of _Solve.lang_
 * Create a PR to this repository when finished
+
