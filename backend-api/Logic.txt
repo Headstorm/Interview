@@ -1,0 +1,25 @@
+GET '/data':
+  1. Check if there exists a list of 500 numbers
+    a. Yes => (200, {status: 'ok', data: [sorted 500 numbers]})
+    b. No => (204, {status: 'error', message: 'No Content'})
+
+POST '/data':
+  1. Check body data
+    a. Body contains {data: array} && array.length == 500
+      1) Input array contains non-numeric element
+        => (400, {status: 'error', message: 'Bad Request'})
+      2) Input array contains 500 numeric elements 
+        => jump to step 2
+    b. Body does not contain data key or value is not an array
+      => (400, {status: 'error', message: 'Bad Request'})
+  
+  2. If body contains an valid array
+    a. Sort input array & update the old local array to the new array
+    b. (200, {status: 'ok', message: '500 Numbers Submitted!'})
+
+PATCH '/data':
+  1. Check body data
+    a. Body contains {data: number}
+      => (200, {status: 'ok', message: 'Patched!'})
+    b. Body does not contain data key or value is not a number
+      => (400, {status: 'error', message: 'Bad Request'})
