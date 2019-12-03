@@ -1,0 +1,18 @@
+{% extends "info/base.html" %}
+{% load crispy_forms_tags %}
+    {% block content %}
+      <div class="content-section">
+        <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Contact Us</legend>
+            {{ form|crispy }}
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <div class="g-recaptcha" data-sitekey="6LcVL8QUAAAAAGq37gflszu708f53KiHC5c7n6d1"></div>
+          </fieldset>
+          <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    {% endblock %}
