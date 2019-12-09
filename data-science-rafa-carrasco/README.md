@@ -5,6 +5,7 @@
 	* json must contain an array of 500 numerical values. 
 
 # Folder Structure
+```
 |back-end-challenge/
 |- test_files/
    |- __init__.py
@@ -19,7 +20,7 @@
    |- app.py
    |- json_methods.py
    |- README.md
-
+```
 # Future Work
 * Include css for each page
 * Refactor code to extend html files using flask api and not just hardcode my html pages
