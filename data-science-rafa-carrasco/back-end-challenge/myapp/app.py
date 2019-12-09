@@ -27,10 +27,13 @@ def data():
         if res[0] == 404:
             return render_template('data.html', message=res[1][1])
     if request.method == "GET":
-        data_dir = os.path.join(directory, "data")
-        recent_sorted_array = get_recent_array(filepath=data_dir, filename="arrays.json")
-        return recent_sorted_array
-    return render_template('data.html', message="None")
+        try:
+            data_dir = os.path.join(directory, "data")
+            recent_sorted_array = get_recent_array(filepath=data_dir, filename="arrays.json")
+            return recent_sorted_array
+        except Exception as e:
+            return render_template('data.html')
+    return render_template('data.html', message=None)
 
 # Run server
 if __name__=="__main__":

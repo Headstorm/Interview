@@ -45,7 +45,9 @@ def get_recent_array(filepath="data", filename="arrays.json"):
     full_file_path = os.path.join(filepath, filename)
     with open(full_file_path, 'r') as f:
         lst = json.load(f)
-    return lst[-1]
+    data = lst[-1]
+    data['array'] = sorted(data['array'])
+    return data
 
 
 if __name__=="__main__":
