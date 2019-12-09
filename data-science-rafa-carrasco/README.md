@@ -6,20 +6,20 @@
 
 # Folder Structure
 ```
-|back-end-challenge/
-|- test_files/
-   |- __init__.py
-   |- test_json_methods.py
-|- myapp
-   |- data/
-      |- arrays.json
-   |- template/
-      |- data.html
-      |- index.html
-   |- __init__.py
-   |- app.py
-   |- json_methods.py
-   |- README.md
+back-end-challenge/
+ |- test_files/
+    |- __init__.py
+    |- test_json_methods.py
+ |- myapp
+    |- data/
+       |- arrays.json
+    |- template/
+       |- data.html
+       |- index.html
+    |- __init__.py
+    |- app.py
+    |- json_methods.py
+    |- README.md
 ```
 # Future Work
 * Include css for each page
