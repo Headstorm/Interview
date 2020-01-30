@@ -1,0 +1,37 @@
+[{
+  "field name": "Record ID",
+  "type" : "Number",
+  "sample value" : 1234
+},{
+  "field name": "Name",
+  "type" : "String",
+  "sample value" : "Joe Smith"
+},{
+  "field name": "Cell Phone",
+  "type" : "String",
+  "sample value" : "405.867.5309"
+},{
+  "field name": "Work Phone",
+  "type" : "String",
+  "sample value" : "123.123.1234"
+},{
+  "field name": "Email",
+  "type" : "String",
+  "sample value" : "joe_s@gmail.com"
+},{
+  "field name": "Address",
+  "type" : "String",
+  "sample value" : "123 Vic Way, Dallas TX 75001"
+},{
+  "field name": "Basic Widget Order",
+  "type" : "Number",
+  "sample value" : 37
+},{
+  "field name": "Advanced Widget Order",
+  "type" : "Number",
+  "sample value" : 12
+},{
+  "field name": "Protection Plan",
+  "type" : "Boolean",
+  "sample value" : "True"
+}]
