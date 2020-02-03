@@ -1,0 +1,57 @@
+[
+  {
+    "record_id": 1,
+    "name": "Mehreen Wise",
+    "cell_phone": "555-528-1691",
+    "work_phone": "555-402-0938",
+    "email": "Mehreen.Wise@gmail.com",
+    "address": "123 Main Street",
+    "basic_widget_order": 84,
+    "advanced_widget_order": 94,
+    "protection_plan": true
+  },
+  {
+    "record_id": 2,
+    "name": "Dale Deacon",
+    "cell_phone": "555-540-9266",
+    "work_phone": "555-712-7115",
+    "email": "Dale.Deacon@gmail.com",
+    "address": "456 Main Street",
+    "basic_widget_order": 47,
+    "advanced_widget_order": 17,
+    "protection_plan": false
+  },
+  {
+    "record_id": 3,
+    "name": "Shay Correa",
+    "cell_phone": "555-289-0797",
+    "work_phone": "555-362-8301",
+    "email": "Shay.Correa@gmail.com",
+    "address": "789 Main Street",
+    "basic_widget_order": 16,
+    "advanced_widget_order": 76,
+    "protection_plan": false
+  },
+  {
+    "record_id": 4,
+    "name": "Huzaifah Mendez",
+    "cell_phone": "555-335-8090",
+    "work_phone": "555-871-1919",
+    "email": "Huzaifah.Mendez@gmail.com",
+    "address": "012 Main Street",
+    "basic_widget_order": 18,
+    "advanced_widget_order": 9,
+    "protection_plan": true
+  },
+  {
+    "record_id": 5,
+    "name": "Baran Needham",
+    "cell_phone": "555-506-3206",
+    "work_phone": "555-348-3208",
+    "email": "Baran.Needham@gmail.com",
+    "address": "345 Main Street",
+    "basic_widget_order": 80,
+    "advanced_widget_order": 87,
+    "protection_plan": false
+  }
+]
