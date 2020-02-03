@@ -1,6 +1,6 @@
 package com.testScalaApiProject.models
 
-import play.api.libs.json.{JsValue}
+import play.api.libs.json.JsValue
 
 case class OldRecord(recordID: Int,
                      name: String,
