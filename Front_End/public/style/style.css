@@ -1,0 +1,33 @@
+body {
+    background-color: #f2f2f2
+}
+
+.title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 600%;
+    text-shadow: 1px 1px 4px gray;
+  }
+
+.image {
+    height: 50%;
+    width: 100%;
+    }
+
+.header {
+    color: white;
+    position: relative;
+    font-family: 'Port Lligat Sans', sans-serif;
+    margin-bottom: 2%
+    }
+
+.contact-title {
+    font-family: 'Port Lligat Sans', sans-serif;
+  }
+
+.navbar {
+    background-color: white; opacity: 0.5; filter: alpha(opacity=50);
+    max-height: 8%
+  }
