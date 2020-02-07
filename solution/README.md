@@ -1,7 +1,7 @@
 # HeadStormInterview
 Programming Challenge by Headstorm
 
-Before running the app; you will need to export the `SITE_KEY` and the `SECRET_KEY` of Google Recaptcha V3 into environment variables.
+Before running the app; you will need to export the `SITE_KEY` and the `SECRET_KEY` of Google Recaptcha V3 into environment variables. In addition to that,  the `SITE_KEY` needs to be added to the `webapp/public/javascripts/env.js` file.
 
 Once the above step has been completed, to run the app, go to **webapp/**  and execute 
     
