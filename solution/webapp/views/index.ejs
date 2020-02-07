@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="icon" href="/images/favicon.ico">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://www.google.com/recaptcha/api.js?render=6LcVN9YUAAAAANyjapia4VSn5k9AIZIvrBa-RYUB"></script>
+		<script src="javascripts/env.js"></script>
+	</head>
+	<body>
+	<div id="title">
+		<h1>Company Title</h1>
+	</div>
+
+	<div id="container">
+		<div class="form-wrap">
+			<h3>Contact Us</h3>
+			<form>
+				<input type="hidden" name="g-recaptcha" id="g-recaptcha" />
+				<div class="form-group">
+					<label for="first-name">Full Name</label>
+					<input type="text" name="fullName" id="full-name" />
+				</div>
+				<br/>
+				<div class="form-group">
+					<label for="cell-number">Phone Number</label>
+					<input type="number" name="cellnum" id="cell-number" />
+				</div>
+				<br/>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" />
+				</div>
+				<br/>
+				<button type="submit" class="btn" id="submit_btn" onclick="formHandler(event)">Sign Up</button>
+				
+			</form>
+		</div>
+		
+	</div>
+  </body>
+
+  <script>
+	function formHandler(e) {
+		e.preventDefault();
+		const fullname = $("#full-name").val();
+		const phone = $("#cell-number").val();
+		const email = $("#email").val();
+		const token = $("#g-recaptcha").val();
+
+		var params = {
+				fullname: fullname,
+				phone: phone,
+				email: email,
+				token: token
+			};
+
+			fetch('/send', {
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				method: 'post',
+				body: JSON.stringify(params)
+			})
+			.then(response => response.text())
+			.then(text => console.log("Full name is: " + fullname + " \nContact is: "+
+				phone +"\nEmail is : "+email+"\nCaptcha response: "+ text))
+			.catch(error => $("#captcha_output").text(error));
+
+	}
+
+	
+	grecaptcha.ready(function() {
+		const SITE_KEY = env.SITE_KEY;
+		grecaptcha.execute(SITE_KEY, {action: 'form_validate'})
+			.then(function(token) {
+				$('#g-recaptcha').val(token);
+			});
+	});
+  </script>
+</html>
