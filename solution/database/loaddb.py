@@ -21,8 +21,7 @@ def loadDB(filename):
 		return
 
 	# define table names and static variables
-	USER_TABLE = "User_Info"
-	USER_ORDER_TABLE = "Order_Info"
+	USER_TABLE = "Order_Table"
 	INSERT_PREFIX = "INSERT INTO"
 	DB_NAME = "Startup_Order"
 
@@ -38,19 +37,13 @@ def loadDB(filename):
 							   "WorkPhone varchar(15), " + \
 							   "Email nvarchar(255), " + \
 							   "Address nvarchar(255), " + \
-							   "PRIMARY KEY (RecordID));"
-
-	createWidgetTableStatement = "CREATE TABLE " + USER_ORDER_TABLE +"(" + \
-							   "OrderNumber int NOT NULL, " +\
-							   "RecordID int NOT NULL, " + \
 							   "BasicWidgetOrder int, "+ \
 							   "AdvancedWidgetOrder int, " +\
 							   "ProtectionPlan Boolean, " +\
-							   "PRIMARY KEY (OrderNumber)," +\
-							   "FOREIGN KEY (RecordID) REFERENCES "+ USER_TABLE+ "(RecordID));"
+							   "PRIMARY KEY (RecordID));"
+
 	print(createDBStatement +"\n")
 	print(createUserTableStatement + "\n")
-	print(createWidgetTableStatement + "\n")
 
 	# open the file and iterate through the records
 	with open(filename, encoding='utf-8') as f:
@@ -66,14 +59,10 @@ def loadDB(filename):
 		for row in data:
 			try:
 				print(INSERT_PREFIX +" "+ USER_TABLE + "(RecordID, Name, CellPhone, WorkPhone, "+\
-					"Email, Address) VALUES (%d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\');"% \
+					"Email, Address) VALUES (%d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', %d, %d, %r);"% \
 					(row['Record_ID'] , row['Name'], row['Cell_Phone'], row["Work_Phone"], \
-					row["Email"], row["Address"]) )
-				
-				print(INSERT_PREFIX +" "+ USER_ORDER_TABLE + "(RecordID, BasicWidgetOrder, "+\
-					"AdvancedWidgetOrder, ProtectionPlan) VALUES (%d, %d, %d, %r);\n"% \
-					(row['Record_ID'] , row['Basic_Widget_Order'], row['Advanced_Widget_Order'],\
-					row["Protection_Plan"]))
+					row["Email"], row["Address"], row['Basic_Widget_Order'], row['Advanced_Widget_Order'],\
+					row["Protection_Plan"]) )
 			except KeyError:
 				print("The data to be imported is missing fields")
 
