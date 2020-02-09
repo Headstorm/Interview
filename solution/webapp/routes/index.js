@@ -149,7 +149,7 @@ router.patch('/data', function(req, res, next) {
 	});
 });
 
-router.post('/send', function(req, res, next) {
+router.post('/verify', function(req, res, next) {
 	const secret_key = process.env.SECRET_KEY;
 	const token = req.body.token;
 	const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${token}`;
@@ -161,6 +161,7 @@ router.post('/send', function(req, res, next) {
 	.then(google_response => res.json({ google_response }))
 	.catch(error => res.json({ error }));
 });
+
 
 module.exports = router;
 
