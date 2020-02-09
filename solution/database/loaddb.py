@@ -41,7 +41,7 @@ def loadDB(filename):
 							   "AdvancedWidgetOrder int, " +\
 							   "ProtectionPlan Boolean, " +\
 							   "PRIMARY KEY (RecordID));"
-
+	print("\n")						
 	print(createDBStatement +"\n")
 	print(createUserTableStatement + "\n")
 
@@ -59,10 +59,11 @@ def loadDB(filename):
 		for row in data:
 			try:
 				print(INSERT_PREFIX +" "+ USER_TABLE + "(RecordID, Name, CellPhone, WorkPhone, "+\
-					"Email, Address) VALUES (%d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', %d, %d, %r);"% \
-					(row['Record_ID'] , row['Name'], row['Cell_Phone'], row["Work_Phone"], \
-					row["Email"], row["Address"], row['Basic_Widget_Order'], row['Advanced_Widget_Order'],\
-					row["Protection_Plan"]) )
+					"Email, Address, BasicWidgetOrder,AdvancedWidgetOrder, ProtectionPlan) VALUES "+\
+					"(%d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', %d, %d, %r);\n"% (row['Record_ID'] ,
+					 row['Name'], row['Cell_Phone'], row["Work_Phone"], \
+					 row["Email"], row["Address"], row['Basic_Widget_Order'], row['Advanced_Widget_Order'],\
+					 row["Protection_Plan"]) )
 			except KeyError:
 				print("The data to be imported is missing fields")
 
