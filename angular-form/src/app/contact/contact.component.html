@@ -1,0 +1,37 @@
+<div class="container" style="margin-top: 70px;">
+    <div class="row mdbPageScroll">
+      <div class="col-sm-8 offset-sm-2">
+        <div>
+          <form>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input [(ngModel)]="contact.firstName" type="text" name="firstName" class="form-control" id="firstName" aria-describedby="idHelp" 
+              placeholder="Enter First Name">
+              
+              <label for="lastName">Last Name</label>
+              <input [(ngModel)]="contact.lastName" type="text" name="lastName" class="form-control" id="lastName" aria-describedby="nameHelp" 
+              placeholder="Enter Last Name">
+              
+              <label for="email">Email</label>
+              <input [(ngModel)]="contact.email" type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Enter your email">
+              
+  
+              <label for="phone">Phone</label>
+              <input [(ngModel)]="contact.phone" type="text" name="phone" class="form-control" id="phone" aria-describedby="emailHelp"
+              placeholder="Enter your phone">
+                          
+            </div>
+            <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lc-MNUUAAAAAMSwKp7owogHj6I0J8SgKZTMvtfE" data-callback="recaptchaOnload"></div>
+          </form>
+          <script src='https://www.google.com/recaptcha/api.js?onload=recaptchaOnload&render=explicit&hl=en' async defer></script>
+        <br>
+         <div id="buttonClick">
+          <button class="btn btn-primary btn-sm" [disabled]="validForm" (click)="createContact()">Submit</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
