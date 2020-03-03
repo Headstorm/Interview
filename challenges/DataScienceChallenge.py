@@ -13,11 +13,11 @@ for row in data.itertuples():
     dt=date.day
     if mnth in Summer:
       df=df.append({'Latitude':row.Latitude,'Longitude':row.Longitude,'Birth_Date':row.Birth_Date, 'Season':'Summer'}, ignore_index=True)
-    if mnth in Winter:
+    elif mnth in Winter:
       df=df.append({'Latitude':row.Latitude,'Longitude':row.Longitude,'Birth_Date':row.Birth_Date, 'Season':'Winter'}, ignore_index=True)
-    if mnth in Spring:
+    elif mnth in Spring:
       df=df.append({'Latitude':row.Latitude,'Longitude':row.Longitude,'Birth_Date':row.Birth_Date, 'Season':'Spring'}, ignore_index=True)
-    if mnth in Fall:
+    elif mnth in Fall:
       df=df.append({'Latitude':row.Latitude,'Longitude':row.Longitude,'Birth_Date':row.Birth_Date, 'Season':'Fall'}, ignore_index=True)
 #print(df)
 df.to_csv("challenges/data/result_birthday_season.csv",index = False)
