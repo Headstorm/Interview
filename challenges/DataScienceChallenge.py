@@ -20,4 +20,4 @@ for row in data.itertuples():
     if mnth in Fall:
       df=df.append({'Latitude':row.Latitude,'Longitude':row.Longitude,'Birth_Date':row.Birth_Date, 'Season':'Fall'}, ignore_index=True)
 #print(df)
-df.to_csv("challenges/birthday_season.csv",index = False)
+df.to_csv("challenges/data/result_birthday_season.csv",index = False)
