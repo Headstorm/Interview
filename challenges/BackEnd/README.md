@@ -1,0 +1,31 @@
+# Headstorm Backend Challenge
+
+by Javier Castro
+
+## How to run
+
+From command line:
+
+1. Navigate to BackEnd directory
+2. Run:
+
+```
+venv\Scripts\activate
+venv\Scripts\python.exe app\challenge.py
+```
+
+3. API will run on indicated host and port #
+
+## How to test
+
+1. Make `POST`, `GET`, `PATCH` requests to indicated host and port #
+2. Endpoint is `/data`
+   > Example: `http://host:port/data`
+3. API expects JSON object syntax:
+   ```
+   {
+       "list": [int,int,...],
+       "number": int
+   }
+   ```
+   NOTE: `"number"` key is only used for `PATCH` requests, `GET` and `POST` requests ignore it.
