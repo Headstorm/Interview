@@ -22,10 +22,25 @@ venv\Scripts\python.exe app\challenge.py
 2. Endpoint is `/data`
    > Example: `http://host:port/data`
 3. API expects JSON object syntax:
+
+   POST
+
    ```
    {
-       "list": [int,int,...],
+       "list": [int,int,...]
+   }
+   ```
+
+   PATCH
+
+   ```
+   {
        "number": int
    }
    ```
-   NOTE: `"number"` key is only used for `PATCH` requests, `GET` and `POST` requests ignore it.
+
+   GET
+
+   ```
+   //no body needed
+   ```

@@ -29,7 +29,7 @@
     }
             
     function validate($string, $type){
-        if($type == "name"){
+        if($type === "name"){
             if(preg_match("/^[A-Za-z]{1,40}$/", $string)){
                 //valid name
                 $result = True;
@@ -37,7 +37,7 @@
                 //invalid name
                 $result = False;
             }
-        }elseif($type == "email"){
+        }elseif($type === "email"){
             if(filter_var($string, FILTER_VALIDATE_EMAIL)){
                 //valid email
                 $result = True;
