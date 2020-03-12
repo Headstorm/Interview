@@ -15,6 +15,7 @@
 challenges/data/generate/target/
 challenges/data/generate/target/*
 challenges/data/generate/target
+challenges/BackEnd/venv/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
