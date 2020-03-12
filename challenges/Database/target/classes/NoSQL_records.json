@@ -1,0 +1,48 @@
+{
+    "NoSQL Dump": [
+        {
+            "Record ID": 1234,
+            "Name": "Joe Smith",
+            "Cell Phone": "405.867.5309",
+            "Work Phone": "123.123.1234",
+            "Email": "joe_w@gmail.com",
+            "Address": "123 Vic Way, Dallas TX 75001",
+            "Basic Widget Order": 37,
+            "Advanced Widget Order": 12,
+            "Protection Plan": true
+        },
+        {
+            "Record ID": 5615,
+            "Name": "Katherine Ross",
+            "Cell Phone": "245.124.5543",
+            "Work Phone": "234.516.7894",
+            "Email": "kathyr@hotmail.com",
+            "Address": "554 Vista Dr, Doña Ana NM 70046",
+            "Basic Widget Order": 14,
+            "Advanced Widget Order": 24,
+            "Protection Plan": false
+        },
+        {
+            "Record ID": 3549,
+            "Name": "Sarah Cole",
+            "Cell Phone": "245.456.7864",
+            "Work Phone": "456.123.7894",
+            "Email": "sarah_cole@yahoo.com",
+            "Address": "4512 Abolean St, San José CA 45811",
+            "Basic Widget Order": 48,
+            "Advanced Widget Order": 68,
+            "Protection Plan": true
+        },
+        {
+            "Record ID": 4587,
+            "Name": "Omomdamon Guarane",
+            "Cell Phone": "245.456.8745",
+            "Work Phone": "456.123.3547",
+            "Email": "ommmm_ge@mail.com",
+            "Address": "4215 Auburn St, Dallas TX 75487",
+            "Basic Widget Order": 76,
+            "Advanced Widget Order": 38,
+            "Protection Plan": false
+        }
+    ]
+}

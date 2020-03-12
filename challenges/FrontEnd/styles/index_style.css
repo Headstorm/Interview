@@ -1,0 +1,30 @@
+.navbar {
+  overflow: auto;
+  background-color: gray;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.logo_img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.title_txt {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 50px;
+  font-weight: 800;
+}

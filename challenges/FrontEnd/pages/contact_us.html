@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Your Company</title>
+    <link rel="icon" href="../resources/img/tab_icon.ico" />
+    <link rel="stylesheet" href="../styles/contact_us_style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      //script to retrieve reCAPTCHA site key and set it up
+      var bus = $({});
+      $(document).ready(function() {
+        $.post("setup_captcha.php", { key: "RECAPTCHA_SITE_KEY" }, function(
+          result
+        ) {
+          result = JSON.parse(result);
+          //create script element for reCAPTCHA integration
+          var script = document.createElement("script");
+          script.src =
+            "https://www.google.com/recaptcha/api.js?render=" + result.key;
+          document.getElementsByTagName("head")[0].appendChild(script);
+          bus.trigger("site-key-set", { key: result.key }); //trigger site-key-set event
+        });
+      });
+    </script>
+    <script>
+      var site_key = "";
+      //once the site-key has been set
+      bus.on("site-key-set", function(event, data) {
+        site_key = data.key; //update var so we have access later when form is submitted
+      });
+
+      $(document).ready(function() {
+        //when document finishes loading
+        $("#contact_us_form").submit(function(event) {
+          event.preventDefault(); //stop default submit
+          //check reCAPTCHA
+          grecaptcha.ready(function() {
+            grecaptcha
+              .execute(site_key, {
+                action: "contact_us"
+              })
+              .then(function(token) {
+                var recaptcha_response = document.getElementById(
+                  "recaptcha_response"
+                );
+                recaptcha_response.value = token; //set reCAPTCHA token
+                var f_name = $("#f_name").val();
+                var l_name = $("#l_name").val();
+                var email = $("#email").val();
+                var message = $("#message").val();
+                //send POST request to verify reCAPTCHA and process data if successful
+                $.post(
+                  "submit_form.php",
+                  {
+                    f_name: f_name,
+                    l_name: l_name,
+                    email: email,
+                    message: message,
+                    response: $("#recaptcha_response").val()
+                  },
+                  function(result) {
+                    //parse result into JSON object
+                    result = JSON.parse(result);
+                    if (result.success) {
+                      //reCAPTCHA success and form submitted
+                      var f_name = $("#f_name").val();
+                      var l_name = $("#l_name").val();
+                      var email = $("#email").val();
+                      var message = $("#message").val();
+                      alert("Form has been submitted! Thank you");
+                      console.log("First Name: ", f_name);
+                      console.log("Last Name: ", l_name);
+                      console.log("Email: ", email);
+                      console.log("Message: ", message);
+                    } else {
+                      //something went wrong (recaptcha failed, or invalid data, or server error)
+                      alert(result.error_msg);
+                    }
+                  }
+                );
+              });
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img
+      class="logo_img"
+      src="../resources/img/logo.png"
+      alt="Your Company Logo"
+    />
+    <h1 class="title_txt">Your Company</h1>
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../pages/contact_us.html">Contact Us</a>
+    </div>
+
+    <div class="contact_form">
+      <form id="contact_us_form" method="POST">
+        <label for="f_name">First Name*</label>
+        <input
+          required="required"
+          type="text"
+          id="f_name"
+          name="f_name"
+          placeholder="Enter your name..."
+          maxlength="40"
+        />
+        <label for="l_name">Last Name*</label>
+        <input
+          required="required"
+          type="text"
+          id="l_name"
+          name="l_name"
+          placeholder="Enter your last name..."
+          maxlength="40"
+        />
+        <label for="email">Email*</label>
+        <input
+          required="required"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email..."
+          maxlength="254"
+        />
+        <label for="message">Message*</label>
+        <textarea
+          required="required"
+          id="message"
+          name="message"
+          placeholder="Tell us something in 1000 characters..."
+          maxlength="1000"
+        ></textarea>
+        <input
+          type="hidden"
+          id="recaptcha_response"
+          name="recaptcha_response"
+        />
+        <input type="hidden" name="recaptcha_token" id="recaptcha_token" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
