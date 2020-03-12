@@ -7,12 +7,9 @@ by Javier Castro
 From command line:
 
 1. Navigate to BackEnd directory
-2. Run:
+2. Run the `challenge.py` file using python3
 
-```
-venv\Scripts\activate
-venv\Scripts\python.exe app\challenge.py
-```
+NOTE: requires python3, Flask and Flask-RESTful to be installed
 
 3. API will run on indicated host and port #
 
