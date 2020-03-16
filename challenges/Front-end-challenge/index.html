@@ -1,0 +1,35 @@
+<!-- A simple web page consisting contact us form and google reCaptcha V3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpeg" href="img/favicon.jpeg">
+    <title>Headstorm</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=Your_site_key"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body onload="initialize()" style="background-color: lightcoral;">
+    <div>
+    <h1>
+        Headstorm
+    </h1>
+        <h3>
+            Contact Us
+        </h3>
+        <form>
+            <label for="firstName">First Name:</label><br/>
+            <input type="text" id="firstName"><br/>
+            <label for="lastName">Last Name:</label><br/>
+            <input type="text" id="lastName"><br/>
+            <label for="emailId">Email:</label><br/>
+            <input type="email" id="emailId"><br/>
+            <label for="comments">Comments:</label><br/>
+            <textarea id="comments" rows="10" cols="40"></textarea><br/>
+            <input type="button" onclick="sendResponse()" value="Submit">
+        </form>
+    </div>
+    <div id="result">
+    </div>
+</body>
+</html>
