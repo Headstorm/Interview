@@ -1,0 +1,127 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  background: #84531c;
+  background: linear-gradient(to bottom right, #84531c, #3b2121);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font: 70px/85px Lobster, Arial, sans-serif;
+  text-align: center;
+  padding: 15%;
+  padding-bottom: 10px;
+  color: #c2c386;
+  user-select: none;
+}
+
+h2 {
+  font-size: 50px;
+  padding: 20px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font: 600 32px/32px Arial, sans-serif;
+  background: #c2c386;
+  border-radius: 10px;
+  padding: .8em 1.6em;
+  margin: 25px;
+  cursor: pointer;
+  color: #3b2121;
+  user-select: none;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+}
+
+.btn:hover {
+  font-size: 33px;
+  margin: 24.5px;
+}
+
+.type {
+  border: 1px solid #c6c9cc;
+  border-radius: 5px;
+  color: #888;
+  margin: 5px 0 27px 0;
+  padding: 5px 8px;
+  width: 90%;
+}
+
+textarea {
+  width: 90%;
+  margin: 5px 0 20px 0;
+}
+
+label {
+  color: #c2c386;
+  font: 600 18px/22px Arial, sans-serif;
+}
+
+.form {
+  width: 500px;
+  margin: 10% auto;
+  border: 2px solid #c2c386;
+  border-radius: 20px;
+  padding: 30px;
+  background: #3e2321;
+}
