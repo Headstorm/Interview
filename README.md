@@ -1,4 +1,4 @@
-### Headstorm Data Science Challenge
+## Headstorm Data Science Challenge
 
 ### Introduction:
 
@@ -8,12 +8,12 @@ This project uses geographical coordinates paired with a timestamp representing 
 
 I am using the DarkSky API (https://darksky.net/dev) to fetch weather data. This API accepts the 3-tuples (latitude, longitude, timestamp) and returns a number of weather features like sunriseTime, temperatureHigh, temperatureLow, etc.
 
-Note: This API is a little shaky and therefore sometimes returns incomplete/stale data. Moreover, according to my observation, on using the same API from different IP addresses, it only gives complete data to the original IP address used initially. So if the API key I have created, is used on your end, it could prevent the access to a lot of data.
+**Note:** This API is a little shaky and therefore sometimes returns incomplete/stale data. Moreover, according to my observation, on using the same API from different IP addresses, it only gives complete data to the original IP address used initially. So if the API key I have created, is used on your end, it could prevent the access to a lot of data.
 
 Therefore, while testing the model, I have handled the situation where, if the API does not return the necessary data, you can use the test data I have pre-fetched and stored in the current folderalready when I first used the API.
 
 ### Deliverables (Contents of Folder):
-NOTES:
+**NOTES:**
 - All these files are required to be in the same folder in order to make the Test Jupyter Notebook run without any errors.
 - Pass the filename of the test CSV dataset in the placeholder for path variable.
 
