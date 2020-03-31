@@ -1,0 +1,85 @@
+div {
+  margin-top: 0;
+}
+
+#headerBackground {
+  display: block;
+  margin-right: 1px;
+  margin-left: 0px;
+  margin-top: -7%;
+  border: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.container {
+  margin-top: 0;
+  color: white;
+}
+
+.summary {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  color: black;
+}
+
+.companyName {
+  font-family: "Baloo Thambi 2", cursive;
+  position: relative;
+  top: 12%;
+  left: 10%;
+  /* font-size: 20em; */
+  font-size: 18vw;
+  color: black;
+}
+
+.logo {
+  font-size: 0.8em;
+}
+
+.description {
+  position: relative;
+  top: -2.5em;
+  left: 12%;
+  right: 18%;
+  font-size: 1.7em;
+  max-width: 65%;
+  color: white;
+}
+
+#value1 {
+  position: absolute;
+  font-size: 1.15em;
+  top: 60%;
+  left: 12%;
+  color: white;
+}
+
+#value2 {
+  position: absolute;
+  font-size: 1.15em;
+  top: 60%;
+  left: 40%;
+  color: white;
+}
+
+#value3 {
+  position: absolute;
+  font-size: 1.15em;
+  top: 60%;
+  left: 65%;
+  color: white;
+}
+
+.valueIcon {
+  position: absolute;
+  left: 29%;
+  font-size: 4em;
+  color: black;
+}
+
+.valueCopy {
+  position: absolute;
+  top: 10em;
+}
