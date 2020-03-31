@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5c5d9cdebc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <div class="ui grid">
+          <div class="column sixteen wide">
+              <div class="row summary">
+                <div>
+                  <h1 class="companyName">Bounce<i class="fas fa-check-double logo"></i></h1>
+                </div>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non odio euismod lacinia at quis risus sed. Cras fermentum odio eu feugiat pretium. Lectus vestibulum mattis ullamcorper velit.
+                  </div>
+              </div>
+
+              <br>
+            <div class="row">  
+              <div class="column two wide">
+                <div id="value1">
+                  <h2>Value Prop #1</h2>
+                  <br>
+                  <i class="far fa-calendar-alt valueIcon"></i>
+                  <br>
+                  <p class="valueCopy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </div>
+              </div>
+              <div class="column two wide">
+                <div id="value2">
+                  <h2>Value Prop #2</h2>
+                  <br>
+                  <i class="fas fa-tachometer-alt valueIcon"></i>
+                  <br>
+                  <p class="valueCopy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </div>
+              </div>
+              <div class="column two wide">
+                <div id="value3">
+                  <h2 >Value Prop #3</h2>
+                  <br>
+                  <i class="fas fa-users-cog valueIcon"></i>
+                  <br>
+                  <p class="valueCopy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </div>
+              </div>
+            </div>
+              <img id="headerBackground" src="https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="container form">
+        <div class="ui eight column centered grid">
+          <br>
+          <form id= "contactForm" method="post" id=contactForm class= "ui form">
+            <h2 class="contact">Contact Us!</h2>
+            <br>
+            <div class= "field textInput">
+              <label>Name</label>
+              <input type="text" id="nameInput" placeholder="Name" />
+            </div>
+            <div class= "field textInput">
+              <label>Email</label>
+              <input type="text" id="emailInput" placeholder="Email" />
+            </div>
+            <div class= "field textInput">
+              <label>Company</label>
+              <input type="text" id="companyInput" placeholder="Company" />
+            </div>
+            <div class= "field textInput">
+              <label>Message</label>
+                <textarea
+                  type="text"
+                  id="messageInput"
+                  placeholder="message"
+                  rows="2"
+              ></textarea>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6Lccy-IUAAAAAAhEwK9F6wbfF3kLGqrLZ0sPvpy7" data-callback="verifyCaptcha"></div>
+            <div id="g-recaptcha-error"></div>
+            <div>
+              <input class= "ui yellow button" type="submit" name="submit" value="Submit" />
+            </div>
+          </form>
+          <br>
+        </div>
+      </div>
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+      <script>
+      function submitUserForm() {
+        let response = grecaptcha.getResponse();
+        let contactName = document.getElementById("nameInput");
+        let contactEmail = document.getElementById("emailInput");
+        let contactCompany = document.getElementById("companyInput");
+        let contactMessage = document.getElementById("messageInput");
+
+        if(response.length == 0) {
+            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+            return false;
+        }
+          console.log("token:",response)
+          console.log("name:", contactName.value, " ", "email:", contactEmail.value, " ", "company:", contactCompany.value, " ", "message:", "", contactMessage.value)
+          return true;
+        };
+      function verifyCaptcha() {
+        document.getElementById('g-recaptcha-error').innerHTML = '';
+      }
+     
+      contactForm.addEventListener("submit", e => {
+        let contactForm = document.getElementById("contactForm");
+        e.preventDefault();
+        submitUserForm();
+        contactForm.reset();
+      })
+      </script>
+  <body>
+<html>
