@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Company A -- the best company in the world</title>
+  <meta name="description" content="the best company in the world">
+  <meta name="author" content="Headstorm Technical Interviews">
+  <link rel="shortcut icon" href="../src/ico/favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css?v=1.0">
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      grecaptcha.render('html_element', {
+        'sitekey' : 'hello'
+      });
+    };
+  </script>
+</head>
+
+<body>
+  <script src="../js/scripts.js"></script>
+  <div class="container">
+    <h1 style="text-align: center">Contact Us</h1>
+  <form onsubmit="fireSubmit()" id="contact-us" name="contact-us">
+    <label for="fname">First Name: </label><input type="text" id="fName" name="fName">
+    <label for="lname">Last Name: </label><input type="text" id="lName" name="lName">
+    <label for="lname">Phone: </label><input type="phone" id="phone" name="phone">
+    <label for="lname">Email: </label><input type="email" id="email" name="email">
+    <div id="html_element"></div>
+    <input type="submit">
+  </form>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+  async defer>
+</script>
+  </div>
+</body>
+</html>
