@@ -1,9 +1,17 @@
 ## Headstorm Interview
+Hello! My name is Jeri "Betsy" Trammell. Please email me at betsytrammell0@gmail.com or call/text (318) 805-6761 if you have any questions or comments about the project. 
 
-Welcome to the Headstorm interview challenge!  This repository is designed for candidates to [fork and create Pull Requests](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) with their solutions.  There are two types of 'take-home' problems here:
 
-### Challenges
-These are domain specific problems that can be submitted individually.  You can choose from backend, frontend, databases, or data-science.  You can submit a PR for one, many, or all the challenges.
+I used ReactJS, NodeJS, and ExpressJS for the frontend and backend challenges. For the database challenge purposes, I used mySQL (MERN stack).
+### Download and Run
+- cd into the client/ and server/ folders separately
+- run ```npm install``` in both
+- run ```npm start``` in both
+- open localhost:3000 in your browser
+>The output for the frontend and database challenges appears in the console. To view the output of the backend challenge, you will have to press the "Show JSON file." It will print the sorted file underneath the file upload buttons. 
 
-### Interviews
-These are language specific interview questions and you can choose the language in which you implement your solution.
+### About the Files
+- The new DB visualization is located in client/src/DBVisual
+ - The files I was submitting for testing the Backend Challenge are located in client/src/BackendTestingFiles
+
+###

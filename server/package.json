@@ -1,0 +1,33 @@
+{
+    "name": "headstorm-interview",
+    "version": "0.1.0",
+    "private": true,
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "devDependencies": {
+        "body-parser": "^1.19.0",
+        "es6-promise": "^4.2.8",
+        "express": "^4.17.1",
+        "isomorphic-fetch": "^3.0.0",
+        "node-env-run": "^4.0.2",
+        "nodemon": "^2.0.7"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "node-fetch": "^2.6.1"
+    }
+}

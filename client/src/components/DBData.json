@@ -1,0 +1,24 @@
+[
+    {
+        "record_ID": 1234,
+        "name": "Joe Smith",
+        "cellphone": "405.867.5309",
+        "workphone": "123.123.1234",
+        "email": "joe_s@gmail.com",
+        "address": "123 Vic Way, Dallas TX 75001",
+        "basic_widget_order": 37,
+        "advanced_widget_order": 12,
+        "protection_plan": true
+    },
+    {
+        "record_ID": 4545,
+        "name": "Scott Smith",
+        "cellphone": "318.867.5555",
+        "workphone": "304.123.5454",
+        "email": "s_smith@gmail.com",
+        "address": "111 My Way, Dallas TX 78900",
+        "basic_widget_order": 40,
+        "advanced_widget_order": 10,
+        "protection_plan": false
+    }
+]
