@@ -2,7 +2,7 @@
 
   The following is a set of front-end, back-end, and database challenges that can be completed to supplement your resume as part of the interview process with Headstorm. Technology is a core element of our culture at Headstorm and we hope you find these challenges interesting. Complete as many of the challenges as you desire.  It is acceptable to submit an incomplete solution to any challenge.
 
-### Submission Instructions
+### Submission Instruction
 
   Submit a [Pull Request](https://help.github.com/en/articles/about-pull-requests) (PR) to this repository. Once your PR is created, engineers at Headstorm will review the request and engage in commentary and questions on your PR.
 
