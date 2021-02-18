@@ -1,13 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import ContactForm from './components/ContactForm';
 
-function App() {
+const App = () => {
+  require('dotenv').config()
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className='App'>
+      <div className='container'>
+        <h1 className='text-center'>React Contact Form</h1>
+        <ContactForm />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
