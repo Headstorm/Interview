@@ -1,7 +1,7 @@
 {
   "name": "headstorm-backend",
   "version": "1.0.0",
-  "description": "\u001b[D Restful API for portfolio projects",
+  "description": "\u001b[D Restful API for headstorm backend challenge",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
