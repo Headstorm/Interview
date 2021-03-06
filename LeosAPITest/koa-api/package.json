@@ -1,0 +1,17 @@
+{
+  "name": "api test",
+  "version": "1.0.0",
+  "description": "chanllenge",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start:prod": "node app.js"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "author": "leo",
+  "license": "ISC"
+}
