@@ -11,6 +11,7 @@
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-google-recaptcha": "^2.1.0",
     "react-google-recaptcha-v3": "^1.8.0",
     "react-recaptcha": "^2.3.10",
     "react-recaptcha-v3": "^2.0.1",
