@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 data_list = []
 
+# TODO: better (more verbose) errors
 @app.route('/data', methods=['GET', 'POST', 'PATCH'])
 def data_api():
     global data_list
@@ -17,7 +18,12 @@ def data_api():
         else:
             return 'Bad request', 400
     elif request.method == 'PATCH':
-        pass
+        try:
+            data_list = list(sorted([int(request.data)] + data_list))
+            return jsonify(data_list)
+        except BaseException as e:
+            print(e)
+            return 'Bad request', 400
 
 if __name__ == '__main__':
     app.run(debug=True)
