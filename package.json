@@ -1,0 +1,20 @@
+{
+  "name": "headstorm-contact-form",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "10.0.9",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hook-form": "^6.15.5",
+    "react-recaptcha": "^2.3.10",
+    "react-recaptcha-v3": "^2.0.1",
+    "sass": "^1.32.8"
+  }
+}
