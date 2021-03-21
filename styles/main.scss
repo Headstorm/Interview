@@ -1,0 +1,198 @@
+body{
+    background-color: gray;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+    background-image: url("https://images.unsplash.com/photo-1460627390041-532a28402358?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80 ");
+    background-size: cover;
+    
+
+
+}
+
+h1{
+    color:white;
+    text-align: center;
+    font-size: 2.9rem;
+    margin-bottom: 0;
+    text-shadow: 0px 2px 8px #000000;
+}
+.sub-title{
+    margin-top:15px;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 1.2rem;
+    text-shadow: 0px 2px 8px #000000;
+}
+
+
+#main-container{
+    width: 1100px;
+    
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    backdrop-filter: blur(17px);
+    border:  rgb(64, 64, 64);
+    -webkit-box-shadow: 0px 4px 34px 9px rgba(0,0,0,0.48); 
+     box-shadow: 0px 4px 34px 9px rgba(0,0,0,0.48);
+    
+  
+    .contact-info{
+        background-color: #4B0082;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 40%;
+        padding: 40px;
+        border-radius: 15px;
+        
+        h4{
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+        p{
+            color: rgba(255, 255, 255, .7);
+            margin-bottom: 3rem;
+        }
+        .icon-container{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 2rem;
+
+            .fa{
+                font-size: 1.5rem;
+                flex: 0 0 20px;
+                margin-right: 2rem;
+                color:salmon;
+                
+            }
+            span{
+                font-size: 1.2rem;
+                font-weight: 350;
+            }
+
+        }
+       
+        .social-media-icons{
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            
+           
+            
+        }
+        .icon-area{
+            display: flex;
+            flex: 0 0 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #4B0082;
+            font-size: 1rem;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+        .icon-area:hover{
+            background-color:salmon ;   
+            transition: all 0.3s ease-in-out;
+            
+        }
+    }
+}
+form{
+    width: 100%;
+     .col{
+        padding: 40px;
+        display: flex;
+        flex: 0 1 100%;
+       
+        .col-grp{
+            display:flex;
+            flex: 0 1 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+         
+        .error-message{
+             color:#6a00b6;   
+        }
+        textarea{
+            cursor: pointer;
+            font-size:1.3rem;
+            text-align: start;
+            color:white;
+            outline:transparent;
+            margin-right: 2rem;
+            background-color: transparent;
+            border-color: transparent ;
+            border-bottom-color:  rgba(255, 255, 255, 0.7);;
+            border-bottom-width: 2px ;
+            &:focus{
+                border-bottom-color:  #3d0069 ;
+
+                transition: 0.3s all ease-in-out;
+            }
+        }       
+        label{
+            color:rgba(255, 255, 255, 0.7);
+             }
+        input{
+            cursor: pointer;
+            font-size:1rem;
+            text-align: start;
+            color:white;
+            outline:transparent;
+            padding: 0.8rem;
+            margin-right: 2rem;
+            background-color: transparent;
+            border-color: transparent ;
+            border-bottom-color: rgba(255, 255, 255, 0.7);
+            border-bottom-width: 2px ;
+         
+            &:focus{
+                border-bottom-color:  #4B0082 ;
+
+                transition: 0.3s all ease-in-out;
+        }
+        
+        }
+        
+       
+        }
+       
+    }
+    
+    .button{
+        display:flex;
+        justify-content: flex-end;
+        flex: 0 0 50%;
+        padding-right: 70px;
+
+        button{
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        border: none;
+        background-color:#4B0082;    
+        padding: 17px 35px;
+        border-radius: 12px;
+        &:hover{
+            color: salmon;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        }
+        
+    } 
+}
