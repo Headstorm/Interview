@@ -1,9 +1,10 @@
 ## Headstorm Interview
 
-Welcome to the Headstorm interview challenge!  This repository is designed for candidates to [fork and create Pull Requests](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) with their solutions.  There are two types of 'take-home' problems here:
+This is my solution to the front-end-challenge
 
-### Challenges
-These are domain specific problems that can be submitted individually.  You can choose from backend, frontend, databases, or data-science.  You can submit a PR for one, many, or all the challenges.
+The project has been bootstrapped from create-next-app
 
-### Interviews
-These are language specific interview questions and you can choose the language in which you implement your solution.
+I used react.js, html5, css3, sass to design and develop the webpage. 
+
+the company's title and the company's logo(favicon) has been added to the browser tab, google recaptcha implemented successfully 
+and the information from the for has been dumped to the browser console.
