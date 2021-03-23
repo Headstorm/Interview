@@ -1,0 +1,12 @@
+body{
+    text-anchor: middle;
+    color: #004f99;
+    background-color: #b3daff;
+
+}
+h1 {
+	justify-content: center;
+	text-align: center;
+    height: 70px;
+    width: 400px;
+}
