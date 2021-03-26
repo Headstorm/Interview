@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Calibri';
+    font-size: 18px;
+}
+
+.navbar {
+    background-color: #f37363;
+    color: white;
+}
+.navbar-brand {
+    padding-left:1em;
+}
+.navbar-text{
+    padding-right:1em;
+    font-style:italic;
+}
+ .nav-item {
+     float: left;
+ }
+.form-group {
+    padding:0.5em;
+}
+
+.card {
+    padding:1em;
+    outline-color:gray;
+    margin: 2em;
+}
+
+
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}

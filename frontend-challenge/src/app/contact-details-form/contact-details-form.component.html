@@ -1,0 +1,33 @@
+<div class="card" *ngIf="recaptchaError">
+  <div class="card-body">
+    <h5 class="card-title">ReCaptcha Error</h5>
+    <p class="card-text">Error validating ReCaptcha, please refresh the page and try again</p>
+  </div>
+</div>
+
+<div class="card" *ngIf="!recaptchaError">
+    <div class="card-body">
+      <h5 class="card-title">Please fill out the form below and we will be in contact with you shortly!</h5>
+      <form (ngSubmit)="onSubmit(contactDetailsForm)" [formGroup]="contactDetailsForm" novalidate>
+          <div class="form-group">
+            <label class="col-md-4">First Name</label>
+            <input type="text" class="form-control" formControlName="firstname" placeholder="Please enter first name"/>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastname" placeholder="Please enter last name"/>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Please enter email"/>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Phone Number</label>
+            <input type="number" class="form-control" formControlName="phoneNumber" placeholder="Please enter phone number"/>
+          </div>
+          <div class="form-group">
+            <button [disabled]="contactDetailsForm.invalid && !recaptchaError" type="submit" class="btn btn-primary">Submit</button>
+          </div>
+      </form>
+    </div>
+</div>
