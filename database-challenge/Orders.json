@@ -1,0 +1,24 @@
+[
+    {
+        "Record ID": 1234,
+        "Name": "Joe Smith",
+        "Cell Phone": "405.867.5309",
+        "Work Phone": "123.123.1234",
+        "Email": "joe_w@gmail.com",
+        "Address": "123 Vic Way, Dallas TX 75001",
+        "Basic Widget Order": 37,
+        "Advanced Widget Order": 12,
+        "Protection Plan": true
+    },
+    {
+        "Record ID": 1235,
+        "Name": "Ben Douthit",
+        "Cell Phone": "940.391.7596",
+        "Work Phone": "123.123.1234",
+        "Email": "bendouthit31@gmail.com",
+        "Address": "15480 Dallas Parkway, Dallas TX 75248",
+        "Basic Widget Order": 38,
+        "Advanced Widget Order": 13,
+        "Protection Plan": true
+    }
+]
