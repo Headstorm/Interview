@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/tooplate-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Coffee-PNG/Coffee_Cup_PNG_Clipart_Vector.png" />
+    <title>WhirlyBird Coffee</title>
+    <!--
+
+    Template 2107 New Spot
+
+	http://www.tooplate.com/view/2107-new-spot
+
+    -->
+</head>
+<body>
+    <div class="tm-container mx-auto">
+        <section class="tm-section tm-section-1">
+            <div class="container">
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="tm-bg-circle-white tm-flex-center-v">
+                            <header class="text-center">
+                                <h1 class="tm-site-title">WhirlyBird Coffee</h1>
+                                <p class="tm-site-subtitle">The healthiest coffee in Dallas!</p>
+                            </header>
+                            <p>WhirlyBird Coffee is a unique blend of light and dark roast coffee beans. The beans are sourced from local farms and wet processed to maintain maximum flavor and minimum contaminants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tm-section pt-2 pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 tm-flex-center-v tm-section-left">
+                        <p id ="send_message">Free Coffee Beans Sample! <br> Send us a message!</p>
+                        <!-- <p id="send_message2">Send us a message!</p> -->
+                        <form id="submission" class="tm-contact-form" method="POST">
+                            <div class="form-group mb-4">
+                                <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required/>
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required/>
+                            </div>
+                            <div class="form-group mb-5">
+                                <textarea rows="5" id="contact_message" name="contact_message" class="form-control" placeholder="Message..." required></textarea>
+                            </div>
+                            <div class="form-group mb-0 text-right">
+                                <input type="button" onclick ="data_grab()" class="g-recaptcha btn btn-primary" 
+                                data-sitekey="6Lern5IaAAAAAHgqI8pMVsn1CI88CCkBc_4uha0w" data-callback="data_grab()" data-action="submit" value="Send">
+                            </div>
+                        </form>
+                    </div>    
+                            
+        </section>
+        <footer class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="small mb-4 tm-footer-text">Copyright &copy; 2021 WhirlyBird Coffee 
+                    
+                    | Design: <a rel="nofollow" href="https://www.tooplate.com" class="tm-footer-link">Tooplate</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="static/js/smooth-scroll.polyfills.min.js"></script>
+    <script src="static/js/datacapturing.js"></script>
+    <!-- https://github.com/cferdinandi/smooth-scroll -->
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            easing: 'easeInOutQuart',
+            speed: 800
+        });
+    </script>
+
+</body>
+</html>
