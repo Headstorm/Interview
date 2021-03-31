@@ -25,30 +25,37 @@
 
 <body class="bg-gray-700">
     <div class="sm:mx-auto sm:container justify-center md:max-w-md m-4 flex flex-col font-mono">
-        <header class="text-gray-100 font-black text-2xl text-center">
+        <header class="text-gray-100 font-black text-4xl text-center">
             big thonk inc.
         </header>
         <section class="leading-normal">
-            <form class="text-gray-100 font-extrabold">
+            <form class="text-gray-100 font-extrabold text-2xl mt-3">
                 contact us.
-                <div class="text-gray-300 flex flex-row font-normal mb-1">
-                    <label for="name" class="flex-grow text-left">name.</label>
-                    <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text" id="name"
-                        name="name" required>
-                </div>
-                <div class="text-gray-300 flex flex-row font-normal mb-1">
-                    <label for="email" class="flex-grow text-left">email.</label>
-                    <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="email" id="email"
-                        name="email" required>
-                </div>
-                <div class="text-gray-300 flex flex-row font-normal">
-                    <label for="message" class="flex-grow text-left">message.</label>
-                    <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text" id="message"
-                        name="message" required>
+                <div class="text-lg mt-2">
+                    <div class="text-gray-300 flex flex-row font-normal mb-1">
+                        <label for="name" class="flex-grow text-left">name.</label>
+                        <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text"
+                            id="name" name="name" required>
+                    </div>
+                    <div class="text-gray-300 flex flex-row font-normal mb-1">
+                        <label for="email" class="flex-grow text-left">email.</label>
+                        <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="email"
+                            id="email" name="email" required>
+                    </div>
+                    <div class="text-gray-300 flex flex-row font-normal mb-2">
+                        <label for="message" class="flex-grow text-left">message.</label>
+                        <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text"
+                            id="message" name="message" required>
+                    </div>
+                    <div class="text-gray-300 flex justify-center font-normal">
+                        <button class="text-gray-700 bg-gray-200 hover:bg-gray-400 border-gray-500 rounded-sm w-20"
+                            type="button" id="button" name="button" required>submit</input>
+                    </div>
                 </div>
             </form>
         </section>
-        <footer class="mt-4">
+        <footer class="mt-4 text-xs text-center">
+            I'm not sure if I still need a footer
         </footer>
     </div>
 </body>
