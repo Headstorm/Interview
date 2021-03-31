@@ -1,0 +1,35 @@
+[
+    {
+        "Record_ID": 1234,
+        "Name": "Joe Smith",
+        "Cell_Phone": "405.867.5309",
+        "Work_Phone": "123.123.1234",
+        "Email": "joe_s@gmail.com",
+        "Address": "123 Vic Way, Dallas TX 75001",
+        "Basic_Widget_Order": 37,
+        "Advanced_Widget_Order": 12,
+        "Protection_Plan": true
+    },
+    {
+        "Record_ID": 1235,
+        "Name": "Jane Smith",
+        "Cell_Phone": "405.867.5320",
+        "Work_Phone": "321.321.4321",
+        "Email": "jane_s@gmail.com",
+        "Address": "123 Vic Way, Dallas TX 75001",
+        "Basic_Widget_Order": 15,
+        "Advanced_Widget_Order": 20,
+        "Protection_Plan": false
+    },
+    {
+        "Record_ID": 1236,
+        "Name": "John Doe",
+        "Cell_Phone": "405.254.9210",
+        "Work_Phone": "321.321.4321",
+        "Email": "jane_s@gmail.com",
+        "Address": "1532 Vicky Way, Dallas TX 75001",
+        "Basic_Widget_Order": 50,
+        "Advanced_Widget_Order": 10,
+        "Protection_Plan": true
+    }
+]
