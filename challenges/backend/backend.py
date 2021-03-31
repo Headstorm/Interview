@@ -12,7 +12,8 @@ def data_api():
         return jsonify(data_list)
     elif request.method == 'POST':
         in_json = request.get_json()
-        if len(in_json) == 500 and all(map(lambda x: type(x) == int, in_json)):
+        is_num = lambda x: type(x) (int, float), in_json
+        if len(in_json) == 500 and all(map(is_num)):
             data_list = list(sorted(in_json))
             return jsonify(data_list)
         else:
