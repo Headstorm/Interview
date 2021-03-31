@@ -14,10 +14,15 @@
     <link rel="icon" type="image/png" href="favicon-32x32.ico" sizes="32x32">
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <script>
         function onSubmit(token) {
-            document.getElementById("demo-form").submit();
+            document.getElementById("form").submit();
+            console.log(document.getElementById("name").value);
+            console.log(document.getElementById("email").value);
+            console.log(document.getElementById("message").value);
         }
+
     </script>
 
 
@@ -29,7 +34,7 @@
             big thonk inc.
         </header>
         <section class="leading-normal">
-            <form class="text-gray-100 font-extrabold text-2xl mt-3">
+            <form id="form" class="text-gray-100 font-extrabold text-2xl mt-3">
                 contact us.
                 <div class="text-lg mt-2">
                     <div class="text-gray-300 flex flex-row font-normal mb-1">
@@ -50,8 +55,8 @@
                     <div class="text-gray-300 flex justify-center font-normal">
                         <button
                             class="g-recaptcha text-gray-700 bg-gray-200 hover:bg-gray-400 border-gray-500 rounded-sm w-20"
-                            data-sitekey="6LeHFpcaAAAAAAZzV0CkeXZEQuoS1o8zi7AHRrei" data-callback='onSubmit'
-                            data-action='submit' type="button" id="button" name="button" required>submit.</input>
+                            data-sitekey="6LeHFpcaAAAAAAZzV0CkeXZEQuoS1o8zi7AHRrei" data-action='submit'
+                            data-callback='onSubmit' type="button" id="button" name="button" required>submit.</input>
                     </div>
                 </div>
             </form>
