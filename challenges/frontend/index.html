@@ -5,8 +5,14 @@
     <title></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="output.css" rel="stylesheet" />
+
+    <!--https://www.reddit.com/r/Thinking/comments/85f0vm/a_three_eyed_thinking_emoji_i_made/ -->
+    <!--credit given where it is due -->
+    <link rel="icon" type="image/png" href="favicon-32x32.ico" sizes="32x32">
+
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
         function onSubmit(token) {
@@ -20,34 +26,27 @@
 <body class="bg-gray-700">
     <div class="sm:mx-auto sm:container justify-center md:max-w-md m-4 flex flex-col font-mono">
         <header class="text-gray-100 font-black text-2xl text-center">
-            Big Thonk Inc.
+            big thonk inc.
         </header>
         <section class="leading-normal">
-            <h3 class="text-gray-100 font-extrabold">
-                TODO
-                <div class="text-gray-300 flex flex-row font-normal">
-                    <span class="flex-grow text-left">TODO</span>
-                    <span class="flex-grow text-right">TODO</span>
+            <form class="text-gray-100 font-extrabold">
+                contact us.
+                <div class="text-gray-300 flex flex-row font-normal mb-1">
+                    <label for="name" class="flex-grow text-left">name.</label>
+                    <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text" id="name"
+                        name="name" required>
                 </div>
-            </h3>
-            <h3 class="text-gray-100 font-extrabold">
-                TODO
-                <div class="text-gray-300 flex flex-row font-normal">
-                    <span class="flex-grow text-left">TODO</span>
-                    <span class="flex-grow text-right">TODO</span>
-                </div>
-            </h3>
-            <h3 class="text-gray-100 font-extrabold">
-                TOOD
-                <div class="text-gray-300 flex flex-row font-normal">
-                    <span class="flex-grow text-left">TODO</span>
-                    <span class="flex-grow text-right">TODO</span>
+                <div class="text-gray-300 flex flex-row font-normal mb-1">
+                    <label for="email" class="flex-grow text-left">email.</label>
+                    <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="email" id="email"
+                        name="email" required>
                 </div>
                 <div class="text-gray-300 flex flex-row font-normal">
-                    <span class="flex-grow text-left">TODO</span>
-                    <span class="flex-grow text-right">TODO</span>
+                    <label for="message" class="flex-grow text-left">message.</label>
+                    <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text" id="message"
+                        name="message" required>
                 </div>
-            </h3>
+            </form>
         </section>
         <footer class="mt-4">
         </footer>
