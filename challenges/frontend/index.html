@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />-->
     <link href="output.css" rel="stylesheet" />
 
     <!--https://www.reddit.com/r/Thinking/comments/85f0vm/a_three_eyed_thinking_emoji_i_made/ -->
@@ -48,8 +48,10 @@
                             id="message" name="message" required>
                     </div>
                     <div class="text-gray-300 flex justify-center font-normal">
-                        <button class="text-gray-700 bg-gray-200 hover:bg-gray-400 border-gray-500 rounded-sm w-20"
-                            type="button" id="button" name="button" required>submit</input>
+                        <button
+                            class="g-recaptcha text-gray-700 bg-gray-200 hover:bg-gray-400 border-gray-500 rounded-sm w-20"
+                            data-sitekey="6LeHFpcaAAAAAAZzV0CkeXZEQuoS1o8zi7AHRrei" data-callback='onSubmit'
+                            data-action='submit' type="button" id="button" name="button" required>submit.</input>
                     </div>
                 </div>
             </form>
