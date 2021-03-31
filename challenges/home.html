@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rambling Whale Sharks Co.</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+  
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeHF5YaAAAAAChObdbTIlXh7zjN6-NAXRlab9BJ"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LeHF5YaAAAAAChObdbTIlXh7zjN6-NAXRlab9BJ', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+      
+  </head>
+  <body>
+      <div id="header">
+          <h1> <img src="images/favicon.png" alt="Whale Shark Logo"> Rambling Whale Sharks Co.</h1>
+      </div>
+      <div id="main"> 
+          <h1 style="text-align: center;">Contact Us</h1>
+          <?php include(verify.php)?>
+          <form id="contactUs" action="contact_us_submit.php" method="POST">
+              <label>Full Name: </label> <br>
+              <input type="text" id="name" name="name" placeholder="Your full name..." required><br>
+              <label>Your Email: </label> <br>
+              <input type="email" id="email" name="email" placeholder="Your email..." required><br>
+              <label>Subject of Your Message </label> <br>
+              <input type="text" id="subject" name="subject" placeholder="Subject..." required><br>
+              <label>Your Message: </label> <br>
+              <textarea type="text" id="message" name="message" placeholder="Your message..." style="height:200px" required></textarea><br>
+              <input type="submit" value="Submit">
+              <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+          </form>
+      </div>
+      <div id="footer">
+
+      </div>
+  </body>
+</html>
