@@ -5,7 +5,7 @@
 #include <string>
 #include "JsonDB.hpp"
 
-// hheadstorm challenge (hsc)...
+// Headstorm challenge (hsc)...
 namespace hsc {
 
 class SQLiteDB {
@@ -14,8 +14,8 @@ public:
         : file_path(file_path), database(nullptr), handle(0), error_msg(0)
     {
     }
-    ~SQLiteDB() {}
 
+    // Open the local SQLite database
     bool open()
     {
         handle = sqlite3_open(file_path, &database);
@@ -30,20 +30,11 @@ public:
         }
     }
 
-    void createHSCTable()
+    // Create contact table in the local SQLite database
+    void createContactTable()
     {
-        const char *sql = "CREATE TABLE IF NOT EXISTS contacts ("
-                          "  record_id INTEGER PRIMARY KEY,\n"
-                          "  name TEXT NOT NULL,\n"
-                          "  cell_phone TEXT NOT NULL,\n"
-                          "  work_phone TEXT NOT NULL,\n"
-                          "  email TEXT NOT NULL,\n"
-                          "  address TEXT NOT NULL,\n"
-                          "  basic_order INTEGER NOT NULL,\n"
-                          "  advanced_order INTEGER NOT NULL,\n"
-                          "  protection_plan INTEGER NOT NULL\n);";
-
-        handle = sqlite3_exec(database, sql, callback, 0, &error_msg);
+        std::string sql = contact_table_sql();
+        handle = sqlite3_exec(database, sql.c_str(), callback, 0, &error_msg);
 
         if (handle != SQLITE_OK) {
             fmt::print("SQL ERROR: {}\n\n", error_msg);
@@ -54,6 +45,7 @@ public:
         }
     }
 
+    // Insert a record into the local SQLite database's contact table
     void insertRecord(JsonDB::Record record)
     {
         std::string sql = fmt::format(
@@ -74,6 +66,7 @@ public:
         }
     }
 
+    // Close the local SQLite database
     void close() { sqlite3_close(database); }
 
 private:
@@ -82,6 +75,7 @@ private:
     int handle;
     char *error_msg;
 
+    // Callback method for sqlite3_exec()
     static int callback(void *, int argc, char **argv, char **column_name)
     {
         for (int i = 0; i < argc; ++i) {
@@ -91,6 +85,7 @@ private:
         return 0;
     }
 
+    // static string return
     static std::string insert_fmt()
     {
         static std::string fmt =
@@ -98,6 +93,22 @@ private:
             "email, address, basic_order, advanced_order, protection_plan)\n "
             "  VALUES ({}, '{}', '{}', '{}', '{}', '{}', {}, {}, {});";
         return fmt;
+    }
+
+    // static string return
+    static std::string contact_table_sql()
+    {
+        static std::string str = "CREATE TABLE IF NOT EXISTS contacts ("
+                                 "  record_id INTEGER PRIMARY KEY,\n"
+                                 "  name TEXT NOT NULL,\n"
+                                 "  cell_phone TEXT NOT NULL,\n"
+                                 "  work_phone TEXT NOT NULL,\n"
+                                 "  email TEXT NOT NULL,\n"
+                                 "  address TEXT NOT NULL,\n"
+                                 "  basic_order INTEGER NOT NULL,\n"
+                                 "  advanced_order INTEGER NOT NULL,\n"
+                                 "  protection_plan INTEGER NOT NULL\n);";
+        return str;
     }
 };
 

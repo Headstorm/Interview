@@ -3,7 +3,7 @@
 #include <fstream>
 #include <nlohmann/json.hpp>
 
-// hheadstorm challenge (hsc)...
+// Headstorm challenge (hsc)...
 namespace hsc {
 
 using json = nlohmann::json;
@@ -12,9 +12,11 @@ class JsonDB {
 public:
     JsonDB(const char *file_path) : file_path(file_path)
     {
+        // Load json from file
         std::ifstream json_file(file_path);
         json_file >> old_system;
 
+        // Parse json
         for (auto &record : old_system) {
             records.push_back({record});
         }
