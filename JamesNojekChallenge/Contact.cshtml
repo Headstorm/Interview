@@ -1,0 +1,54 @@
+﻿@page
+@model HeadstormFrontend.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h1>Contact</h1>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LenDZcaAAAAAMtYKn7gK8qYGKS0UCqrH1Le6ubI"></script> <!--used my own key to test recaptcha on localhost-->
+<!--recaptcha code from google-->
+<script>
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+</script>
+
+
+<!--gets data from variables to dump into console log-->
+<script>
+    function sConsole(event) {
+        event.preventDefault();
+        var data = document.getElementById("name");
+        console.log(data.value);
+        data = document.getElementById("email");
+        console.log(data.value);
+        data = document.getElementById("comment");
+        console.log(data.value);
+
+    }
+</script>
+
+<!--contact from layout, when button pressed the console dump occurs-->
+<form action="" id="form" onsubmit="sConsole(event)">
+
+    <label for="name">Name: </label> <br />
+    <input type="text" name="name" id="name" /><br /><br />
+
+    <label for="email">Email: </label><br />
+    <input type="text" name="email" id="email" /><br /><br />
+
+    <label for="comment">Comment: </label> <br />
+    <textarea name="comment" id="comment" rows="10" cols="50"> </textarea> <br /><br />
+
+    <!--button with modifications for recaptcha-->
+    <button type="submit"
+            class="g-recaptcha"
+            data-sitekey="reCAPTCHA_site_key"
+            data-callback='onSubmit'
+            data-action='submit'>
+
+        Submit
+    </button>
+</form>
+
