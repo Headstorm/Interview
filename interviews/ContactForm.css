@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(64, 187, 125);
+}
+
+.centerBox {
+    margin: auto;
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.form {
+    margin: 0 auto;
+    width: 250px;
+}
+
+.form label{
+    display: inline-block;
+    text-align: right;
+    float: left;
+}
+
+.form input{
+    display: inline-block;
+    text-align: left;
+    float: right;
+}
+
+.messageField {
+    height: 100px;
+}
+
+.captcha {
+    transform: translate(12%, 30%);
+}
+
+.submitButton {
+    transform: translate(0, 550%);
+}
