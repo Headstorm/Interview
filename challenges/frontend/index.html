@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />-->
+    <link href="output.css" rel="stylesheet" />
+
+    <!--https://www.reddit.com/r/Thinking/comments/85f0vm/a_three_eyed_thinking_emoji_i_made/ -->
+    <!--credit given where it is due -->
+    <link rel="icon" type="image/png" href="favicon-32x32.ico" sizes="32x32">
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("form").submit();
+            console.log(document.getElementById("name").value);
+            console.log(document.getElementById("email").value);
+            console.log(document.getElementById("message").value);
+        }
+
+    </script>
+
+
+</head>
+
+<body class="bg-gray-700">
+    <div class="sm:mx-auto sm:container justify-center md:max-w-md m-4 flex flex-col font-mono">
+        <header class="text-gray-100 font-black text-4xl text-center">
+            big thonk inc.
+        </header>
+        <section class="leading-normal">
+            <form id="form" class="text-gray-100 font-extrabold text-2xl mt-3">
+                contact us.
+                <div class="text-lg mt-2">
+                    <div class="text-gray-300 flex flex-row font-normal mb-1">
+                        <label for="name" class="flex-grow text-left">name.</label>
+                        <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text"
+                            id="name" name="name" required>
+                    </div>
+                    <div class="text-gray-300 flex flex-row font-normal mb-1">
+                        <label for="email" class="flex-grow text-left">email.</label>
+                        <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="email"
+                            id="email" name="email" required>
+                    </div>
+                    <div class="text-gray-300 flex flex-row font-normal mb-2">
+                        <label for="message" class="flex-grow text-left">message.</label>
+                        <input class="text-gray-700 bg-gray-200 border-gray-500 rounded-sm md:w-80" type="text"
+                            id="message" name="message" required>
+                    </div>
+                    <div class="text-gray-300 flex justify-center font-normal">
+                        <button
+                            class="g-recaptcha text-gray-700 bg-gray-200 hover:bg-gray-400 border-gray-500 rounded-sm w-20"
+                            data-sitekey="6LeHFpcaAAAAAAZzV0CkeXZEQuoS1o8zi7AHRrei" data-action='submit'
+                            data-callback='onSubmit' type="button" id="button" name="button" required>submit.</input>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <footer class="mt-4 text-xs text-center">
+            I'm not sure if I still need a footer
+        </footer>
+    </div>
+</body>
+
+</html>
