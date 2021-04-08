@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="profile pic.png">
+        <link rel="stylesheet" href="mystyle.css">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <body>
+
+            <div style="background:#097524" class="jumbotron">
+                <h1 class="text-white">Jeremy Kracy, LLC</h1>
+                <p class="text-white">Author: Jeremy Kracy</p>
+            </div>
+
+            <div id="after_submit"></div>
+            <form id="contact_form" action="" onsubmit="sConsole(event)" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col px-sm-4">
+                        <label class="required" for="name">Your name:</label><br />
+                        <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                        <span id="name_validation" class="error_message"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col px-sm-4">
+                        <label class="required" for="email">Your email:</label><br />
+                        <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                        <span id="email_validation" class="error_message"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col px-sm-4">
+                        <label class="required" for="message">Your message:</label><br />
+                        <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+                        <span id="message_validation" class="error_message"></span>
+                    </div>
+                </div>
+                <div class="col px-sm-2">
+                    <div class="g-recaptcha" data-sitekey="6LdwoaEaAAAAANI_ZCSKM_sMK_wYc_OfUW1B-xtL"></div>
+                </div>
+                <br/>
+                <div class="col px-sm-2">
+                <input id="submit_button" type="submit" value="Submit form" />
+                </div>
+            </form>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </body>
+    </head>
+</html>
+
+<script type: "text/javascript">
+    function sConsole(event) {
+        event.preventDefault();
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var message = document.getElementById("message");
+        console.log(name.value);
+        console.log(email.value);
+        console.log(message.value);
+    }
+</script>
