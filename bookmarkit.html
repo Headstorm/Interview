@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+  <!-- Import from Google Fonts -->
+
+ <link href='http://fonts.googleapis.com/css?family=Nanum+Myeongjo' rel='stylesheet' type='text/css'>
+
+ <!-- Adding browser icon - works with local pathname -->
+
+ <link rel="icon" type="image/jpg" href="/Users/gayatripai/Desktop/webpage/icon.jpg"/>
+
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow:auto;
+  font-family: Nanum Myeongjo, sans-serif;
+}
+
+.topnav {
+  background-color: #282828;
+  overflow:scroll;
+}
+
+/* Navigation Bar Style */
+.topnav a {
+  float: left;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+/* Navigation on hover */
+.topnav a:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+/* Current link color */
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+/* Hero image/banner attributes */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Hero image/banner text */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Style attributes for web page content */
+.new-container
+{
+  background-color: #282828;
+  overflow: hidden;
+  z-index: -100;
+  height: 100%;
+
+}
+
+/* Setting where content text starts */
+.content-pos {
+  position:relative;
+  margin: 70px;
+  color:white;
+  font-size:20px;
+}
+
+/* Form element: name */
+.name {
+  background-color: #ebebeb;
+  font-family: Nanum Myeongjo, sans-serif;
+  width: 20%;
+  height: 5em;
+  overflow:auto;
+  text-align:center;
+}
+
+/* Form element: email */
+.email {
+  background-color: #ebebeb;
+  font-family: Nanum Myeongjo, sans-serif;
+  width: 20%;
+  height: 5em;
+  overflow:auto;
+  text-align:center;
+}
+
+/* Form element: message */
+.message {
+  background-color: #ebebeb;
+  font-family: Nanum Myeongjo, sans-serif;
+  width:40%;
+  height: 5em;
+  overflow:auto;
+  text-align:center;
+}
+
+/* Submit button style */
+.button {
+  background-color: black;
+  border: none;
+  width: 16%;
+  color: white;
+  padding: 26px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family: Nanum Myeongjo, sans-serif;
+  transition-duration: 0.4s;
+
+}
+
+/* Submit button on hover */
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Creating the Navigation Bar -->
+
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#About">About</a>
+    <a href="#FAQ">FAQs</a>
+    <a href="#Discover">Discover Books</a>
+
+  </div>
+
+<!-- Adding a banner with company title and quick description -->
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:55px">BookmarkIt <font color = red>. </font></h1>
+    <p>An intuitive online book market. Buy and sell new and used books today.</p>
+
+  </div>
+</div>
+
+<!-- Creating text info sections - Why BookMarkit and How it Works -->
+
+<div class="new-container">
+  <div class="content-pos">
+  <h2> Why BookmarkIt?</h2>
+  <p> Finding books has never been easier. With BookmarkIt, you can find anything from fantasy novels to astronomy textbooks.
+    Our user base is growing faster everyday, generating more options for everyone.
+    BookmarkIt's holistic approach to book buying and selling ensures that people can find the books they need quickly and at a reasonable price.
+    <br>
+    <br>
+    <br>
+
+    <h2> How it Works</h2>
+
+  Once you indicate your intial preferences, we'll list some starting recommendations.
+  Later on, you'll get recommendations based on previous purchases and what you've viewed
+   - all free of cost! </p>
+
+   <p>We'll make sure to take all of your preferences into account. Use keywords, like and dislike buttons, and reviews.
+     You can also follow community members to see what everyone is reading.
+
+  </p>
+  <br>
+  <h2>Questions? Contact Us!</h2>
+
+  <!-- Get form elements, print to console, and then clear the form -->
+
+  <script>
+
+      function getInputValue()
+      {
+          var getName = document.getElementById("name").value;
+          var getEmail = document.getElementById("email").value;
+          var getMessage = document.getElementById("message").value;
+
+          console.log(getName);
+          console.log(getEmail);
+          console.log(getMessage);
+
+          getName = document.getElementById('name').value = '';
+          getEmail = document.getElementById('email').value = '';
+          getMessage = document.getElementById('message').value = '';
+      }
+
+  </script>
+
+<!-- Creating the input boxes of the contact form -->
+
+<input type="text" class="name" id = "name"placeholder="Full Name">
+<input type="text" class="email" id = "email"placeholder="Email">
+<input type="text" class="message" id = "message" placeholder="Message">
+<button class="button" onclick="getInputValue();">Submit</button>
+
+
+
+<!-- Recaptcha v3 - incomplete -->
+
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+
+<!-- Including recaptcha + website button styling was the tricky part (g-recaptcha attributes would clash), but
+here is my understanding of how it works - obtain a site key by registering localhost.
+Create a function that sends information to back end on clicking submit button.
+Then verify that the response human by setting a threshold (on a scale between 0 and 1).
+
+ -->
+
+
+</html>
