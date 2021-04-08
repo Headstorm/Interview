@@ -1,0 +1,21 @@
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#submit_button {
+    background-color: #097524;
+    height: 30px;
+    width: 20%;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+input, textarea {
+    background-color: #D3D3D3;
+    color: #2F4F4F;
+    width: 250px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 2px 2px #696969;
+}
+
