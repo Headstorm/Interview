@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cheeky Monkey Odysee</title>
+        <link rel="icon" href="logo.jpg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"
+            id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </head>
+
+    <body style="background: linear-gradient(to right, #ffa17f, #023e00);">
+        <header>
+            <nav class="navbar navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#" style="font-family: 'Caesar Dressing', cursive;">
+                        <img src="logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        Cheeky Monkey LongBoard
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-12 p-md-5 shadow p-3 mb-5 bg-body rounded"
+                        style="background-image: url('longboard.png');">
+                        <h1 style="text-align: center; font-size: 8rem;color:#ffa17f;" class="h1"> Contact us</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="well well-sm">
+                            <form id="myform">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="name">
+                                                Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Enter name"
+                                                required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">
+                                                Email Address</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span
+                                                        class="glyphicon glyphicon-envelope"></span>
+                                                </span>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="Enter email" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="subject">
+                                                Subject</label>
+                                            <select id="subject" name="subject" class="form-control"
+                                                required="required">
+                                                <option value="na" disabled selected="">Choose One:</option>
+                                                <option value="service">General Customer Service</option>
+                                                <option value="suggestions">Suggestions</option>
+                                                <option value="product">Product Support</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="message">
+                                                Message</label>
+                                            <textarea name="message" id="message" class="form-control" rows="9"
+                                                cols="25" required="required" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" id="result"></div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <button style="background-color: #ffa17f;" type="button"
+                                            class="btn btn-primary pull-right" id="submit_form">
+                                            Send Message</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+                            <address>
+                                <strong>Cheeky Monkey LLC.</strong><br>
+                                795 Davis Road, Suite 2135<br>
+                                Dallas, Tx 76022<br>
+                                <span class="glyphicon glyphicon-phone"></span>
+                                (123) 456-7890
+                            </address>
+                            <address>
+                                <strong>Company Email</strong><br>
+                                <a href="#">jumpboarTeam@CheekyMonkey.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span>Copyright © 2021, All Right Reserved Chiefmky</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://www.google.com/recaptcha/api.js?render=6Ld_vaEaAAAAAHVakDeJLg7Cd18idj6CFlmJuR2s"></script>
+        <script>
+            function showResult(text) {
+                //check google recaptcha response
+                if (JSON.parse(text).google_response.success) {
+                    const name = document.querySelector('#name').value;
+                    const email = document.querySelector('#email').value;
+                    const subject = document.querySelector('#subject').value;
+                    const message = document.querySelector('#message').value;
+
+                    //Dump all information to browser console if captcha succeed
+                    console.log(`Name: ${name}`);
+                    console.log(`Email: ${email}`);
+                    console.log(`Subject: ${subject}`);
+                    console.log(`Message: ${message}`);
+                    document.querySelector('#result').innerHTML = "Captcha passed! Your form has been submitted";
+                } else {
+                    //if fail, console log failed captcha
+                    document.querySelector('#result').innerHTML = "Failed captcha verification.";
+                }
+
+            };
+
+            function handleSubmit(token) {
+                return function () {
+                    var name = document.querySelector('#name').value;
+                    var email = document.querySelector('#email').value;
+                    var subject = document.querySelector('#subject').value;
+                    var message = document.querySelector('#message').value;
+
+                    var data = {
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message,
+                        token: token
+                    }
+                    //send data to /send
+                    fetch('/send', {
+                        headers: {
+                            'Accept': 'application/json',
+                            'content-type': 'application/json'
+                        },
+                        method: 'POST',
+                        body: JSON.stringify(data)
+                    })
+                        .then(response => response.text())
+                        .then(text => showResult(text))
+                        .catch(error => showResult(error));
+                }
+            };
+
+            //load the captcha and event listening of the submit button
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6Ld_vaEaAAAAAHVakDeJLg7Cd18idj6CFlmJuR2s', { action: 'homepage' })
+                    .then(function (token) {
+                        document.querySelector('#submit_form').addEventListener('click', handleSubmit(token));
+                    });
+            });
+
+        </script>
+    </body>
+
+</html>
