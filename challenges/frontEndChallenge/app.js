@@ -22,22 +22,5 @@ const handleSend = (req, res) => {
 };
 
 app.post('/send', handleSend);
-    // const secret_key = process.env.SECRET_KEY;
-    // const token = req.body.token;
-    // const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${token}`;
-
-    // const body = await fetch(url, {
-    //     method: 'POST'
-    // }).then(res => res.json())
-    
-
-    // //if Not Successful
-    // if (body.success !== undefined && !body.success) {
-    //     return res.json({ "success": false, "msg": "Failed captcha verification" });
-    // }
-
-    // //if Successful
-    // return res.json({ "success": true, "msg": "Captcha passed" });
-
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
