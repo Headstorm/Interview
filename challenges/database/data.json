@@ -1,0 +1,79 @@
+[
+  {
+    "customerID": 3953,
+    "name": "Wiggins Collins",
+    "cellPhone": "872.409.3355",
+    "workPhone": "919.597.2805",
+    "email": "wigginscollins@geekosis.com",
+    "address": "906 Greenwood Avenue, Ebro Illinois 8466",
+    "basicWidgetOrder": 14,
+    "advancedWidgetOrder": 60,
+    "protectionPlan": true
+  },
+  {
+    "customerID": 4761,
+    "name": "Dorothea Oliver",
+    "cellPhone": "986.553.3439",
+    "workPhone": "850.511.2107",
+    "email": "dorotheaoliver@geekosis.com",
+    "address": "138 Cedar Street, Jackpot Louisiana 8560",
+    "basicWidgetOrder": 77,
+    "advancedWidgetOrder": 73,
+    "protectionPlan": true
+  },
+  {
+    "customerID": 3417,
+    "name": "Leticia Avery",
+    "cellPhone": "890.524.2285",
+    "workPhone": "886.597.2877",
+    "email": "leticiaavery@geekosis.com",
+    "address": "942 Tabor Court, Noblestown Marshall Islands 235",
+    "basicWidgetOrder": 44,
+    "advancedWidgetOrder": 49,
+    "protectionPlan": false
+  },
+  {
+    "customerID": 3526,
+    "name": "Taylor Cain",
+    "cellPhone": "924.540.2400",
+    "workPhone": "928.419.3536",
+    "email": "taylorcain@geekosis.com",
+    "address": "912 Bragg Court, Camino Guam 7658",
+    "basicWidgetOrder": 52,
+    "advancedWidgetOrder": 89,
+    "protectionPlan": false
+  },
+  {
+    "customerID": 4318,
+    "name": "Jocelyn Berg",
+    "cellPhone": "888.558.2793",
+    "workPhone": "976.402.2614",
+    "email": "jocelynberg@geekosis.com",
+    "address": "207 Broadway , Soham Arkansas 8596",
+    "basicWidgetOrder": 38,
+    "advancedWidgetOrder": 24,
+    "protectionPlan": true
+  },
+  {
+    "customerID": 2418,
+    "name": "Nicole William",
+    "cellPhone": "920.527.2952",
+    "workPhone": "874.496.3058",
+    "email": "nicolewilliam@geekosis.com",
+    "address": "755 Essex Street, Bend Montana 7783",
+    "basicWidgetOrder": 68,
+    "advancedWidgetOrder": 4,
+    "protectionPlan": true
+  },
+  {
+    "customerID": 4604,
+    "name": "Beach Harvey",
+    "cellPhone": "927.490.2780",
+    "workPhone": "897.545.3438",
+    "email": "beachharvey@geekosis.com",
+    "address": "917 Strong Place, Jugtown Northern Mariana Islands 2114",
+    "basicWidgetOrder": 21,
+    "advancedWidgetOrder": 72,
+    "protectionPlan": false
+  }
+]
