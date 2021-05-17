@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "record_id": 1,
+      "name": "Joe Smith",
+      "cell_phone": "405.867.5309",
+      "work_phone": "123.123.1234",
+      "email": "joe_s@gmail.com",
+      "address": "123 Vic Way, Dallas TX 75001",
+      "basic_widget_order": 37,
+      "advanced_widget_order": 12,
+      "protection_plan": true
+    },
+    {
+      "record_id": 2,
+      "name": "Joe Smith2",
+      "cell_phone": "405.867.5309",
+      "work_phone": "123.123.1234",
+      "email": "joe_s2@gmail.com",
+      "address": "123 Vic Way, Dallas TX 75002",
+      "basic_widget_order": 38,
+      "advanced_widget_order": 13,
+      "protection_plan": false
+    },
+    {
+      "record_id": 3,
+      "name": "Joe Smith3",
+      "cell_phone": "405.867.5309",
+      "work_phone": "123.123.1234",
+      "email": "joe_s3@gmail.com",
+      "address": "123 Vic Way, Dallas TX 75002",
+      "basic_widget_order": 39,
+      "advanced_widget_order": 14,
+      "protection_plan": true
+    }
+  ]
+}
