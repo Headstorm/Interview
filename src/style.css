@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap');
+
+body {
+    background: yellow;
+}
+
+.logo img {
+    height: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 350px;
+} 
+
+.title {
+    text-align: center;
+    padding-top: 30px;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+a {
+    border-radius: 2px;
+    padding: 7px;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    letter-spacing: 5%;
+    transform: translate(-50%, -50%);
+    max-width: 120px;
+    background-color: lightgray;
+    display: block;
+    text-align: center;
+    position: absolute;
+    color: black;
+    font-weight: bold;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    font-family:'Josefin Slab', serif;
+
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    letter-spacing: 5%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: black;
+}
+
+.wrapper .input_field{
+    margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type= "text"],
+.wrapper textarea{
+    width: 100%;
+    border: 1px solid #e0e0e0e0;
+    padding: 10px;
+}
+
+.wrapper textarea {
+    height: 110px;
+    resize: none;
+}
+
+.wrapper .button input[type="submit"] {
+    border: 0;
+    margin-top: 20px;
+    padding:10px;
+    width: 100%;
+    background: black;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.wrapper #error_message {
+    margin-bottom: 20px;
+    padding: 0;
+    background: pink;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}

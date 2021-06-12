@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="scripts.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <title>Contact us</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Contact us</h1>
+        <div id="error_message"></div>
+        <form id="contactform" onSubmit="return validation()">
+            <div class="input_field">
+                <input type="text" placeholder="Full Name" id="name"></input>
+            </div>
+
+            <div class="input_field">
+                <input type="text" placeholder="Email" id="email"></input>
+            </div>
+
+            <div class="input_field">
+                <input type="text" placeholder="Phone number" id="phone"></input>
+            </div>
+
+            <div class="input_field">
+                <input type="text" placeholder="Subject" id="subject"></input>
+            </div>
+
+            <div class="input_field">
+                <textarea id="message" placeholder="Message"></textarea>
+            </div>
+
+            <!-- recaptcha on submit -->
+             <form method="post" onsubmit="return submitUserForm();">
+                <div class="g-recaptcha" data-sitekey="6LdAFCobAAAAAEFBNa4wo5dUAvw35XJOaUhceCxr" data-callback="verifyCaptcha"></div>
+                <div id="g-recaptcha-error"></div>
+                <div class="button">
+                    <input type="submit">
+                </div> 
+            </form>  
+        </form>
+    </div>
+</body>
+
+</html>
