@@ -1,9 +1,3 @@
-## Headstorm Interview
-
-Welcome to the Headstorm interview challenge!  This repository is designed for candidates to [fork and create Pull Requests](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) with their solutions.  There are two types of 'take-home' problems here:
-
-### Challenges
-These are domain specific problems that can be submitted individually.  You can choose from backend, frontend, databases, or data-science.  You can submit a PR for one, many, or all the challenges.
-
-### Interviews
-These are language specific interview questions and you can choose the language in which you implement your solution.
+## front end challenge
+This is my attempt for the front end challenge. I had some issues with reCAPTCHA v3, so I used v2. This was my first time using reCAPTCHA, it may not be perfect.
+Would love to hear any feedback you have for me and ways I can improve. 
