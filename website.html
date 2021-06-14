@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="companystyle.css">
+      <link rel="icon" href="logo.png"/>
+      <title>The Company</title>
+
+      <script type="text/javascript">
+
+	 <!-- This function hides objects marked to be hidden until clicked -->
+         function hideInfo(){
+            var hidden = document.getElementsByClassName("hide");
+            var j;
+            for (j = 0; j < hidden.length; j++){
+               hidden[j].style.display = "none";
+            }
+         }
+
+         <!-- This function changes the color of the text boxes that are altered by the user -->
+	 function inputChanged(id){
+            id.style.backgroundColor="#7afeae";
+         }
+
+         <!-- This function capitalizes the letters of first and last names entered by user -->
+         function fixCase(id){
+            id.value = id.value.charAt(0).toUpperCase() + id.value.slice(1).toLowerCase();
+         }
+
+         <!-- This function shows a hidden element when the element before is clicked -->
+         function viewInfo(id){
+            id.nextSibling.nextSibling.style.display="";
+         }
+      </script>
+
+      <script src="https://www.google.com/recaptcha/api.js?render=6LfsrSIbAAAAAPSOYLgxoriLtIO1LsJo8DN6_j5V"></script>
+   </head>
+
+   <body onload="hideInfo()">
+      
+      <div class="header">
+         <img id="logo" src="logo.png" height="180px" width="180px">
+         <h2 id="frontpage">The<br />Company</h2>
+         <img id="headimg" src="business.jpg" height="180px" width="675px">
+      </div>
+
+      <div class="topnav">
+         <ul class="listnav">
+            <li class="nav"><a href="website.html">Home</a></li>
+            <li class="nav"><a href="about.html">About</a></li>
+            <li class="nav"><a href="products.html">Products</a></li>
+         </ul>
+      </div>
+
+      <!-- Pictures, headers, information used as examples -->
+      <div class="fronthead" id="firsthead">
+         <h3 onclick="viewInfo(this)">Heading</h3>
+	 <p class="hide">Information</p><br />
+      </div>
+
+      <div class="frontpic" id="firstpic">
+         <img id="example" src="business2.jpg" height="400px" width="600px">
+      </div>
+
+      <div class="frontpic" id="secondpic">
+         <img id="example" src="business2.jpg" height="400px" width="600px">
+      </div>
+
+      <div class="fronthead" id="secondhead">
+         <h3>Heading</h3>
+         <p>Information</p><br />
+      </div>
+
+      <!-- Form requires all fields to be filled before submission -->
+      <div id="contact">
+         <h3>Contact</h3>
+         <p>Please fill out and submit the entire form.</p>
+         <form name ="contactForm" action="form.php" method="POST"><br />
+            First Name: <input type="text" name="fname" onchange="inputChanged(this)" onblur = "fixCase(this)" pattern="[A-Za-z]+" required> <br />
+            Last Name: <input type="text" name="lname" onchange="inputChanged(this)" onblur = "fixCase(this)" pattern="[A-Za-z]+" required> <br />
+            <p style="font-size:13px;">First and last name must contain only letters</p>
+            Email Address: <input type="text" name="email" onchange="inputChanged(this)" onblur = "fixCase(this)" required><br />
+            Phone Number: <input type="text" name="phonenumber" onchange="inputChanged(this)" pattern="\([0-9]{3}\)[0-9]{3}-[0-9]{4}" required><br />
+            <p style="font-size:13px;">Please format phone number as (xxx)xxx-xxxx</p>
+            Enter your brief comment, question, or concern here: <input type="text" name="comments" onChange="inputChanged(this)" minlength="10" required>
+            <p>What is your preferred form of contact?</p>
+            <input type="radio" name="contactchoice" value="pnum" checked> <label>Phone Number</label>
+            <input type="radio" name="contactchoice" value="email"> <label>Email</label>
+
+	    <br /><br /><input type="submit" name = submit value="Submit">
+            <div id="g-recaptcha" data-sitekey="6LdbdBMbAAAAAF5GjyDelQEcJPV6fWU2s6Jng8Za"</div>
+         </form>
+
+         <script>
+            $('#contactForm').submit(function() {
+	       event.preventDefault();
+               var fname = $('#fname').val();
+               var lname = $('#lname').val();
+               var email = $('#email').val();
+	       var phonenumber = $('#phonenumber').val();
+	       var comments = $('#comments').val();
+ 	       var contactchoice = $('#contactchoice').val();
+
+               grecaptcha.ready(function() {
+                  grecaptcha.execute('6LfsrSIbAAAAAPSOYLgxoriLtIO1LsJo8DN6_j5V', {action:'contactForm'}).then(function(token){
+	  	     $('#contactForm').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                     $.post("form.php",{fname: fname, lname: lname, email: email, phonenumber: phonenumber, comments: comments, contactchoice: contactchoice, token: token}, function(result) {
+	                console.log(result);
+	 		if (result.success){
+			   alert("Thank you for contacting us");
+			}
+			else{
+			   alert("Error with captcha form");
+			}
+		     });
+                  });
+               });
+            }); 
+         </script>
+      </div>
+   </body>

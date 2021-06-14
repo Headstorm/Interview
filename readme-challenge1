@@ -1,0 +1,4 @@
+website.html contains the main logic. All files (about.html, business.jpg, business2.jpg, companystyle.css, form.php, logo.png, product.jpg, and products.html)
+should be in the same location when launching website.html.
+
+Unsure if recaptcha will work, have had it work on and off on my own end.

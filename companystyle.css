@@ -1,0 +1,148 @@
+h2 {
+   text-align: left;
+}
+h3 {
+   text-align: center;
+   font-size: 22px;
+   font-family: Verdana, Arial, sans-serif
+}
+.header {
+   padding-bottom: 200px;
+   background-color: black;
+}
+#logo {
+   width: 15%;
+   padding: 10px 10px;
+   float: left;
+   clear: right;
+}
+#frontpage {
+   width: 20%;
+   text-align: left;
+   float: left;
+   clear: right;
+   color: white;
+   padding: 10px 10px;
+   font-weight: bold;
+   font-size: 45px;
+   font-family: Verdana, Arial, sans-serif;
+}
+#headimg {
+   width: 60%;
+   float: left;
+   opacity: 75%;
+   padding: 10px 5px;
+}
+#headimg:hover {
+   opacity: 100%;
+}
+.listnav {
+   list-style-type: none;
+   margin: 0;
+   padding: 5px 0;
+}
+.nav {
+   float: left;
+   text-align: center;
+   width: 33.33%;
+   background-color: #000000;
+}
+.nav a{
+   display: block;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: bold;
+   color: #ff0000;
+   padding-top: 5px;
+   height: 25px;
+}
+.nav a:visited {
+   color: #ff9999;
+}
+.nav a:hover {
+   color: #800000;
+   background-color: #a3a3c2;
+}
+.fronthead {
+   width: 49%;
+   margin-left: 5px;
+   margin-right: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+}
+.frontpic {
+   width: 49%;
+   margin-left: 5px;
+   margin-right: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+}
+#firsthead {
+   float: left;
+}
+#firstpic {
+   float: left;
+   clear: right;
+}
+#secondpic {
+   float: left;
+}
+#secondhead {
+   float: left;
+   clear: right;
+}
+#contact{
+   float: left;
+   clear: both;
+   width: 50%;
+   margin-right: 10px;
+   padding-bottom: 10px;
+   padding-top: 10px;
+   text-align: center;
+}
+.leftabout {
+   width: 45%;
+   float: left;
+   clear: right;
+   margin-left: 5px;
+   margin-right: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+}
+.rightabout {
+   width: 45%;
+   float: left;
+   margin-left: 5px;
+   margin-right: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+}
+.leftproduct {
+   width: 31%;
+   float: left;
+   clear: right;
+   margin-left: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+}
+.middleproduct {
+   width: 31%;
+   float: left;
+   clear: right;
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+}
+.rightproduct {
+   width: 31%;
+   float: left;
+   margin-right: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+}
+.product {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}

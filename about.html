@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="companystyle.css">
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <link rel="icon" href="logo.png"/>
+      <title>About The Company</title>
+
+      <script type="text/javascript">
+
+	 <!-- This function hides objects marked to be hidden until clicked -->
+         function hideInfo(){
+            var hidden = document.getElementsByClassName("hide");
+            var j;
+            for (j = 0; j < hidden.length; j++){
+               hidden[j].style.display = "none";
+            }
+         }
+
+         <!-- This function shows a hidden element when the element before is clicked -->
+         function viewInfo(id){
+            id.nextSibling.nextSibling.style.display="";
+         }
+      </script>
+   </head>
+
+   <body onload="hideInfo()">
+      
+      <div class="header">
+         <img id="logo" src="logo.png" height="180px" width="180px">
+         <h2 id="frontpage">About<br />Us</h2>
+         <img id="headimg" src="business.jpg" height="180px" width="675px">
+      </div>
+
+      <div class="topnav">
+         <ul class="listnav">
+            <li class="nav"><a href="website.html">Home</a></li>
+            <li class="nav"><a href="about.html">About</a></li>
+            <li class="nav"><a href="products.html">Products</a></li>
+         </ul>
+      </div>
+
+      <!-- Titles and and information used for example -->
+      <div class="leftabout">
+         <h3>Mission</h3>
+	 <p>Information</p>
+      </div>
+
+      <!-- Set so that a staff's information can be displayed when their name is clicked -->
+      <div class="rightabout">
+         <h3>Staff</h3>
+         <h4 onclick="viewInfo(this)">Staff Name</h4>
+	 <p class="hide">Staff info and credentials</p>
+      </div>
+
+      <script type="text/JavaScript" src="companyscript.js"> </script>
+         
+   </body>
