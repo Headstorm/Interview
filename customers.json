@@ -1,0 +1,59 @@
+{
+    "customers" : [
+        {
+            "RecordID" : 1,
+            "Name" : "Joe Smith",
+            "CellPhone" : "405.867.5309",
+            "WorkPhone" : "405.867.5309",
+            "Email" : "joe_s@gmail.com",
+            "Address" : "123 Vic Way, Dallas TX 75001",
+            "BasicWidgetOrder" : 	37,
+            "AdvancedWidgetOrder" : 12,
+            "ProtectionPlan" : "True"
+        },
+        {
+            "RecordID" : 2,
+            "Name" : "Luke Skywalker",
+            "CellPhone" : "405.867.5309",
+            "WorkPhone" : "405.867.5309",
+            "Email" : "joe_s@gmail.com",
+            "Address" : "123 Vic Way, Dallas TX 75001",
+            "BasicWidgetOrder" : 	37,
+            "AdvancedWidgetOrder" : 12,
+            "ProtectionPlan" : "False"
+        },
+        {
+            "RecordID" : 3,
+            "Name" : "Darth Vader",
+            "CellPhone" : "405.867.5309",
+            "WorkPhone" : "405.867.5309",
+            "Email" : "dv@gmail.com",
+            "Address" : "Death Star, Space",
+            "BasicWidgetOrder" : 	37,
+            "AdvancedWidgetOrder" : 12,
+            "ProtectionPlan" : "False"
+        },
+        {
+            "RecordID" : 4,
+            "Name" : "Han Solo",
+            "CellPhone" : "405.867.5309",
+            "WorkPhone" : "405.867.5309",
+            "Email" : "hs@gmail.com",
+            "Address" : "123 test Way, Dallas TX 75001",
+            "BasicWidgetOrder" : 	37,
+            "AdvancedWidgetOrder" : 12,
+            "ProtectionPlan" : "False"
+        },
+        {
+            "RecordID" : 5,
+            "Name" : "Chewbacca",
+            "CellPhone" : "405.867.5309",
+            "WorkPhone" : "405.867.5309",
+            "Email" : "cw@gmail.com",
+            "Address" : "123 fake Way, Dallas TX 75001",
+            "BasicWidgetOrder" : 	37,
+            "AdvancedWidgetOrder" : 12,
+            "ProtectionPlan" : "False"
+        }
+    ]
+}

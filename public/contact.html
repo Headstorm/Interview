@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://headstorm.com/wp-content/uploads/2020/09/Headstorm_bolt_512-150x150.png">
+    <title>Headstorm</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Google RECAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+ <style>
+     body,html {
+         background-color: #f3f3f3;
+         height: 100%;
+     }
+     .card {
+         margin: auto;
+         margin-top: 50px;
+         width: 60%;
+         height: auto;
+     }
+     #message {
+         height: 200px;
+         max-height: 200px;
+         margin-top: 20px;
+         margin-bottom: 20px;
+     }
+     #submit {
+         margin-top: 20px
+     }
+     @media only screen and (max-width: 900px) {
+        .card {
+         width: 90%;
+     }
+    }
+
+ </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://headstorm.com/wp-content/uploads/2020/09/Headstorm_bolt_512-150x150.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+            Headstorm
+          </a>
+        </div>
+      </nav>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Contact Us</h5>
+            <form onsubmit="event.preventDefault(); $.fn.validate(this);">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstname" required>
+                      </div>
+                      <div class="col-6">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastname" required>
+                      </div>
+                </div>
+                <div class="form-text"></div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                       
+                      </div>
+                      <div class="col-6">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" required>
+                      </div>
+                      <div id="formHelp" class="form-text">We'll never share your contact information with anyone else.</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a message here" id="message" required></textarea>
+                            <label for="message">Message</label>
+                          </div>
+                      </div>
+                </div>
+                  
+                  <div class="g-recaptcha" data-callback="checkToken" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                  <button disabled id="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+      </div>
+ 
+
+      <script type="text/javascript">
+        var submission = {}
+        function checkToken(token) {
+            console.log(token);
+            if(token) {
+              submission["token"] = token;
+              document.getElementById('submit').disabled = false;
+            }
+        }
+      </script>
+</body>
+</html>
