@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 1rem;
+    background-color: #f4f5f6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    padding-right: .75rem;
+    text-decoration: none;
+    color: #0d0d0d;
+}
+
+.jumbotron {
+    background-color: #e9ecef;
+    max-width: 75vw;
+    min-height: 45vh;
+    margin: 2rem auto auto;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.jumbotron p {
+    padding-top: .75rem;
+}
+
+.jumbotron hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.lead {
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.contact.jumbotron {
+    min-height: auto;
+}
+.jumbotron .header {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form-group {
+    margin-bottom: .75rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
