@@ -10,7 +10,7 @@ NUMBERLIST = {"list":[]}
 class ListProcess(Resource):
 	def get(self):
 		#Sort before returning
-		if('list' in NUMBERLIST):
+		if(len(NUMBERLIST['list']) > 0):
 			NUMBERLIST['list'].sort()
 			return NUMBERLIST
 		else:
