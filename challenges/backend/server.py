@@ -10,8 +10,11 @@ NUMBERLIST = {"list":[]}
 class ListProcess(Resource):
 	def get(self):
 		#Sort before returning
-		NUMBERLIST['list'].sort()
-		return NUMBERLIST
+		if('list' in NUMBERLIST):
+			NUMBERLIST['list'].sort()
+			return NUMBERLIST
+		else:
+			abort(404, message="No lists found.")
 	
 	def post(self):
 		numlist = str(request.data).strip()
