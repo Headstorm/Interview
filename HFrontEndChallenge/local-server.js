@@ -46,4 +46,4 @@ app.get('', (req, res) => {
     res.render('index', { text: 'Hey' })
 })
 
-app.listen(port, () => console.info(`App listening on port ${port}`))
+app.listen(port, () => console.info(`Listening on localhost:${port}. Go here to view the website!`))
