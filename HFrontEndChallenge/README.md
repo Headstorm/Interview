@@ -9,7 +9,7 @@
   <h3 align="center">Headstorm Engineering Front End Challenge</h3>
 
   <p align="center">
-    I made a mock demo of a company (Emily's Idea Company)'s new website. 
+    I made quick mock of a company (Emily's Idea Company)'s new website. 
   </p>
 </p>
 
@@ -38,7 +38,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="ss-of-working-site.png" alt="Logo" width="80" height="80">
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
