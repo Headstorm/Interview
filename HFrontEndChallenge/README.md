@@ -26,6 +26,9 @@
       </ul>
     </li>
     <li>
+      <a href="#how-requirements">How Requirements Were Met</a>
+    </li>
+    <li>
       <a href="#run-it">Run the project</a>
     </li>
     <li><a href="#usage">Improvements</a></li>
@@ -36,9 +39,19 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+### About The Project
 
 <img src="ss-of-working-site.png" alt="Logo" width="250" height="300">
+
+### Requirements
+* Company name title - The Company Title is "Emily's Idea Company".
+* Company logo as icon in browser tab - You can see the logo & name in the browser tab. :) 
+* Contact us web form that captures contact information - 
+    * The contact form allows the user to enter their name, email, & phone number along with questions. 
+* Google reCaptcha V3 implement in page. Submission of form requires Google captcha pass.
+    * The user must pass the recaptcha score to submit the form. The grey button demonstrates what happens when the user does not pass the recaptcha. That of course would not really be there if this website was live, but is just an example. 
+* Dump all the information from the form submission to browser console. 
+    * In the developer console, you can see the form information (& recaptcha response) once the form is submitted.
 
 
 ### Built With
@@ -77,15 +90,17 @@ You will need to have npm installed
 
 ### Run The Project
 3. Navigate to the "HFrontEndChallenge" directory 
-4. Run node
+4. Run node from the command line 
    ```sh
    node local-server.js
    ```
+5. Open localhost:3000 to view my work! 
 
 ### Improvements
 * Upon pressing the close button, the page would ideally not reload. I should have just made it so the closing message/form toggled between eachother. 
 
 ### Contact 
+Please contact me with any issues running the code: 
 * email: emm190@pitt.edu
 * phone: 330-987-0225 
 * linkedIn: https://www.linkedin.com/in/emilymiller21/
