@@ -9,7 +9,7 @@ h1 {
     display: block;
     font-size: 2em;
     font-family: Sans-serif;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 0.67em;
     margin-left: 0;
     margin-right: 0;
@@ -20,11 +20,11 @@ h1 {
 p {
     text-align: center;
     display: block;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 25%;
+    margin-right: 25%;
     font-family: Sans-serif;
     color: white;
   }

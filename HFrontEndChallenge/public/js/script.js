@@ -2,7 +2,7 @@ function onSubmit(token) {
     console.log("submitted called"); 
     $('#comment_form').submit(); 
     console.log("Submitted" + token);
-    //Very important line, it disable the page refresh.
+    //Disabling the page from refreshing
     return false;
 }
 $(document).ready(function() {

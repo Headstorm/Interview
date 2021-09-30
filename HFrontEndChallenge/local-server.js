@@ -1,7 +1,7 @@
 // Imports
 const express = require('express')
 const app = express()
-const port = 5000
+const port = 3000
 var bodyParser = require('body-parser');
 var request = require('request');
 
