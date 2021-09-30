@@ -38,18 +38,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="ss-of-working-site.png" alt="Logo" width="200" height="330">
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
+<img src="ss-of-working-site.png" alt="Logo" width="200" height="350">
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* []() JavaScript
+* []() Node.js
+* []() CSS/HTML
 
 
 
