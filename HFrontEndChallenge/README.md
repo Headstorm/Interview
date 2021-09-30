@@ -38,14 +38,19 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="ss-of-working-site.png" alt="Logo" width="200" height="350">
+<img src="ss-of-working-site.png" alt="Logo" width="250" height="300">
 
 
 ### Built With
 
-* []() JavaScript
+* []() Javascript/Embedded Javascript
+* []() CSS
+* []() HTML
+
+### Using
+
 * []() Node.js
-* []() CSS/HTML
+* []() npm
 
 
 
