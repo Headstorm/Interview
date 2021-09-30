@@ -38,7 +38,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="ss-of-working-site.png" alt="Logo" width="80" height="80">
+<img src="ss-of-working-site.png" alt="Logo" width="200" height="300">
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
