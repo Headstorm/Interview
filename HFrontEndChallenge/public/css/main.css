@@ -1,0 +1,51 @@
+.main-icon {
+    text-align: center;
+  }
+
+body {background-color: #404040;}
+
+h1 {
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    font-family: Sans-serif;
+    margin-top: 100px;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: white;
+  }
+
+p {
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: Sans-serif;
+    color: white;
+  }
+
+.leftcenter {
+margin: 0;
+position: absolute;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+.center {
+margin: 0;
+position: absolute;
+left: 50%;
+top: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+.contact-button {
+  margin-top: 40px;
+  }
