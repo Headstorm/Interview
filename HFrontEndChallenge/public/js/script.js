@@ -1,12 +1,15 @@
+//var for submitting form 
+var isSubmitted = false; 
+
+//submit the form on submit 
 function onSubmit(token) { 
     console.log("submitted called"); 
     $('#comment_form').submit(); 
-    console.log("Submitted" + token);
     //Disabling the page from refreshing
     return false;
 }
+//when the document has loaded 
 $(document).ready(function() {
-   console.log("Ready");
   $('#comment_form').submit(function() {
     $(this).ajaxSubmit({
       error: function(xhr) {
@@ -47,31 +50,7 @@ $(document).ready(function() {
   });
 });
 
-var isSubmitted = false;
-console.log("Being read"); 
-function sConsole(event) {
-    event.preventDefault();
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var phoneNumber = document.getElementById("phoneNumber");
-    var questions = document.getElementById("questions");
-    console.log("Form submission: ------------------");
-    console.log("Name: " + name.value);
-    console.log("Email: " + email.value);
-    console.log("Phone Number: " + phoneNumber.value);
-    console.log("Questions: " + questions.value);
-    console.log("End form submission: ---------------");
-    if (name.value!="") {
-        document.getElementById("form").innerHTML="Thank you, " + name.value; 
-        document.getElementById("form").reset();
-    }
-    else
-        document.getElementById("form").innerHTML="Thank you!"; 
-    
-    isSubmitted=true; 
-    toggleOnSubmit(); 
-}
-
+//switch to new form upon submit/recaptcha pass & then reload once switched close is clicked
 function toggleOnSubmit() { 
     if (isSubmitted==false) {
     document.getElementById("comment_form").innerHTML=

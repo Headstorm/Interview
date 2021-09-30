@@ -89,15 +89,25 @@ You will need to have npm installed
    ```
 
 ### Run The Project
-3. Navigate to the "HFrontEndChallenge" directory 
-4. Run node from the command line 
+3. To use google recaptcha, you may have to get new secret & site keys, registering localhost on the v3 admin site. You would need to replace them in local-server: 
+```sh
+   var secretKey = YOUR_SECRET_KEY
+```
+and index.ejs
+```sh
+   data-sitekey = YOUR_SECRET_KEY
+```
+4. Navigate to the "HFrontEndChallenge" directory 
+5. Run node from the command line 
    ```sh
    node local-server.js
    ```
-5. Open localhost:3000 to view my work! 
+6. Open localhost:3000 to view my work! 
 
 ### Improvements
 * Upon pressing the close button, the page would ideally not reload. I should have just made it so the closing message/form toggled between eachother. 
+* I did struggle with getting the recaptcha v3 to work so I did use body parser which is depreciated. With more time, I would have found a different way to make the recaptcha v3 work. 
+* There are other errors/issues in the developer that I did not have the chance to look into unfortunately. 
 
 ### Contact 
 Please contact me with any issues running the code: 

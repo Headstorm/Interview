@@ -16,15 +16,15 @@ app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/js', express.static(__dirname + 'public/js'))
 app.use('/img', express.static(__dirname + 'public/images'))
 
+//upon submit
 app.post('/submit',function(req,res){
     // g-recaptcha-response is the key that browser will generate upon form submit.
     // if its blank or null means user has not selected the captcha, so return the error.
     if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
       return res.json({"responseCode" : 1,"responseDesc" : "Please select captcha"});
     }
-    // Put your secret key here.
+    // Secret key 
     var secretKey = "6LfXDZ4cAAAAABJ7h33X-SPdQ1VMBuD4tUnen4KB";
-    // req.connection.remoteAddress will provide IP address of connected user.
     var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'];
     // Hitting GET request to the URL, Google will respond with success or error scenario.
     request(verificationUrl,function(error,response,body) {
@@ -44,10 +44,6 @@ app.set('view engine', 'ejs');
 // Navigation
 app.get('', (req, res) => {
     res.render('index', { text: 'Hey' })
-})
-
-app.get('/about', (req, res) => {
-   res.sendFile(__dirname + '/views/about.html')
 })
 
 app.listen(port, () => console.info(`App listening on port ${port}`))
