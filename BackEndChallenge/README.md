@@ -58,8 +58,7 @@ You will need to have python 3.8.5 & flask installed along with the flask depend
 4. Type "python app.py"
 
 ### Improvements
-* I did not get a chance to add the requirements about the input being 500 numbers as json input. My current program takes in 5 numbers. It checks that there are exactly 5 integers, 
-* but does not check that there are 500 or the input. It only works if there are 5 numbers separated by commas. This addition to meet the 500 json requirements could be 
+* I did not get a chance to add the requirements about the input being 500 numbers as json input. My current program takes in 5 numbers. It checks that there are exactly 5 integers, but does not check that there are 500 or the input. It only works if there are 5 numbers separated by commas. This addition to meet the 500 json requirements could be 
 * met with more time.  
 
 ### Contact 
