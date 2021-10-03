@@ -6,7 +6,7 @@
   <h3 align="center">Headstorm Engineering Back End Challenge</h3>
 
   <p align="center">
-    I made a rest API using flask for the /data entry point. 
+    I made a rest API using flask for the /data entry point.
   </p>
 </p>
 
@@ -50,19 +50,20 @@ You will need to have python 3.8.5 & flask installed along with the flask depend
 
 ### Installation
 
-1. Clone my repo :) 
-2. Install flask & flask requirements 
-3. I set up a virtual environment & installed flask & the dependencies that way 
+1. Clone my repo :)
+2. Install flask & flask requirements
+3. I set up a virtual environment & installed flask & the dependencies that way
+4. To run my virtual environment, type "source bin/activate" from the myproject directory
 
 ### Run The Project
 4. Type "python app.py"
 
 ### Improvements
-* I did not get a chance to add the requirements about the input being 500 numbers as json input. My current program takes in 5 numbers. It checks that there are exactly 5 integers, but does not check that there are 500 or the input. It only works if there are 5 numbers separated by commas. This addition to meet the 500 json requirements could be 
+* I did not get a chance to add the requirements about the input being 500 numbers as json input. My current program takes in 5 numbers. It checks that there are exactly 5 integers, but does not check that there are 500 or the input. It only works if there are 5 numbers separated by commas. This addition to meet the 500 json requirements could be
 * met with more time.  
 
-### Contact 
-Please contact me with any issues running the code: 
+### Contact
+Please contact me with any issues running the code:
 * email: emm190@pitt.edu
-* phone: 330-987-0225 
+* phone: 330-987-0225
 * linkedIn: https://www.linkedin.com/in/emilymiller21/
