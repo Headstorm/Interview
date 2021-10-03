@@ -2,9 +2,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="public/img/emily-icon.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">Headstorm Engineering Back End Challenge</h3>
 
@@ -20,9 +17,7 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <ul>
         <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#run-it">Run the project</a>
