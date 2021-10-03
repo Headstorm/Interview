@@ -45,10 +45,16 @@ def data():
       idNumber = number1.id
       listOfNumbers = str(stringList)
       user = listOfNumbers.split(',')
+      for x in user:
+        try:
+            int(x)
+        except: 
+            error_msg='There is something wrong with your formatting. Make sure you did not enter any letters. The only acceptable input is numbers separated by commas (with no space at the end)'
+            return render_template('index.html', embed=error_msg)
       intList = [int(x) for x in user]
-      print(len(intList))
+      print(intList)
       if (len(intList)!=5):
-        error_msg='You have to enter 500 numbers. You did not. Try again'
+        error_msg='You have to enter 5 numbers. You did not. Try again'
         return render_template('index.html', embed=error_msg)
       print(idNumber)
       return redirect(url_for('success',listOfNumbers = Number.query.filter_by(id=idNumber).all()))
@@ -67,6 +73,7 @@ def getValue():
 def success(listOfNumbers):
    listOfNumbers = str(listOfNumbers)
    user = listOfNumbers.split(',')
+   print(user)
    intList = [int(x) for x in user]
    intList.sort()
    print(intList)
