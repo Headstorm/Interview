@@ -1,0 +1,20 @@
+<body>
+    <h1>Back end challenge!</h1>
+    <p id='embed'>{{embed}}</p>
+    <p id='mylog'/>
+    <form action = "http://localhost:5000/data" method = "post">
+        <p>Enter Numbers:</p>
+        <p><input type = "text" name = "numbers" /></p>
+        <p><input type = "submit" value = "submit" onSubmit=""/></p>
+    </form>  
+    <form action = "http://localhost:5000/getValue" method = "post">
+        <p>Enter The Request you want to see:</p>
+        <p><input type = "text" name = "numbersOfRequest" /></p>
+        <p><input type = "submit" value = "submit" onSubmit=""/></p>
+    </form> 
+    <form method = "post">
+    <button formaction = "http://localhost:5000/showAll" > 
+        Click here to see all submissions.
+    </button>
+</form> 
+<body>

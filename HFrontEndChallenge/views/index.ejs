@@ -1,0 +1,83 @@
+<html lang="en">
+    <head> 
+        <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/-TriQeni1Ls-Mdq_ssN2cUL5/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-L1Joc/A2btBqMKjJOCvvgRe+ptim2I0yOZYwI/H/2MLPdAC7PAF87u7yYxzND7WF"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LfCcJgcAAAAAGXUV0Dv7Lokkz3IJZ2OMTa1CCOj"></script>
+        <script src="local-server.js"></script>
+        <script>
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LfCcJgcAAAAAGXUV0Dv7Lokkz3IJZ2OMTa1CCOj', {action: 'homepage'}).then(function(token) {
+              });
+            });
+          </script>
+          <meta charset="utf-8">
+          <link rel="icon" href="img/emily-icon.png" type="image/icon type">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         
+          <link type="text/css" href="css/main.css" rel="stylesheet">
+
+          <title>Emily's Idea Co.</title>
+    </head>
+    <body>
+        <h1>Emily's Idea Company</h1>
+        <div class="main-icon">
+          <img src="img/emily-icon.png" alt="Lightbulb icon" rel="img">
+        </div>
+        <p>Bringing YOUR software ideas to life since 1999. Leave your contact information below so we can get in touch.</p>
+        <button type="button" id="contact-button" class="contact-button leftcenter contact btn btn-info btn-lg" data-toggle="modal" data-target="#contactForm">Contact Info!</button>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactForm" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Leave your contact info!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="comment_form" action='/submit' method="post">
+                  <div class="form-row">
+                      <label id="namelabel" for="name">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Emily Miller">
+                  </div>
+                  <div class="form-row">
+                    <label id="emaillabel" for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="miller24emily@gmail.com">
+                  </div>
+                  <div class="form-row">
+                    <label id="phonenumberlabel" for="phoneNumber">Phone Number (form XXX-XXX-XXXX)</label>
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="330-987-0225">
+                  </div>
+                  <div class="form-row">
+                    <label id="questionlabel" for="questions">Questions</label>
+                    <input type="text" class="form-control" id="questions" placeholder="Any questions? How can we help you!">
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn btn-primary g-recaptcha" 
+                    data-sitekey="6LfXDZ4cAAAAAAx7Ye8tF6UWQoVVEvO5f1h7zQBx" 
+                    data-callback='onSubmit' 
+                    type="submit" name="submit" 
+                    >Submit</button> <button type="submit" class="btn btn-secondary" data-action="submit">Example fail recaptcha button</button>
+                  </div>
+                  <br>
+                  <div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </form>
+              </div>
+              </div>
+            </div>
+          </div>
+        </body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+        <script type="application/javascript" src="js/script.js"></script>>
+</html> 
