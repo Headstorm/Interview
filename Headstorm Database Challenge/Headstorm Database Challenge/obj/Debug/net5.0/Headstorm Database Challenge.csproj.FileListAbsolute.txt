@@ -1,0 +1,18 @@
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\Headstorm Database Challenge.exe
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\Headstorm Database Challenge.deps.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\Headstorm Database Challenge.runtimeconfig.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\Headstorm Database Challenge.runtimeconfig.dev.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\Headstorm Database Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\ref\Headstorm Database Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\Headstorm Database Challenge.pdb
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.csproj.AssemblyReference.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.AssemblyInfoInputs.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.AssemblyInfo.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.csproj.CoreCompileInputs.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.csproj.CopyComplete
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\ref\Headstorm Database Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.pdb
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Database Challenge\Headstorm Database Challenge\obj\Debug\net5.0\Headstorm Database Challenge.genruntimeconfig.cache

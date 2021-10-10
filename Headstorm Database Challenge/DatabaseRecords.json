@@ -1,0 +1,13 @@
+[
+{
+  "RecordID": 1234,
+  "Name": "Joe Smith",
+  "CellPhone": "405.867.5309",
+  "WorkPhone": "123.123.1234",
+  "Email": "joe_s@gmail.com",
+  "Address": "123 Vic Way, Dallas TX 75001",
+  "BasicWidgetOrder": 37,
+  "AdvancedWidgetOrder": 37,
+  "ProtectionPlan": true
+}
+]

@@ -1,0 +1,28 @@
+DECLARE @CustomerID AS INT
+
+IF joe_s@gmail.com IN (SELECT Email FROM Customer)
+BEGIN
+SELECT @CustomerID = CustomerID FROM Customers WHERE Email = joe_s@gmail.com
+END
+ELSE
+BEGIN
+INSERT INTO Orders (Name, CellPhone, WorkPhone, Email, Address)
+OUTPUT Inserted.ID INTO @CustomerID
+VALUES( Joe Smith, 405.867.5309, 123.123.1234, joe_s@gmail.com, 123 Vic Way, Dallas TX 75001 )
+END
+
+INSERT INTO Orders (CustomerID, RecordID, WidgetOrder, Advanced, ProtectionPlan) VALUES (@CustomerID, 1234, 37, 0, 1 )
+
+IF Timmy@gmail.com IN (SELECT Email FROM Customer)
+BEGIN
+SELECT @CustomerID = CustomerID FROM Customers WHERE Email = Timmy@gmail.com
+END
+ELSE
+BEGIN
+INSERT INTO Orders (Name, CellPhone, WorkPhone, Email, Address)
+OUTPUT Inserted.ID INTO @CustomerID
+VALUES( Timmy, 123.456.7890, 654.654.6544, Timmy@gmail.com, 456 Main St., Independence, MO 64050 )
+END
+
+INSERT INTO Orders (CustomerID, RecordID, WidgetOrder, Advanced, ProtectionPlan) VALUES (@CustomerID, 5678, 73, 1, 0 )
+
