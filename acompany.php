@@ -15,7 +15,7 @@
 
 		$data = json_decode(recaptcha_data());
 
-		if ($data->success) {
+		if ($data->success == true && $data->score > 0.5) {
 			$data_flag = true;
 			$console_data = [
 				"name" => $_POST['name'],
