@@ -1,0 +1,60 @@
+<!--
+[INCOMPLETE]
+Google reCaptcha V3 implement in page. Submission of form requires Google captcha pass
+
+The implementation code for incorporating Google reCaptcha v3 was not difficult. The difficult part
+that I was having trouble was using the keys and adding the local host as one of the sites. Apart from that,
+the website will present a basic contact form where the user is expected to input their information.
+That information will then be printed out on the Browser Console.
+ -->
+
+ <!--
+     Assumptions that were made here is that the only information would be needed is the contact us form
+     And that data would then be dumped into the console log. Other than that, made some changes to center it
+     and to include the icon in the browser with a local file that is included with this file. 
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Title of the Company, not really sure what else to put so extended the title a little bit-->
+    <title>Company Title: A New Horizon</title>
+    <!-- Icon in the browser tab -->
+    <link rel="icon" href="browserIcon.png">
+</head>
+
+<!-- Scripts that will be needed for this website applicaiton to work -->
+<script>
+    function onSubmit(token)
+    {
+        console.log("Results");
+        document.getElementById("contact-form").submit();
+        console.log("First Name:" + document.getElementById("fname").value);
+        console.log("Last Name:" + document.getElementById("lname").value);
+        console.log("Phone Number:" + document.getElementById("number").value);
+        console.log("Email:" + document.getElementById("email").value);
+    }
+</script>
+
+<!-- Information of the body that will be displayed on the website -->
+<body style="text-align: center;">
+    <div class="wrapper">
+        <h1>Contact Me</h1>
+        <form 	id="contact-form" onsubmit="onSubmit()">
+
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            <label for="number">Phone Number</label><br>
+            <input type="text" id="number" name="number" value=""><br>
+            <label for="pnum">Email </label><br>
+            <input type="text" id="email" name="email" value=""><br>
+        </form>
+        <button type="submit" form="contact-form" value="submit">Submit</button>
+    </div>
+</body>
+</html>
