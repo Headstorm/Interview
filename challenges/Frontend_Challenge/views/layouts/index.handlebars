@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdcXzweAAAAACOaMqihXUE57cbf-_gFfm4__08W"></script>
+    <style> 
+      input, textarea, select, button {
+        width : 150px;
+        padding: 5px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    </style>
+    <link rel="icon" href="https://static.wikia.nocookie.net/residentevil/images/5/50/UmbrellaCorporation3.png">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Umbrella Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+    <h1>Umbrella Corporation</h1>
+    <h2>"Our Business Is Life Itself"</h2>
+    <div class="container">
+      <form action="/form_submit/" method="post" class = "form" id = "form">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname"> <br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname"> <br>
+
+        <label for="email">Email Address</label>
+        <input type="text" id="email" name="email"> <br>
+
+        <label for="cell">Cell Number (XXX-XXX-XXXX)</label>
+        <input type="text" id="cell" name="cell"> <br>
+
+        <label for="message">Message</label>
+        <input type="textarea" id="message" name="message" style="height:100px;width:350px;"> <br>
+
+        <input type="submit" onclick="return validateForm()">
+      </form>
+    </div>
+  </body>
+
+<script>
+  //Validates input formats (doesnt actually check phones/emails for existence)
+  function validateForm() {
+    const form = document.getElementById('form');
+    reg_name = /[A-Z][A-Z | a-z | \']*/
+    reg_email = /[A-Z| a-z| 0-9]*@[A-Za-z]*\.[A-Za-z]*/
+    reg_phone = /[0-9]{3}-[0-9]{3}-[0-9]{4}/
+    if (!reg_name.test(form.fname.value) || form.fname.value === "" ) {
+      alert("Invalid first name!")
+      return false
+    }
+    if (!reg_name.test(form.lname.value) || form.lname.value === "") {
+      alert("Invalid last name!")
+      return false
+    }
+    if (!reg_email.test(form.email.value) || form.email.value === "") {
+      alert("Invalid email!")
+      return false
+    }
+    if (!reg_phone.test(form.cell.value) || form.cell.value === "") {
+      console.log(reg_phone.test(form.cell.value))
+      console.log(form.cell.value === "")
+      alert("Invalid cell number!")
+
+      return false
+    } 
+    if (form.message.value === "") {
+      console.log(reg_phone.test(form.cell.value))
+      console.log(form.cell.value === "")
+      alert("No message!")
+      return false
+    } 
+    return true
+  }
+</script>
+
+<script>
+  //Listens for form submission, delays submission until reCaptcha API is called and verified.
+  //Stops form from being submitted if reCaptcha is suspicious of a user (bad score). Submits with a good score (>0.5)
+  //Frontend gets key from reCaptcha API, sends info to backend to verify the key, gets back the score of the user.
+  form.addEventListener('submit', onSubmit);
+  async function onSubmit(event) {
+    event.preventDefault();
+    console.log("clicked")
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6LdcXzweAAAAACOaMqihXUE57cbf-_gFfm4__08W', {action: 'submit'}).then(function(token) {
+        console.log(token)
+        fetch("/captcha", {
+          method : 'POST',
+          body : token
+          }).then(function(response) {
+            response.json().then(function(data) {
+            console.log(data)
+            console.log("score", data.score)
+            if (data.score >= 0.5) {
+              console.log("Captcha passed!")
+              const form = document.getElementById('form');
+              const formJson = new Object()
+              formJson.fname = form.fname.value,
+              formJson.lname = form.lname.value,
+              formJson.email = form.email.value,
+              formJson.cell = form.cell.value,
+              formJson.message = form.message.value
+              console.log(formJson)
+              document.getElementById("form").submit();
+            }
+            else {
+              console.error("Failed captcha!")
+            }
+            })
+      }).catch((e) => {
+        console.error(e);
+      })
+      })
+    });
+  }
+
+</script>
+</html>
+
+
