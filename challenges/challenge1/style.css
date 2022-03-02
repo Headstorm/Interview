@@ -1,0 +1,325 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horizontal {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #171a21;
+  overflow: hidden;
+  z-index: 0;
+  min-width: 960px;
+  min-height: 450px;
+  width: 100%;
+}
+
+.horizontal:hover>span {
+  opacity: 1;
+}
+
+.horizontal:hover>span.left {
+  left: 1.6%;
+}
+
+.horizontal:hover>span.right {
+  right: 1.6%;
+}
+
+.wrap {
+  position: absolute;
+  top: 0px;
+  height: 400px;
+  width: 100%;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.is-transition {
+  transition: 0.5s ease;
+}
+
+.wrap img {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+}
+
+.horizontal>span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  background-color: rgba(31, 45, 61, .30);
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: 200px;
+}
+
+.horizontal>span:hover {
+  background-color: rgba(31, 45, 61, .60);
+}
+
+.horizontal>span.left {
+  left: 1%;
+}
+
+.horizontal>span.right {
+  right: 1%;
+}
+
+.indicator {
+  list-style: none;
+  height: 31.2px;
+  width: 90px;
+  display: flex;
+  padding: 0;
+}
+
+.indicator li {
+  padding: 6px 5px;
+  cursor: pointer;
+}
+
+.indicator li span {
+  display: inline-block;
+  width: 20px;
+  height: 4px;
+  border-radius: 5px;
+  opacity: .48;
+  background-color: #fff;
+}
+
+.indicator li:hover span {
+  opacity: .7;
+}
+
+.indicator li.actived span {
+  opacity: 1; 
+}
+
+.connectFormWrapper {
+  /* background-color: aqua; */
+  display: flex;
+  max-width: 960px;
+  position: relative;
+  margin: 0px;
+  width: 100%;
+}
+
+.connectCol1 {
+  /* background-color: antiquewhite; */
+  box-sizing: border-box;
+  border: 0 solid #333;
+  position: relative;
+  width: 58.33333%;
+
+  font-family: Roboto;
+  font-style: normal;
+  color: #333;
+  font-weight: 400;
+  font-size: 16px;
+  padding:50px 20px;
+
+  text-align: center;
+  display: block;
+  float: left;
+}
+
+.connectCol2{
+  /* background-color: cadetblue; */
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  box-sizing: border-box;
+  border: 0 solid #333;
+  position: relative;
+  width: 41.66667%;
+
+  font-family: Roboto;
+  font-style: normal;
+  color: #636363;
+  font-weight: 400;
+  font-size: 16px;
+
+}
+.col1Title{
+  top: 0;
+  left: 0;
+  /* width: 690px; */
+  /* max-width: 100%; */
+  min-width: 250px;
+  height: auto;
+  padding: 0px 2px;
+  margin: 8px 0;
+
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 24px;
+  direction: ltr;
+  text-align: left;
+  font-family: "Poppins";
+  font-style: normal;
+
+  position: relative;
+}
+
+.formWrapper{
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: Roboto;
+  color: #636363;
+  font-weight: 400;
+  font-style: normal;
+  /* background-color: thistle; */
+
+
+  position: relative;
+  display: flex;
+  min-width: 250px;
+}
+
+.form{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  padding: 15px 0;
+
+  /* background-color: tomato; */
+}
+
+.forminputWrap{
+  margin-top: 20px;
+  position: relative;
+  width: 50%;
+  float: left;
+  vertical-align: top;
+  text-align: left;
+  /* background-color: yellowgreen; */
+}
+
+.forminputWrap>label{
+  display: block;
+}
+.forminputWrap>input{
+  width: 80%;
+}
+
+.wouldLike>input{
+  width: 90%;
+}
+.wouldLike{
+  width: 100%;
+}
+
+.inputText{
+  border: 0;
+  border-bottom: 1px solid;
+  height: 30px;
+  margin:0 10px;
+  text-align: start;
+  background: 0;
+
+}
+
+.formsubmitWrap{
+  border-color: #000;
+  border-width: 1px;
+  border-style: solid;
+
+
+  min-width: 200px;
+  background: rgba(0, 0, 0, 1);
+  /* display: inline-block; */
+  margin: 20px 15px;
+  margin-top: 80px;
+  position: relative;
+  float: right;
+
+  white-space: nowrap;
+  transition: background-color .2s ease,border-color .2s ease;
+}
+
+.submit:hover{
+  font-weight: bold;
+  /* background-color: salmon; */
+}
+
+.submit{
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  letter-spacing: 2px;
+
+  width: 98%;
+  padding: 10px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.phoneGraph{
+  width: 80px;
+  height: 80px;
+  float: none;
+  position: relative;
+  padding: 0;
+  min-width: 25px;
+  margin: 20px auto;
+  border: 0;
+  display: block;
+}
+
+.phoneNum{
+  display: block;
+  float: none;
+  padding: 2px 0;
+  width: 100%;
+  min-width: 25px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-family: Poppins;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  
+  margin: 8px 0;
+}
+.phoneNum>h3{
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+.phoneNum>p{
+  margin: 0;
+  color: #636363;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+}
+.phoneNum>i{
+
+  margin-top: 38px;
+  margin-bottom: 10px;
+
+}
+
+.hidden {
+  display: none;
+}

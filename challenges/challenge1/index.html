@@ -1,0 +1,140 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-27 12:28:24
+ * @LastEditTime: 2022-03-02 15:03:45
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /PuzzleGame/workplace/TEST/Test2/test2 v0.3/index.html
+-->
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript" src='https://www.google.com/recaptcha/api.js' async defer></script>
+
+<head>
+  <title>Cars</title>
+  <!-- <script type="text/javascript">
+    var  onloadCallback = function(){
+      grecaptcha.render('html_element',{
+        'sitekey':'6LdQmqoeAAAAAO3jd2hWw2QVLZEzMiGzYpDiSXSC'
+      })
+    }
+  </script> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./img/font-awesome-4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+  <div class="horizontal" id="scroll">
+    <div class="wrap">
+      <img src="./img/promotion1.jpeg" alt="9 Creative Auto Dealer" class="center">
+      <img src="./img/promotion2.jpeg" alt="Test Drive">
+      <img src="./img/promotion3.jpeg" alt="Four Cool Cars">
+      <img src="./img/promotion4.jpeg" alt="How to Market Your Vintage Car Bussiness" class="center">
+      <img src="./img/promotion5.jpeg" alt="A Race Car">
+      <img src="./img/promotion6.jpeg" alt="Cars Auto Mall">
+    </div>
+    <span class="right">
+      <i class="fa fa-angle-right"></i>
+    </span>
+    <span class="left">
+      <i class="fa fa-angle-left"></i>
+    </span>
+    <ul class="indicator">
+      <li class="actived">
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+      </li>
+    </ul>
+  </div>
+  <div class="connectFormWrapper">
+    <div class="connectCol1">
+      <div class="col1Title">
+        <h1>
+          Drop Us A Message
+        </h1>
+      </div>
+      <div class="formWrapper">
+        <form method="POST" class="form" action="submit.php">
+          <div class="forminputWrap">
+            <label for="form-0">First Name:</label>
+            <input type="text" class="inputText" id="form-0" placeholder="First Name" name="first_name" required>
+          </div>
+          <div class="forminputWrap">
+            <label for="form-1">Last Name:</label>
+            <input type="text" class="inputText" id="form-1" placeholder="Last Name" name="last_name" required>
+          </div>
+          <div class="forminputWrap">
+            <label for="form-2">Email:</label>
+            <input type="email" class="inputText" id="form-2" placeholder="example@email.com" name="email" required>
+          </div>
+          <div class="forminputWrap">
+            <label for="form-3">Phone:</label>
+            <input type="text" class="inputText" id="form-3" placeholder="(214)470-0379" name="phone" required>
+          </div>
+          <div class="forminputWrap wouldLike">
+            <label for="form-4">I would like to...</label>
+            <input type="text" class="inputText" id="form-4" name="message">
+          </div>
+          <!-- <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit'
+            data-action='submit'>Submit</button>
+          <div class="g-recaptcha" data-sitekey="6LfQbK4eAAAAAKKxrGLVpGkD9Y_YmoJQaD7tQ6fs"></div> -->
+          <div class="formsubmitWrap" id="html_element">
+            <input type="submit" ata-sitekey="6LfQbK4eAAAAAKKxrGLVpGkD9Y_YmoJQaD7tQ6fs" class="submit g-recaptcha"
+              value="SUBMIT">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="connectCol2">
+      <div class="phoneGraph">
+        <i class="fa fa-volume-control-phone fa-5x" aria-hidden="true"></i>
+      </div>
+      <div class="phoneNum">
+        <h3>
+          Call us
+        </h3>
+      </div>
+      <div class="phoneNum">
+        214-470-0379
+      </div>
+      <div class="phoneNum">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+      </div>
+      <div class="phoneNum">
+        <h3>
+          Visit us
+        </h3>
+      </div>
+      <div class="phoneNum">
+        <p>
+          5600 Blvd.
+        </p>
+        <p>
+          Dallas, TX 75206
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script src="test2.js"></script>
+
+</html>
