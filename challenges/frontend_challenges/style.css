@@ -1,0 +1,43 @@
+.companyName{
+    position: fixed;
+    text-align: center;
+    left: 45%;
+    top:5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.label{
+    position: fixed;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto ;
+}
+
+.input{
+    position: fixed;
+    text-align: center;
+    left: 45%;
+    margin-left: auto;
+    margin-right: auto ;
+}
+
+.inputTextarea{
+    top:55%;
+    position: fixed;
+    width: 30%;
+    left: 38%;
+    margin-left: auto;
+    margin-right: auto ;
+}
+
+.submitButton{
+    top:90%;
+    position: fixed;
+    left: 50%;
+}
+
+.gverify{
+    top: 70%;
+    position: fixed;
+    left: 40%;
+}
