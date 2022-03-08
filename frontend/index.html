@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Headstorm </title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+    <body>
+        <h1> Headstorm </h1>
+        <h2> Contact Us</h2>
+        <form id = "contact"> 
+            <label for = "fname"> First Name</label><br>
+            <input type = "text" id = "fname" name = "fname" /><br>
+            <label for = "lname"> Last Name</label><br> 
+            <input type = "text" id = "lname" name = "lname" /><br>
+            <label for = "email"> Email</label><br>
+            <input type = "text" id = "email" name = "email" /><br>
+            <label for = "number"> Number</label><br>
+            <input type = "text" id = "number" name = "number"/><br>
+            <button class="g-recaptcha"
+                data-sitekey="6LfuT8QeAAAAAF79Xo1I-6Rjvzozrg0dUua0T-ph"
+                data-callback="onSubmit"> Submit </button>
+        </form>
+
+        <script> 
+            var recaptcha = "";
+            function submitContactInfo() {
+                if(recaptcha.length == 0) {
+                    console.log("Recaptcha verification unsuccessful");
+                }
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var email = document.getElementById("email").value;
+                var number = document.getElementById("number").value;
+
+                if (fname.length == 0) {
+                    console.log("First name is left blank");
+                }
+                if (lname.length == 0) {
+                    console.log("Last name is left blank");
+                }
+                if (email.length == 0 || email.indexOf("@") == -1) {
+                    console.log("Enter valid email");
+                }
+                if (number.length != 10) {
+                    console.log("Enter valid phone number")
+                }
+            }
+
+            function onSubmit(token) {
+                recaptcha = token;
+                submitContactInfo();
+            }
+        </script>
+    </body>
+</html>
