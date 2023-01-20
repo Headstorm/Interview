@@ -1,0 +1,25 @@
+<form #form="ngForm" class="contact-us-form">
+	<!-- Series of input text fields that store text in variables in ContactUsComponent. -->
+	<mat-form-field class="contact-us-text-field" appearance="fill">
+		<mat-label>First Name</mat-label>
+		<input matInput placeholder="Joe" (change)='userFirstName=$event.target.value'>
+	</mat-form-field>
+
+	<mat-form-field class="contact-us-text-field" appearance="fill">
+		<mat-label>Last Name</mat-label>
+		<input matInput placeholder="Smith" (change)='userLastName=$event.target.value'>
+	</mat-form-field>
+
+	<mat-form-field class="contact-us-text-field" appearance="fill">
+		<mat-label>Email</mat-label>
+		<input matInput placeholder="example@domain.com" (change)='userEmail=$event.target.value'>
+	</mat-form-field>
+
+	<mat-form-field class="contact-us-text-field" appearance="fill">
+		<mat-label>What Do You Want To Know About Cacti?</mat-label>
+		<textarea matInput placeholder="Ex. How bad do the spikes hurt?" (change)='userMessage=$event.target.value'></textarea>
+	</mat-form-field>
+
+	<!-- Once the submit button is clicked, Google Recaptcha V3 is initiated and validated before the "submission" completes. -->
+	<button mat-raised-button class="contact-us-button" (click)="onClickSubmit(form)">Submit</button>
+</form>
