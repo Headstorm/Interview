@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+
+
+        <title>Headstorm</title>
+        <link rel="icon" href="https://headstorm.com/wp-content/uploads/2020/10/Logo-Bolt.png">
+    </head>
+
+
+    <body style="background-color:#FFE5B4;">
+        <style>
+            h1 {
+              text-align: center;
+              text-shadow: 0px 6px #D3D3D3;
+            }
+        </style>
+        <h1>Welcome to Headstorm</h1>
+
+        <link href="contact-form.css" rel="stylesheet">
+
+        <div class="fcf-body">
+        
+            <div id="fcf-form">
+            <h3 class="fcf-h3">Contact us</h3>
+        
+            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                
+                <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                </div>
+        
+                <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label">Your email address</label>
+                    <div class="fcf-input-group">
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                    </div>
+                </div>
+        
+                <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label">Your message</label>
+                    <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                    </div>
+                </div>
+        
+                <div class="fcf-form-group">
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                    <script>
+                        function onSubmit(token) {
+                          console.log(document.getElementById("fcf-form-id").submit());
+                        }
+                      </script>
+                    <button  class="g-recaptcha" 
+                    data-sitekey="reCAPTCHA_site_key" 
+                    data-callback='onSubmit' 
+                    data-action='submit' type="submit" id="fcf-button">Send Message</button>
+                </div>
+        
+                <div class="fcf-credit" id="fcf-credit">
+                Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+                </div>
+        
+            </form>
+            </div>
+        
+        </div>
+
+    </body>
+
+
+</html>
