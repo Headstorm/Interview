@@ -1,57 +1,33 @@
 # Headstorm Programming Challenges
 
-  The following is a set of front-end, back-end, and database challenges that can be completed to supplement your resume as part of the interview process with Headstorm. Technology is a core element of our culture at Headstorm and we hope you find these challenges interesting. Complete as many of the challenges as you desire.  It is acceptable to submit an incomplete solution to any challenge.
-
-### Submission Instructions
-
-  Submit a [Pull Request](https://help.github.com/en/articles/about-pull-requests) (PR) to this repository. Once your PR is created, engineers at Headstorm will review the request and engage in commentary and questions on your PR.
+These are my solutions to the 3 challenges provided.
 
 ## Front End Challenge
 
-A company has approached you for help in developing their product and establishing an online presence. You have been tasked with quickly creating a web page for them. This page has the following requirements:
+The front end proved troublesome in regards to the reCaptcha v3 verification. Setting up the page itesl (icon, title, and form) was easy enough, but I was unable to print info to console when integrating reCaptcha. Advice on how to accomplish this would be greatly appreciated.
 
-* Company name title
+## Backend Challenge
 
-* Company logo as icon in browser tab
+Three APIs at the endpoint /data with the features below:
 
-* Contact us web form that captures contact information
+- GET the list of numbers after being sorted.
 
-* Google reCaptcha V3 implement in page. Submission of form requires Google captcha pass
+- POST a list of numbers with the following format: `{"numbers":[1,2,...,500]}`
 
-* Dump all the information from the form submission to browser console. Google reCaptcha Reference: https://developers.google.com/recaptcha/docs/display
+**BONUS:**
 
-## Back End Challenge
+- PATCH a number into the list in the following JSON format: `{"number":1}`.
+  <br>The number will be placed into the list in sorted order.
 
-  Create a [REST API](https://www.restapitutorial.com) using any language or web framework you prefer, which performs the following functionality: 
-  - Provides a POST endpoint at `/data` where a user submits a JSON formatted list of 500 random numbers.  The list has to be exactly 500 numbers, if there are more or less than 500 an error must be returned.  Similarly, if something other than a list of numbers is submitted, an error must be returned.
-  - Provides a GET endpoint at `/data` which provides the same JSON formatted list of 500 numbers that are sorted from lowest to highest.
-  
-  **BONUS:**
-  
-  - Provides a PATCH endpoint at `/data` which allows insertion of a single number into the list which gets placed in the proper order.
-  
+API testing done using Postman on localhost:3000.
+
+Created with express and node.js. Run using:
+
+```text
+npm install
+node index.js
+```
 
 ## Database Challenge
 
-  **Part 1**
-  
-  The client chose to use a NoSQL database in their original system so that they could skip data modeling. The number of users for their system is growing rapidly. To support the new demands the client has chosen to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization.
-
-Startup Order NoSQL Database
-
-|Field Name | Type   | Sample Value |
-| --------- | ------ | ------------ |
-|Record ID  | Number | 1234         |
-|Name       | String | Joe Smith    |
-|Cell Phone | String | 405.867.5309 |
-|Work Phone | String | 123.123.1234 |
-|Email      | String |joe_s@gmail.com |
-|Address    | String | 123 Vic Way, Dallas TX 75001 |
-|Basic Widget Order | Number | 37 |
-|Advanced Widget Order | Number | 12 |
-|Protection Plan | Boolean | True |
-
-**Part 2**
-
-  The next step is to create a solution for the client that can migrate the data from their current database to your new relational database. Write a basic program in a language of your choice such as Python or Java. Read in a JSON file that contains the records from the old database, format the data to match your new data model, and print SQL statements to console/standard IO that would insert these records into the new database.
-  
+The database program reads data from a "data.json" file which is checked for. The program also checks whether a person's name exist so that the same customer ID can be assigned to the current widget order. It was done in a python 3.10 venv.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Company</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeMJpweAAAAAIVYmBfqByLqfSNpkF7XG6Ah4g8Y"></script>
+  </head>
+  <body>
+    <form method="post" action="onsubmit">
+      <div class="form-inner">
+        <h1>Contact us</h1>
+        <input type="text" placeholder="Name" id="name" required />
+        <input type="email" placeholder="Email" id="email" required />
+        <input type="tel" placeholder="Phone Number" id="phone" required />
+        <textarea placeholder="Message" rows="4" id="msg"></textarea>
+        <button
+          class="g-recaptcha"
+          data-sitekey="6LeMJpweAAAAAIVYmBfqByLqfSNpkF7XG6Ah4g8Y"
+          data-callback="verifyCaptcha"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <script>
+      var recaptcha_response = "";
+      function submitUserForm() {
+        if (recaptcha_response.length == 0) {
+          console.log("Captcha failed");
+        } else {
+          var nameValue = document.getElementById("name").value;
+          var emailValue = document.getElementById("email").value;
+          var phoneValue = document.getElementById("phone").value;
+          var msgValue = document.getElementById("msg").value;
+
+          if (nameValue.length < 1) {
+            console.log("Please enter a valid name.");
+          } else if (emailValue.length < 6 || email.indexOf("@") == -1) {
+            console.log("Please enter a valid email.");
+          } else if (isNaN(phoneValue) || phoneValue.length != 10) {
+            console.log("Please enter a valid phone number.");
+          } else {
+            console.log(
+              `Name: ${nameValue}` +
+                `\nEmail: ${emailValue}` +
+                `\nPhone: ${phoneValue}` +
+                `\nMessage: ${msgValue}`
+            );
+          }
+        }
+      }
+
+      function verifyCaptcha(token) {
+        recaptcha_response = token;
+        submitUserForm();
+      }
+    </script>
+  </body>
+</html>
