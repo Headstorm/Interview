@@ -1,0 +1,29 @@
+Relational Data Model
+
+
+
+
+Customers 
++--------------+--------------+--------------+--------------+-------------+------------+
+|RecordID      |Name          |Cell          |Work          |Email        |Address     | 
++--------------+--------------+--------------+--------------+-------------+------------+
+        ^
+        |
+        |
+        |
+Options |      
++--------------+--------------------+---------------------+
+|RecordID      |Basic Widget Order  |Advanced Widget Order|   
++--------------+--------------------+---------------------+
+        ^
+        |
+        |
+        |
+Plans   |     
++--------------+--------------------+
+|RecordID      |Protection Plan     |
++--------------+--------------------+
+
+INSERT INTO Customers(RecordID, Name, Cell, Work, Email, Address) Values(v1, v2, v3, v4, v5, v6)
+INSERT INTO Options(RecordID, Basic Widget Order, Advanced Widget Order) Values(v1, v2, v3)
+INSERT INTO Plans(RecordID, Protection Plan) Values(v1, v2)
