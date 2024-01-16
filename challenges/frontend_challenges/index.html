@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel = "stylesheet" href ="style.css"/>
+</head>
+<body>
+    <h1 class="companyName" >Headstorm </h1>
+    <form id="myform">
+        <label for="fname" class="label" style="top: 20%;left: 49%;">Full Name:</label><br>
+        <input type="text" id="fname" name="fname" class = "input" style="top: 25%;"><br>
+        
+        <label for="email" class="label" style="top:30%;left: 50%; ">Email:</label><br>
+        <input type="email" id="email" name="email" class = "input" style="top:35%;"><br>
+        
+        <label for="phone" class="label" style="top: 40%;left: 48%;">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" name="email" class = "input" style="top:45%;"><br>
+
+        <label for="message" class="label" style="top: 50%;left: 49.5%;">Message:</label><br>
+        <textarea for="message" name="message" id="message" rows ="4" cols="50" class = "inputTextarea" ></textarea> 
+      
+        <div class="g-recaptcha gverify" data-sitekey="6LcVJLQeAAAAAHIGNTmpAEOue_X-zEt1JlxSChR7"></div>
+        <input type="submit" name="submit" value="Submit" id="submit" class="submitButton" />
+
+    </form>
+    <script>
+        var form = document.getElementById("myform");
+        function handleForm(event){ 
+            event.preventDefault(); 
+            var response = grecaptcha.getResponse();
+            if(response.length ==0){
+                alert("Please verify the recaptcha box");
+                return;
+            }
+            let fname = document.getElementById("fname").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let message = document.getElementById("message").value;
+            if(fname.trim().length ==0){
+                console.log("first name is empty");
+            }
+            else{
+            console.log(fname);
+            }
+            if(email.trim().length==0){
+            console.log("email is empty");
+            }
+            else{
+            console.log(email);
+            }
+            if(phone.trim().length==0){
+                console.log("phone number is empty");
+            }
+            else{
+            console.log(phone);
+            }
+            if(message.trim().length==0){
+                console.log("message is empty ");
+            }
+            else{
+            console.log(message);
+            }
+            grecaptcha.reset();
+        } 
+        form.addEventListener('submit', handleForm);
+    </script>
+</body>
+</html>
