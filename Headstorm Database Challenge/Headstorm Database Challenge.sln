@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Headstorm Database Challenge", "Headstorm Database Challenge\Headstorm Database Challenge.csproj", "{5EA6CD6C-597D-414F-A0FB-6EF3379BDEE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EA6CD6C-597D-414F-A0FB-6EF3379BDEE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA6CD6C-597D-414F-A0FB-6EF3379BDEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA6CD6C-597D-414F-A0FB-6EF3379BDEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA6CD6C-597D-414F-A0FB-6EF3379BDEE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7D4E5DF-4778-4226-8BE0-ED30A683ED6D}
+	EndGlobalSection
+EndGlobal

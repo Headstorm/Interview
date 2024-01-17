@@ -1,0 +1,41 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "AG Inc Contact Page";
+}
+
+<script>
+    function Submit() {
+        document.ContactForm.submit();
+        console.log("Name:" + document.getElementById("NameText").value);
+        console.log("Number:" + document.getElementById("NumberText").value);
+        console.log("Comment:" + document.getElementById("CommentText").value);
+    }
+</script>
+<!--I didn't do anything to make it look good, just put the form together as instructed.-->
+<div class="text-center">
+    <h1 class="display-4">AG Inc Contact Form</h1>
+    <form id="ContactForm" name="ContactForm">
+        <label>Name</label>
+        <br />
+        <input id="NameText" type="text" />
+        <br />
+        <label>Number</label>
+        <br />
+        <!--Limit to 12 for phone numbers, 10 digits for the numbers and 2 for dashes if the user inputs them.
+            I was going to auto-map the format but it turned out to be too complicated for such a small project.-->
+        <input id="NumberText" type="tel" maxlength="12" />
+        <br />
+        <label>Comment</label>
+        <br />
+        <input id="CommentText" type="text" />
+        <br />
+    </form>
+    <br />
+    <!-- reCAPTCHA doesn't work since I don't have a site to register a key to, but the documentation said this is the way to do it.-->
+    <button id="SubmitButton" onclick="Submit()" form="ContactForm" type="submit" value="Submit" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key"  
+        data-action='submit'>
+        Submit
+    </button>
+    <br />
+</div>

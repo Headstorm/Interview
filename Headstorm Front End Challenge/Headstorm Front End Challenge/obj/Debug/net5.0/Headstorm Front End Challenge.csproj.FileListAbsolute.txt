@@ -1,0 +1,40 @@
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\appsettings.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.exe
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.deps.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.runtimeconfig.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.runtimeconfig.dev.json
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\ref\Headstorm Front End Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.pdb
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.Views.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\bin\Debug\net5.0\Headstorm Front End Challenge.Views.pdb
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.AssemblyInfoInputs.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.AssemblyInfo.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.csproj.CoreCompileInputs.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.RazorAssemblyInfo.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.RazorAssemblyInfo.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\staticwebassets\Headstorm Front End Challenge.StaticWebAssets.Manifest.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\staticwebassets\Headstorm Front End Challenge.StaticWebAssets.xml
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\scopedcss\bundle\Headstorm Front End Challenge.styles.css
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.TagHelpers.input.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.TagHelpers.output.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.RazorCoreGenerate.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.RazorTargetAssemblyInfo.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.RazorTargetAssemblyInfo.cs
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.Views.pdb
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\ref\Headstorm Front End Challenge.dll
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.pdb
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.genruntimeconfig.cache
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.csproj.CopyComplete
+C:\Users\Tony\Dropbox\Interview Code\Headstorm Front End Challenge\Headstorm Front End Challenge\obj\Debug\net5.0\Headstorm Front End Challenge.csproj.AssemblyReference.cache

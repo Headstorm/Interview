@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Headstorm Front End Challenge", "Headstorm Front End Challenge\Headstorm Front End Challenge.csproj", "{231000BC-3960-4A81-909A-AEE356C4BBD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{231000BC-3960-4A81-909A-AEE356C4BBD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231000BC-3960-4A81-909A-AEE356C4BBD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231000BC-3960-4A81-909A-AEE356C4BBD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231000BC-3960-4A81-909A-AEE356C4BBD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {989C42F2-1354-4505-A961-E16313A1DF77}
+	EndGlobalSection
+EndGlobal

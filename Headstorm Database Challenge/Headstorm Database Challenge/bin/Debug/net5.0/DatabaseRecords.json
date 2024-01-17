@@ -1,0 +1,24 @@
+[
+{
+  "RecordID": 1234,
+  "Name": "Joe Smith",
+  "CellPhone": "405.867.5309",
+  "WorkPhone": "123.123.1234",
+  "Email": "joe_s@gmail.com",
+  "Address": "123 Vic Way, Dallas TX 75001",
+  "BasicWidgetOrder": 37,
+  "AdvancedWidgetOrder": null,
+  "ProtectionPlan": true
+},
+{
+  "RecordID": 5678,
+  "Name": "Timmy",
+  "CellPhone": "123.456.7890",
+  "WorkPhone": "654.654.6544",
+  "Email": "Timmy@gmail.com",
+  "Address": "456 Main St., Independence, MO 64050",
+  "BasicWidgetOrder": null,
+  "AdvancedWidgetOrder": 73,
+  "ProtectionPlan": false
+}
+]
